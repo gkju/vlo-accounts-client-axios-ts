@@ -889,6 +889,35 @@ export const LoginApiAxiosParamCreator = function (configuration?: Configuration
     return {
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLoginClearExternalCookiesPost: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Login/ClearExternalCookies`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary Endpoint used to log user in based on username, password
          * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel] 
@@ -926,35 +955,6 @@ export const LoginApiAxiosParamCreator = function (configuration?: Configuration
                 options: localVarRequestOptions,
             };
         },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        clearExternalCookiesPost: async (options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/ClearExternalCookies`;
-            // use dummy base URL string because the URL constructor only accepts absolute URLs.
-            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-            let baseOptions;
-            if (configuration) {
-                baseOptions = configuration.baseOptions;
-            }
-
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
-            const localVarHeaderParameter = {} as any;
-            const localVarQueryParameter = {} as any;
-
-
-    
-            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-
-            return {
-                url: toPathString(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
     }
 };
 
@@ -967,6 +967,15 @@ export const LoginApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthLoginClearExternalCookiesPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthLoginClearExternalCookiesPost(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
          * @summary Endpoint used to log user in based on username, password
          * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel] 
@@ -975,15 +984,6 @@ export const LoginApiFp = function(configuration?: Configuration) {
          */
         async apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthLoginPost(returnUrl, vLOBOARDSAreasAuthLoginInputModel, options);
-            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        async clearExternalCookiesPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.clearExternalCookiesPost(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -998,6 +998,14 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
     return {
         /**
          * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLoginClearExternalCookiesPost(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthLoginClearExternalCookiesPost(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary Endpoint used to log user in based on username, password
          * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel] 
@@ -1006,14 +1014,6 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
          */
         apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginResult> {
             return localVarFp.apiAuthLoginPost(returnUrl, vLOBOARDSAreasAuthLoginInputModel, options).then((request) => request(axios, basePath));
-        },
-        /**
-         * 
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        clearExternalCookiesPost(options?: any): AxiosPromise<void> {
-            return localVarFp.clearExternalCookiesPost(options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1027,6 +1027,16 @@ export const LoginApiFactory = function (configuration?: Configuration, basePath
 export class LoginApi extends BaseAPI {
     /**
      * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LoginApi
+     */
+    public apiAuthLoginClearExternalCookiesPost(options?: any) {
+        return LoginApiFp(this.configuration).apiAuthLoginClearExternalCookiesPost(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
      * @summary Endpoint used to log user in based on username, password
      * @param {string} [returnUrl] 
      * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel] 
@@ -1036,16 +1046,6 @@ export class LoginApi extends BaseAPI {
      */
     public apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any) {
         return LoginApiFp(this.configuration).apiAuthLoginPost(returnUrl, vLOBOARDSAreasAuthLoginInputModel, options).then((request) => request(this.axios, this.basePath));
-    }
-
-    /**
-     * 
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof LoginApi
-     */
-    public clearExternalCookiesPost(options?: any) {
-        return LoginApiFp(this.configuration).clearExternalCookiesPost(options).then((request) => request(this.axios, this.basePath));
     }
 }
 

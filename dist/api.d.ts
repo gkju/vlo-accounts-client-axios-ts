@@ -657,6 +657,12 @@ export declare class ForgotPasswordApi extends BaseAPI {
 export declare const LoginApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
     /**
      *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthLoginClearExternalCookiesPost: (options?: any) => Promise<RequestArgs>;
+    /**
+     *
      * @summary Endpoint used to log user in based on username, password
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel]
@@ -664,18 +670,18 @@ export declare const LoginApiAxiosParamCreator: (configuration?: Configuration |
      * @throws {RequiredError}
      */
     apiAuthLoginPost: (returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any) => Promise<RequestArgs>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    clearExternalCookiesPost: (options?: any) => Promise<RequestArgs>;
 };
 /**
  * LoginApi - functional programming interface
  * @export
  */
 export declare const LoginApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
     /**
      *
      * @summary Endpoint used to log user in based on username, password
@@ -685,18 +691,18 @@ export declare const LoginApiFp: (configuration?: Configuration | undefined) => 
      * @throws {RequiredError}
      */
     apiAuthLoginPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    clearExternalCookiesPost(options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * LoginApi - factory interface
  * @export
  */
 export declare const LoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthLoginClearExternalCookiesPost(options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Endpoint used to log user in based on username, password
@@ -706,12 +712,6 @@ export declare const LoginApiFactory: (configuration?: Configuration | undefined
      * @throws {RequiredError}
      */
     apiAuthLoginPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginResult>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     */
-    clearExternalCookiesPost(options?: any): AxiosPromise<void>;
 };
 /**
  * LoginApi - object-oriented interface
@@ -722,6 +722,13 @@ export declare const LoginApiFactory: (configuration?: Configuration | undefined
 export declare class LoginApi extends BaseAPI {
     /**
      *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LoginApi
+     */
+    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    /**
+     *
      * @summary Endpoint used to log user in based on username, password
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel]
@@ -730,13 +737,6 @@ export declare class LoginApi extends BaseAPI {
      * @memberof LoginApi
      */
     apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLoginResult, any>>;
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof LoginApi
-     */
-    clearExternalCookiesPost(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * Login2FAApi - axios parameter creator

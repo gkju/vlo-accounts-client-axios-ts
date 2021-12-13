@@ -240,7 +240,7 @@
         }
       }
     },
-    "/ClearExternalCookies": {
+    "/api/Auth/Login/ClearExternalCookies": {
       "post": {
         "tags": [
           "Login"

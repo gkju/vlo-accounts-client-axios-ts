@@ -604,6 +604,34 @@ export var LoginApiAxiosParamCreator = function (configuration) {
     return {
         /**
          *
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLoginClearExternalCookiesPost: function (options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/api/Auth/Login/ClearExternalCookies";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+        /**
+         *
          * @summary Endpoint used to log user in based on username, password
          * @param {string} [returnUrl]
          * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel]
@@ -638,34 +666,6 @@ export var LoginApiAxiosParamCreator = function (configuration) {
                 });
             });
         },
-        /**
-         *
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        clearExternalCookiesPost: function (options) {
-            if (options === void 0) { options = {}; }
-            return __awaiter(_this, void 0, void 0, function () {
-                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
-                return __generator(this, function (_a) {
-                    localVarPath = "/ClearExternalCookies";
-                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
-                    if (configuration) {
-                        baseOptions = configuration.baseOptions;
-                    }
-                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
-                    localVarHeaderParameter = {};
-                    localVarQueryParameter = {};
-                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
-                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
-                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
-                    return [2 /*return*/, {
-                            url: toPathString(localVarUrlObj),
-                            options: localVarRequestOptions,
-                        }];
-                });
-            });
-        },
     };
 };
 /**
@@ -675,6 +675,24 @@ export var LoginApiAxiosParamCreator = function (configuration) {
 export var LoginApiFp = function (configuration) {
     var localVarAxiosParamCreator = LoginApiAxiosParamCreator(configuration);
     return {
+        /**
+         *
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLoginClearExternalCookiesPost: function (options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthLoginClearExternalCookiesPost(options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
         /**
          *
          * @summary Endpoint used to log user in based on username, password
@@ -696,24 +714,6 @@ export var LoginApiFp = function (configuration) {
                 });
             });
         },
-        /**
-         *
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        clearExternalCookiesPost: function (options) {
-            return __awaiter(this, void 0, void 0, function () {
-                var localVarAxiosArgs;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.clearExternalCookiesPost(options)];
-                        case 1:
-                            localVarAxiosArgs = _a.sent();
-                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
-                    }
-                });
-            });
-        },
     };
 };
 /**
@@ -725,6 +725,14 @@ export var LoginApiFactory = function (configuration, basePath, axios) {
     return {
         /**
          *
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLoginClearExternalCookiesPost: function (options) {
+            return localVarFp.apiAuthLoginClearExternalCookiesPost(options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
          * @summary Endpoint used to log user in based on username, password
          * @param {string} [returnUrl]
          * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel]
@@ -733,14 +741,6 @@ export var LoginApiFactory = function (configuration, basePath, axios) {
          */
         apiAuthLoginPost: function (returnUrl, vLOBOARDSAreasAuthLoginInputModel, options) {
             return localVarFp.apiAuthLoginPost(returnUrl, vLOBOARDSAreasAuthLoginInputModel, options).then(function (request) { return request(axios, basePath); });
-        },
-        /**
-         *
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        clearExternalCookiesPost: function (options) {
-            return localVarFp.clearExternalCookiesPost(options).then(function (request) { return request(axios, basePath); });
         },
     };
 };
@@ -757,6 +757,16 @@ var LoginApi = /** @class */ (function (_super) {
     }
     /**
      *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LoginApi
+     */
+    LoginApi.prototype.apiAuthLoginClearExternalCookiesPost = function (options) {
+        var _this = this;
+        return LoginApiFp(this.configuration).apiAuthLoginClearExternalCookiesPost(options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
      * @summary Endpoint used to log user in based on username, password
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginInputModel} [vLOBOARDSAreasAuthLoginInputModel]
@@ -767,16 +777,6 @@ var LoginApi = /** @class */ (function (_super) {
     LoginApi.prototype.apiAuthLoginPost = function (returnUrl, vLOBOARDSAreasAuthLoginInputModel, options) {
         var _this = this;
         return LoginApiFp(this.configuration).apiAuthLoginPost(returnUrl, vLOBOARDSAreasAuthLoginInputModel, options).then(function (request) { return request(_this.axios, _this.basePath); });
-    };
-    /**
-     *
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof LoginApi
-     */
-    LoginApi.prototype.clearExternalCookiesPost = function (options) {
-        var _this = this;
-        return LoginApiFp(this.configuration).clearExternalCookiesPost(options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     return LoginApi;
 }(BaseAPI));
