@@ -24,6 +24,56 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
+ * @interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+ */
+export interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme {
+    /**
+     * 
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+     */
+    displayName?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+     */
+    handlerType?: SystemType;
+}
+/**
+ * 
+ * @export
+ * @interface MicrosoftAspNetCoreIdentityUserLoginInfo
+ */
+export interface MicrosoftAspNetCoreIdentityUserLoginInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreIdentityUserLoginInfo
+     */
+    loginProvider?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreIdentityUserLoginInfo
+     */
+    providerKey?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreIdentityUserLoginInfo
+     */
+    providerDisplayName?: string | null;
+}
+/**
+ * 
+ * @export
  * @interface MicrosoftAspNetCoreMvcProblemDetails
  */
 export interface MicrosoftAspNetCoreMvcProblemDetails {
@@ -63,6 +113,2618 @@ export interface MicrosoftAspNetCoreMvcProblemDetails {
 /**
  * 
  * @export
+ * @interface SystemModuleHandle
+ */
+export interface SystemModuleHandle {
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemModuleHandle
+     */
+    mdStreamVersion?: number;
+}
+/**
+ * 
+ * @export
+ * @interface SystemReflectionAssembly
+ */
+export interface SystemReflectionAssembly {
+    /**
+     * 
+     * @type {Array<SystemReflectionTypeInfo>}
+     * @memberof SystemReflectionAssembly
+     */
+    definedTypes?: Array<SystemReflectionTypeInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionAssembly
+     */
+    exportedTypes?: Array<SystemType> | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    codeBase?: string | null;
+    /**
+     * 
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionAssembly
+     */
+    entryPoint?: SystemReflectionMethodInfo;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    fullName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    imageRuntimeVersion?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    isDynamic?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    location?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    reflectionOnly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    isFullyTrusted?: boolean;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionAssembly
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    escapedCodeBase?: string | null;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionAssembly
+     */
+    manifestModule?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionModule>}
+     * @memberof SystemReflectionAssembly
+     */
+    modules?: Array<SystemReflectionModule> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     * @deprecated
+     */
+    globalAssemblyCache?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionAssembly
+     */
+    hostContext?: number;
+    /**
+     * 
+     * @type {SystemSecuritySecurityRuleSet}
+     * @memberof SystemReflectionAssembly
+     */
+    securityRuleSet?: SystemSecuritySecurityRuleSet;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionCallingConventions {
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionConstructorInfo
+ */
+export interface SystemReflectionConstructorInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {SystemReflectionMethodAttributes}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    attributes?: SystemReflectionMethodAttributes;
+    /**
+     * 
+     * @type {SystemReflectionMethodImplAttributes}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    methodImplementationFlags?: SystemReflectionMethodImplAttributes;
+    /**
+     * 
+     * @type {SystemReflectionCallingConventions}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    callingConvention?: SystemReflectionCallingConventions;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isAbstract?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isConstructor?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFinal?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isHideBySig?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isStatic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isVirtual?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFamily?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isPrivate?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isConstructedGenericMethod?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isGenericMethod?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isGenericMethodDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    containsGenericParameters?: boolean;
+    /**
+     * 
+     * @type {SystemRuntimeMethodHandle}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    methodHandle?: SystemRuntimeMethodHandle;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+}
+/**
+ * 
+ * @export
+ * @interface SystemReflectionCustomAttributeData
+ */
+export interface SystemReflectionCustomAttributeData {
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    attributeType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionConstructorInfo}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    constructor?: SystemReflectionConstructorInfo;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeTypedArgument>}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    constructorArguments?: Array<SystemReflectionCustomAttributeTypedArgument> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeNamedArgument>}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    namedArguments?: Array<SystemReflectionCustomAttributeNamedArgument> | null;
+}
+/**
+ * 
+ * @export
+ * @interface SystemReflectionCustomAttributeNamedArgument
+ */
+export interface SystemReflectionCustomAttributeNamedArgument {
+    /**
+     * 
+     * @type {SystemReflectionMemberInfo}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    memberInfo?: SystemReflectionMemberInfo;
+    /**
+     * 
+     * @type {SystemReflectionCustomAttributeTypedArgument}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    typedValue?: SystemReflectionCustomAttributeTypedArgument;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    memberName?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    isField?: boolean;
+}
+/**
+ * 
+ * @export
+ * @interface SystemReflectionCustomAttributeTypedArgument
+ */
+export interface SystemReflectionCustomAttributeTypedArgument {
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionCustomAttributeTypedArgument
+     */
+    argumentType?: SystemType;
+    /**
+     * 
+     * @type {any}
+     * @memberof SystemReflectionCustomAttributeTypedArgument
+     */
+    value?: any | null;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionEventAttributes {
+    NUMBER_0 = 0,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionEventInfo
+ */
+export interface SystemReflectionEventInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionEventInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionEventInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionEventInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionEventInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionEventInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionEventInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionEventInfo
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionEventInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {SystemReflectionEventAttributes}
+     * @memberof SystemReflectionEventInfo
+     */
+    attributes?: SystemReflectionEventAttributes;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionEventInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionEventInfo
+     */
+    addMethod?: SystemReflectionMethodInfo;
+    /**
+     * 
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionEventInfo
+     */
+    removeMethod?: SystemReflectionMethodInfo;
+    /**
+     * 
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionEventInfo
+     */
+    raiseMethod?: SystemReflectionMethodInfo;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionEventInfo
+     */
+    isMulticast?: boolean;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionEventInfo
+     */
+    eventHandlerType?: SystemType;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionFieldAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_5 = 5,
+    NUMBER_6 = 6,
+    NUMBER_7 = 7,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_32768 = 32768,
+    NUMBER_38144 = 38144
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionFieldInfo
+ */
+export interface SystemReflectionFieldInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionFieldInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionFieldInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionFieldInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionFieldInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionFieldInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionFieldInfo
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionFieldInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {SystemReflectionFieldAttributes}
+     * @memberof SystemReflectionFieldInfo
+     */
+    attributes?: SystemReflectionFieldAttributes;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionFieldInfo
+     */
+    fieldType?: SystemType;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isInitOnly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isLiteral?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isNotSerialized?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isPinvokeImpl?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isStatic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isFamily?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isPrivate?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     * 
+     * @type {SystemRuntimeFieldHandle}
+     * @memberof SystemReflectionFieldInfo
+     */
+    fieldHandle?: SystemRuntimeFieldHandle;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionGenericParameterAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_28 = 28
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionMemberInfo
+ */
+export interface SystemReflectionMemberInfo {
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionMemberInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMemberInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMemberInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionMemberInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionMemberInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionMemberInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMemberInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionMemberInfo
+     */
+    metadataToken?: number;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionMemberTypes {
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_191 = 191
+}
+
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionMethodAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_5 = 5,
+    NUMBER_6 = 6,
+    NUMBER_7 = 7,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024,
+    NUMBER_2048 = 2048,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_32768 = 32768,
+    NUMBER_53248 = 53248
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionMethodBase
+ */
+export interface SystemReflectionMethodBase {
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionMethodBase
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionMethodBase
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodBase
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodBase
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionMethodBase
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionMethodBase
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionMethodBase
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {SystemReflectionMethodAttributes}
+     * @memberof SystemReflectionMethodBase
+     */
+    attributes?: SystemReflectionMethodAttributes;
+    /**
+     * 
+     * @type {SystemReflectionMethodImplAttributes}
+     * @memberof SystemReflectionMethodBase
+     */
+    methodImplementationFlags?: SystemReflectionMethodImplAttributes;
+    /**
+     * 
+     * @type {SystemReflectionCallingConventions}
+     * @memberof SystemReflectionMethodBase
+     */
+    callingConvention?: SystemReflectionCallingConventions;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isAbstract?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isConstructor?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFinal?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isHideBySig?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isStatic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isVirtual?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFamily?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isPrivate?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isConstructedGenericMethod?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isGenericMethod?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isGenericMethodDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    containsGenericParameters?: boolean;
+    /**
+     * 
+     * @type {SystemRuntimeMethodHandle}
+     * @memberof SystemReflectionMethodBase
+     */
+    methodHandle?: SystemRuntimeMethodHandle;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSecurityCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSecurityTransparent?: boolean;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionMethodImplAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_512 = 512,
+    NUMBER_4096 = 4096,
+    NUMBER_65535 = 65535
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionMethodInfo
+ */
+export interface SystemReflectionMethodInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionMethodInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionMethodInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionMethodInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionMethodInfo
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {SystemReflectionMethodAttributes}
+     * @memberof SystemReflectionMethodInfo
+     */
+    attributes?: SystemReflectionMethodAttributes;
+    /**
+     * 
+     * @type {SystemReflectionMethodImplAttributes}
+     * @memberof SystemReflectionMethodInfo
+     */
+    methodImplementationFlags?: SystemReflectionMethodImplAttributes;
+    /**
+     * 
+     * @type {SystemReflectionCallingConventions}
+     * @memberof SystemReflectionMethodInfo
+     */
+    callingConvention?: SystemReflectionCallingConventions;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isAbstract?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isConstructor?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFinal?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isHideBySig?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isStatic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isVirtual?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFamily?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isPrivate?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isConstructedGenericMethod?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isGenericMethod?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isGenericMethodDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    containsGenericParameters?: boolean;
+    /**
+     * 
+     * @type {SystemRuntimeMethodHandle}
+     * @memberof SystemReflectionMethodInfo
+     */
+    methodHandle?: SystemRuntimeMethodHandle;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionMethodInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {SystemReflectionParameterInfo}
+     * @memberof SystemReflectionMethodInfo
+     */
+    returnParameter?: SystemReflectionParameterInfo;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodInfo
+     */
+    returnType?: SystemType;
+    /**
+     * 
+     * @type {object}
+     * @memberof SystemReflectionMethodInfo
+     */
+    returnTypeCustomAttributes?: object;
+}
+/**
+ * 
+ * @export
+ * @interface SystemReflectionModule
+ */
+export interface SystemReflectionModule {
+    /**
+     * 
+     * @type {SystemReflectionAssembly}
+     * @memberof SystemReflectionModule
+     */
+    assembly?: SystemReflectionAssembly;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    fullyQualifiedName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionModule
+     */
+    mdStreamVersion?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    moduleVersionId?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    scopeName?: string | null;
+    /**
+     * 
+     * @type {SystemModuleHandle}
+     * @memberof SystemReflectionModule
+     */
+    moduleHandle?: SystemModuleHandle;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionModule
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionModule
+     */
+    metadataToken?: number;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionParameterAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_32768 = 32768,
+    NUMBER_61440 = 61440
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionParameterInfo
+ */
+export interface SystemReflectionParameterInfo {
+    /**
+     * 
+     * @type {SystemReflectionParameterAttributes}
+     * @memberof SystemReflectionParameterInfo
+     */
+    attributes?: SystemReflectionParameterAttributes;
+    /**
+     * 
+     * @type {SystemReflectionMemberInfo}
+     * @memberof SystemReflectionParameterInfo
+     */
+    member?: SystemReflectionMemberInfo;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionParameterInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionParameterInfo
+     */
+    parameterType?: SystemType;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionParameterInfo
+     */
+    position?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isIn?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isLcid?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isOptional?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isOut?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isRetval?: boolean;
+    /**
+     * 
+     * @type {any}
+     * @memberof SystemReflectionParameterInfo
+     */
+    defaultValue?: any | null;
+    /**
+     * 
+     * @type {any}
+     * @memberof SystemReflectionParameterInfo
+     */
+    rawDefaultValue?: any | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    hasDefaultValue?: boolean;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionParameterInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionParameterInfo
+     */
+    metadataToken?: number;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionPropertyAttributes {
+    NUMBER_0 = 0,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_32768 = 32768,
+    NUMBER_62464 = 62464
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionPropertyInfo
+ */
+export interface SystemReflectionPropertyInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    propertyType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionPropertyAttributes}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    attributes?: SystemReflectionPropertyAttributes;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    canRead?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    canWrite?: boolean;
+    /**
+     * 
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    getMethod?: SystemReflectionMethodInfo;
+    /**
+     * 
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    setMethod?: SystemReflectionMethodInfo;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemReflectionTypeAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_5 = 5,
+    NUMBER_6 = 6,
+    NUMBER_7 = 7,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_24 = 24,
+    NUMBER_32 = 32,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_1024 = 1024,
+    NUMBER_2048 = 2048,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_65536 = 65536,
+    NUMBER_131072 = 131072,
+    NUMBER_196608 = 196608,
+    NUMBER_262144 = 262144,
+    NUMBER_264192 = 264192,
+    NUMBER_1048576 = 1048576,
+    NUMBER_12582912 = 12582912
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemReflectionTypeInfo
+ */
+export interface SystemReflectionTypeInfo {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionTypeInfo
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isInterface?: boolean;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionTypeInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    namespace?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    assemblyQualifiedName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    fullName?: string | null;
+    /**
+     * 
+     * @type {SystemReflectionAssembly}
+     * @memberof SystemReflectionTypeInfo
+     */
+    assembly?: SystemReflectionAssembly;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionTypeInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNested?: boolean;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionMethodBase}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaringMethod?: SystemReflectionMethodBase;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    underlyingSystemType?: SystemType;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isTypeDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isArray?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isByRef?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isPointer?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isConstructedGenericType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericParameter?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericTypeParameter?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericMethodParameter?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericTypeDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSZArray?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isVariableBoundArray?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isByRefLike?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    hasElementType?: boolean;
+    /**
+     * 
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericTypeArguments?: Array<SystemType> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericParameterPosition?: number;
+    /**
+     * 
+     * @type {SystemReflectionGenericParameterAttributes}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericParameterAttributes?: SystemReflectionGenericParameterAttributes;
+    /**
+     * 
+     * @type {SystemReflectionTypeAttributes}
+     * @memberof SystemReflectionTypeInfo
+     */
+    attributes?: SystemReflectionTypeAttributes;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAbstract?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isImport?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSealed?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedFamANDAssem?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedFamily?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedFamORAssem?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedPrivate?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNotPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAutoLayout?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isExplicitLayout?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isLayoutSequential?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAnsiClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAutoClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isUnicodeClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isCOMObject?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isContextful?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isEnum?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isMarshalByRef?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isPrimitive?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isValueType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSignatureType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     * 
+     * @type {SystemRuntimeInteropServicesStructLayoutAttribute}
+     * @memberof SystemReflectionTypeInfo
+     */
+    structLayoutAttribute?: SystemRuntimeInteropServicesStructLayoutAttribute;
+    /**
+     * 
+     * @type {SystemReflectionConstructorInfo}
+     * @memberof SystemReflectionTypeInfo
+     */
+    typeInitializer?: SystemReflectionConstructorInfo;
+    /**
+     * 
+     * @type {SystemRuntimeTypeHandle}
+     * @memberof SystemReflectionTypeInfo
+     */
+    typeHandle?: SystemRuntimeTypeHandle;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    guid?: string;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    baseType?: SystemType;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSerializable?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    containsGenericParameters?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isVisible?: boolean;
+    /**
+     * 
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericTypeParameters?: Array<SystemType> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionConstructorInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredConstructors?: Array<SystemReflectionConstructorInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionEventInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredEvents?: Array<SystemReflectionEventInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionFieldInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredFields?: Array<SystemReflectionFieldInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionMemberInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredMembers?: Array<SystemReflectionMemberInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionMethodInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredMethods?: Array<SystemReflectionMethodInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionTypeInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredNestedTypes?: Array<SystemReflectionTypeInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionPropertyInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredProperties?: Array<SystemReflectionPropertyInfo> | null;
+    /**
+     * 
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    implementedInterfaces?: Array<SystemType> | null;
+}
+/**
+ * 
+ * @export
+ * @interface SystemRuntimeFieldHandle
+ */
+export interface SystemRuntimeFieldHandle {
+    /**
+     * 
+     * @type {object}
+     * @memberof SystemRuntimeFieldHandle
+     */
+    value?: object;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemRuntimeInteropServicesLayoutKind {
+    NUMBER_0 = 0,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemRuntimeInteropServicesStructLayoutAttribute
+ */
+export interface SystemRuntimeInteropServicesStructLayoutAttribute {
+    /**
+     * 
+     * @type {any}
+     * @memberof SystemRuntimeInteropServicesStructLayoutAttribute
+     */
+    typeId?: any | null;
+    /**
+     * 
+     * @type {SystemRuntimeInteropServicesLayoutKind}
+     * @memberof SystemRuntimeInteropServicesStructLayoutAttribute
+     */
+    value?: SystemRuntimeInteropServicesLayoutKind;
+}
+/**
+ * 
+ * @export
+ * @interface SystemRuntimeMethodHandle
+ */
+export interface SystemRuntimeMethodHandle {
+    /**
+     * 
+     * @type {object}
+     * @memberof SystemRuntimeMethodHandle
+     */
+    value?: object;
+}
+/**
+ * 
+ * @export
+ * @interface SystemRuntimeTypeHandle
+ */
+export interface SystemRuntimeTypeHandle {
+    /**
+     * 
+     * @type {object}
+     * @memberof SystemRuntimeTypeHandle
+     */
+    value?: object;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum SystemSecuritySecurityRuleSet {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2
+}
+
+/**
+ * 
+ * @export
+ * @interface SystemType
+ */
+export interface SystemType {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemType
+     */
+    name?: string | null;
+    /**
+     * 
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemType
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isCollectible?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemType
+     */
+    metadataToken?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isInterface?: boolean;
+    /**
+     * 
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemType
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemType
+     */
+    namespace?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemType
+     */
+    assemblyQualifiedName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemType
+     */
+    fullName?: string | null;
+    /**
+     * 
+     * @type {SystemReflectionAssembly}
+     * @memberof SystemType
+     */
+    assembly?: SystemReflectionAssembly;
+    /**
+     * 
+     * @type {SystemReflectionModule}
+     * @memberof SystemType
+     */
+    module?: SystemReflectionModule;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNested?: boolean;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    declaringType?: SystemType;
+    /**
+     * 
+     * @type {SystemReflectionMethodBase}
+     * @memberof SystemType
+     */
+    declaringMethod?: SystemReflectionMethodBase;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    reflectedType?: SystemType;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    underlyingSystemType?: SystemType;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isTypeDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isArray?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isByRef?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isPointer?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isConstructedGenericType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericParameter?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericTypeParameter?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericMethodParameter?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericTypeDefinition?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSZArray?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isVariableBoundArray?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isByRefLike?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    hasElementType?: boolean;
+    /**
+     * 
+     * @type {Array<SystemType>}
+     * @memberof SystemType
+     */
+    genericTypeArguments?: Array<SystemType> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemType
+     */
+    genericParameterPosition?: number;
+    /**
+     * 
+     * @type {SystemReflectionGenericParameterAttributes}
+     * @memberof SystemType
+     */
+    genericParameterAttributes?: SystemReflectionGenericParameterAttributes;
+    /**
+     * 
+     * @type {SystemReflectionTypeAttributes}
+     * @memberof SystemType
+     */
+    attributes?: SystemReflectionTypeAttributes;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAbstract?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isImport?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSealed?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSpecialName?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedAssembly?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedFamANDAssem?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedFamily?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedFamORAssem?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedPrivate?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNotPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isPublic?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAutoLayout?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isExplicitLayout?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isLayoutSequential?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAnsiClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAutoClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isUnicodeClass?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isCOMObject?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isContextful?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isEnum?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isMarshalByRef?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isPrimitive?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isValueType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSignatureType?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSecurityCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     * 
+     * @type {SystemRuntimeInteropServicesStructLayoutAttribute}
+     * @memberof SystemType
+     */
+    structLayoutAttribute?: SystemRuntimeInteropServicesStructLayoutAttribute;
+    /**
+     * 
+     * @type {SystemReflectionConstructorInfo}
+     * @memberof SystemType
+     */
+    typeInitializer?: SystemReflectionConstructorInfo;
+    /**
+     * 
+     * @type {SystemRuntimeTypeHandle}
+     * @memberof SystemType
+     */
+    typeHandle?: SystemRuntimeTypeHandle;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemType
+     */
+    guid?: string;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    baseType?: SystemType;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSerializable?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    containsGenericParameters?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isVisible?: boolean;
+}
+/**
+ * 
+ * @export
  * @interface VLOBOARDSAreasAuthConfirmEmailInputModel
  */
 export interface VLOBOARDSAreasAuthConfirmEmailInputModel {
@@ -78,6 +2740,12 @@ export interface VLOBOARDSAreasAuthConfirmEmailInputModel {
      * @memberof VLOBOARDSAreasAuthConfirmEmailInputModel
      */
     code?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthConfirmEmailInputModel
+     */
+    captchaResponse?: string | null;
 }
 /**
  * 
@@ -110,6 +2778,12 @@ export interface VLOBOARDSAreasAuthForgotPasswordInputModel {
      * @memberof VLOBOARDSAreasAuthForgotPasswordInputModel
      */
     email: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthForgotPasswordInputModel
+     */
+    captchaResponse: string;
 }
 /**
  * 
@@ -135,6 +2809,12 @@ export interface VLOBOARDSAreasAuthLogin2FAInputModel {
      * @memberof VLOBOARDSAreasAuthLogin2FAInputModel
      */
     rememberMe?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthLogin2FAInputModel
+     */
+    captchaResponse: string;
 }
 /**
  * 
@@ -147,7 +2827,7 @@ export interface VLOBOARDSAreasAuthLoginInputModel {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthLoginInputModel
      */
-    username: string;
+    usernameOrEmail: string;
     /**
      * 
      * @type {string}
@@ -204,56 +2884,114 @@ export interface VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel {
      * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel
      */
     recoveryCode: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel
+     */
+    captchaResponse: string;
 }
 /**
  * 
  * @export
- * @interface VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
+ * @interface VLOBOARDSAreasAuthManageChangePasswordInputModel
  */
-export interface VLOBOARDSAreasAuthLoginWithRecoveryCodeResult {
+export interface VLOBOARDSAreasAuthManageChangePasswordInputModel {
     /**
      * 
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
+     * @memberof VLOBOARDSAreasAuthManageChangePasswordInputModel
      */
-    message?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
-     */
-    redirect?: boolean;
+    oldPassword: string;
     /**
      * 
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
+     * @memberof VLOBOARDSAreasAuthManageChangePasswordInputModel
      */
-    returnUrl?: string | null;
+    newPassword: string;
 }
 /**
  * 
  * @export
- * @interface VLOBOARDSAreasAuthLogoutResult
+ * @interface VLOBOARDSAreasAuthManageConfirmEmailChangeInput
  */
-export interface VLOBOARDSAreasAuthLogoutResult {
+export interface VLOBOARDSAreasAuthManageConfirmEmailChangeInput {
     /**
      * 
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLogoutResult
+     * @memberof VLOBOARDSAreasAuthManageConfirmEmailChangeInput
      */
-    message?: string | null;
-    /**
-     * 
-     * @type {boolean}
-     * @memberof VLOBOARDSAreasAuthLogoutResult
-     */
-    redirect?: boolean;
+    code: string;
     /**
      * 
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLogoutResult
+     * @memberof VLOBOARDSAreasAuthManageConfirmEmailChangeInput
      */
-    returnUrl?: string | null;
+    captchaResponse: string;
+}
+/**
+ * 
+ * @export
+ * @interface VLOBOARDSAreasAuthManageExternalLoginInfo
+ */
+export interface VLOBOARDSAreasAuthManageExternalLoginInfo {
+    /**
+     * 
+     * @type {Array<MicrosoftAspNetCoreIdentityUserLoginInfo>}
+     * @memberof VLOBOARDSAreasAuthManageExternalLoginInfo
+     */
+    currentLogins?: Array<MicrosoftAspNetCoreIdentityUserLoginInfo> | null;
+    /**
+     * 
+     * @type {Array<MicrosoftAspNetCoreAuthenticationAuthenticationScheme>}
+     * @memberof VLOBOARDSAreasAuthManageExternalLoginInfo
+     */
+    availableLogins?: Array<MicrosoftAspNetCoreAuthenticationAuthenticationScheme> | null;
+}
+/**
+ * 
+ * @export
+ * @interface VLOBOARDSAreasAuthManageGdprDeleteInputModel
+ */
+export interface VLOBOARDSAreasAuthManageGdprDeleteInputModel {
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageGdprDeleteInputModel
+     */
+    password?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface VLOBOARDSAreasAuthManageRequestEmailChangeInput
+ */
+export interface VLOBOARDSAreasAuthManageRequestEmailChangeInput {
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageRequestEmailChangeInput
+     */
+    email: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageRequestEmailChangeInput
+     */
+    captchaResponse: string;
+}
+/**
+ * 
+ * @export
+ * @interface VLOBOARDSAreasAuthManageResetPasswordInputModel
+ */
+export interface VLOBOARDSAreasAuthManageResetPasswordInputModel {
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageResetPasswordInputModel
+     */
+    newPassword: string;
 }
 /**
  * 
@@ -311,6 +3049,12 @@ export interface VLOBOARDSAreasAuthResendEmailConfirmationInputModel {
      * @memberof VLOBOARDSAreasAuthResendEmailConfirmationInputModel
      */
     email: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthResendEmailConfirmationInputModel
+     */
+    captchaResponse: string;
 }
 /**
  * 
@@ -395,16 +3139,121 @@ export interface VLOBOARDSAreasAuthReturnUrlInfo {
 /**
  * 
  * @export
- * @interface VLOBOARDSAreasAuthReturnUrlInfoInputModel
+ * @interface VLOBOARDSAreasAuthReturnUrlInputModel
  */
-export interface VLOBOARDSAreasAuthReturnUrlInfoInputModel {
+export interface VLOBOARDSAreasAuthReturnUrlInputModel {
     /**
      * 
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthReturnUrlInfoInputModel
+     * @memberof VLOBOARDSAreasAuthReturnUrlInputModel
      */
     returnUrl: string;
 }
+
+/**
+ * ChangePasswordApi - axios parameter creator
+ * @export
+ */
+export const ChangePasswordApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Changes the password (changes as in there was a different password previously)
+         * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangePasswordPost: async (vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ChangePassword`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthManageChangePasswordInputModel, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ChangePasswordApi - functional programming interface
+ * @export
+ */
+export const ChangePasswordApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ChangePasswordApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Changes the password (changes as in there was a different password previously)
+         * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ChangePasswordApi - factory interface
+ * @export
+ */
+export const ChangePasswordApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ChangePasswordApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Changes the password (changes as in there was a different password previously)
+         * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ChangePasswordApi - object-oriented interface
+ * @export
+ * @class ChangePasswordApi
+ * @extends {BaseAPI}
+ */
+export class ChangePasswordApi extends BaseAPI {
+    /**
+     * 
+     * @summary Changes the password (changes as in there was a different password previously)
+     * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ChangePasswordApi
+     */
+    public apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any) {
+        return ChangePasswordApiFp(this.configuration).apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
 
 /**
  * ConfirmEmailApi - axios parameter creator
@@ -512,6 +3361,270 @@ export class ConfirmEmailApi extends BaseAPI {
 
 
 /**
+ * Disable2FAApi - axios parameter creator
+ * @export
+ */
+export const Disable2FAApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Disables 2FA :c
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthDisable2FAPost: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Disable2FA`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * Disable2FAApi - functional programming interface
+ * @export
+ */
+export const Disable2FAApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = Disable2FAApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Disables 2FA :c
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthDisable2FAPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthDisable2FAPost(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * Disable2FAApi - factory interface
+ * @export
+ */
+export const Disable2FAApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = Disable2FAApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Disables 2FA :c
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthDisable2FAPost(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthDisable2FAPost(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * Disable2FAApi - object-oriented interface
+ * @export
+ * @class Disable2FAApi
+ * @extends {BaseAPI}
+ */
+export class Disable2FAApi extends BaseAPI {
+    /**
+     * 
+     * @summary Disables 2FA :c
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Disable2FAApi
+     */
+    public apiAuthDisable2FAPost(options?: any) {
+        return Disable2FAApiFp(this.configuration).apiAuthDisable2FAPost(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * EnableTotp2FAApi - axios parameter creator
+ * @export
+ */
+export const EnableTotp2FAApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthEnableTotp2FAGet: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/EnableTotp2FA`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Enables 2FA TOTP based on the previous uri request
+         * @param {string} [code] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthEnableTotp2FAPost: async (code?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/EnableTotp2FA`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (code !== undefined) {
+                localVarQueryParameter['code'] = code;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * EnableTotp2FAApi - functional programming interface
+ * @export
+ */
+export const EnableTotp2FAApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = EnableTotp2FAApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthEnableTotp2FAGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthEnableTotp2FAGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Enables 2FA TOTP based on the previous uri request
+         * @param {string} [code] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthEnableTotp2FAPost(code?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthEnableTotp2FAPost(code, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * EnableTotp2FAApi - factory interface
+ * @export
+ */
+export const EnableTotp2FAApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = EnableTotp2FAApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthEnableTotp2FAGet(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthEnableTotp2FAGet(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Enables 2FA TOTP based on the previous uri request
+         * @param {string} [code] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthEnableTotp2FAPost(code?: string, options?: any): AxiosPromise<Array<string>> {
+            return localVarFp.apiAuthEnableTotp2FAPost(code, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * EnableTotp2FAApi - object-oriented interface
+ * @export
+ * @class EnableTotp2FAApi
+ * @extends {BaseAPI}
+ */
+export class EnableTotp2FAApi extends BaseAPI {
+    /**
+     * 
+     * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EnableTotp2FAApi
+     */
+    public apiAuthEnableTotp2FAGet(options?: any) {
+        return EnableTotp2FAApiFp(this.configuration).apiAuthEnableTotp2FAGet(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Enables 2FA TOTP based on the previous uri request
+     * @param {string} [code] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EnableTotp2FAApi
+     */
+    public apiAuthEnableTotp2FAPost(code?: string, options?: any) {
+        return EnableTotp2FAApiFp(this.configuration).apiAuthEnableTotp2FAPost(code, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
  * ExternalLoginApi - axios parameter creator
  * @export
  */
@@ -521,11 +3634,12 @@ export const ExternalLoginApiAxiosParamCreator = function (configuration?: Confi
          * 
          * @summary Callback executed when external auth provider redirects back to app
          * @param {string} [returnUrl] 
+         * @param {boolean} [rememberMe] 
          * @param {string} [remoteError] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginCallbackGet: async (returnUrl?: string, remoteError?: string, options: any = {}): Promise<RequestArgs> => {
+        apiAuthExternalLoginCallbackGet: async (returnUrl?: string, rememberMe?: boolean, remoteError?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/Auth/ExternalLogin/Callback`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -540,6 +3654,10 @@ export const ExternalLoginApiAxiosParamCreator = function (configuration?: Confi
 
             if (returnUrl !== undefined) {
                 localVarQueryParameter['returnUrl'] = returnUrl;
+            }
+
+            if (rememberMe !== undefined) {
+                localVarQueryParameter['rememberMe'] = rememberMe;
             }
 
             if (remoteError !== undefined) {
@@ -560,12 +3678,11 @@ export const ExternalLoginApiAxiosParamCreator = function (configuration?: Confi
         /**
          * 
          * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-         * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginCreateAccountPost: async (returnUrl?: string, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options: any = {}): Promise<RequestArgs> => {
+        apiAuthExternalLoginCreateAccountPost: async (vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/Auth/ExternalLogin/CreateAccount`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -577,10 +3694,6 @@ export const ExternalLoginApiAxiosParamCreator = function (configuration?: Confi
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (returnUrl !== undefined) {
-                localVarQueryParameter['returnUrl'] = returnUrl;
-            }
 
 
     
@@ -600,11 +3713,12 @@ export const ExternalLoginApiAxiosParamCreator = function (configuration?: Confi
          * 
          * @summary Challenges user using external provider
          * @param {string} [provider] 
+         * @param {boolean} [rememberMe] 
          * @param {string} [returnUrl] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginGet: async (provider?: string, returnUrl?: string, options: any = {}): Promise<RequestArgs> => {
+        apiAuthExternalLoginGet: async (provider?: string, rememberMe?: boolean, returnUrl?: string, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/Auth/ExternalLogin`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -619,6 +3733,10 @@ export const ExternalLoginApiAxiosParamCreator = function (configuration?: Confi
 
             if (provider !== undefined) {
                 localVarQueryParameter['provider'] = provider;
+            }
+
+            if (rememberMe !== undefined) {
+                localVarQueryParameter['rememberMe'] = rememberMe;
             }
 
             if (returnUrl !== undefined) {
@@ -650,36 +3768,37 @@ export const ExternalLoginApiFp = function(configuration?: Configuration) {
          * 
          * @summary Callback executed when external auth provider redirects back to app
          * @param {string} [returnUrl] 
+         * @param {boolean} [rememberMe] 
          * @param {string} [remoteError] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthExternalLoginCallbackGet(returnUrl?: string, remoteError?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginCallbackGet(returnUrl, remoteError, options);
+        async apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginCallbackGet(returnUrl, rememberMe, remoteError, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-         * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthExternalLoginCreateAccountPost(returnUrl?: string, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginCreateAccountPost(returnUrl, vLOBOARDSAreasAuthExternalLoginRegisterInputModel, options);
+        async apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
          * 
          * @summary Challenges user using external provider
          * @param {string} [provider] 
+         * @param {boolean} [rememberMe] 
          * @param {string} [returnUrl] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthExternalLoginGet(provider?: string, returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginGet(provider, returnUrl, options);
+        async apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginGet(provider, rememberMe, returnUrl, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -696,34 +3815,35 @@ export const ExternalLoginApiFactory = function (configuration?: Configuration, 
          * 
          * @summary Callback executed when external auth provider redirects back to app
          * @param {string} [returnUrl] 
+         * @param {boolean} [rememberMe] 
          * @param {string} [remoteError] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginCallbackGet(returnUrl?: string, remoteError?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAuthExternalLoginCallbackGet(returnUrl, remoteError, options).then((request) => request(axios, basePath));
+        apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthExternalLoginCallbackGet(returnUrl, rememberMe, remoteError, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-         * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginCreateAccountPost(returnUrl?: string, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAuthExternalLoginCreateAccountPost(returnUrl, vLOBOARDSAreasAuthExternalLoginRegisterInputModel, options).then((request) => request(axios, basePath));
+        apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Challenges user using external provider
          * @param {string} [provider] 
+         * @param {boolean} [rememberMe] 
          * @param {string} [returnUrl] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginGet(provider?: string, returnUrl?: string, options?: any): AxiosPromise<void> {
-            return localVarFp.apiAuthExternalLoginGet(provider, returnUrl, options).then((request) => request(axios, basePath));
+        apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthExternalLoginGet(provider, rememberMe, returnUrl, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -739,39 +3859,584 @@ export class ExternalLoginApi extends BaseAPI {
      * 
      * @summary Callback executed when external auth provider redirects back to app
      * @param {string} [returnUrl] 
+     * @param {boolean} [rememberMe] 
      * @param {string} [remoteError] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    public apiAuthExternalLoginCallbackGet(returnUrl?: string, remoteError?: string, options?: any) {
-        return ExternalLoginApiFp(this.configuration).apiAuthExternalLoginCallbackGet(returnUrl, remoteError, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any) {
+        return ExternalLoginApiFp(this.configuration).apiAuthExternalLoginCallbackGet(returnUrl, rememberMe, remoteError, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-     * @param {string} [returnUrl] 
      * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    public apiAuthExternalLoginCreateAccountPost(returnUrl?: string, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any) {
-        return ExternalLoginApiFp(this.configuration).apiAuthExternalLoginCreateAccountPost(returnUrl, vLOBOARDSAreasAuthExternalLoginRegisterInputModel, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any) {
+        return ExternalLoginApiFp(this.configuration).apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Challenges user using external provider
      * @param {string} [provider] 
+     * @param {boolean} [rememberMe] 
      * @param {string} [returnUrl] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    public apiAuthExternalLoginGet(provider?: string, returnUrl?: string, options?: any) {
-        return ExternalLoginApiFp(this.configuration).apiAuthExternalLoginGet(provider, returnUrl, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any) {
+        return ExternalLoginApiFp(this.configuration).apiAuthExternalLoginGet(provider, rememberMe, returnUrl, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ExternalLoginsManagementApi - axios parameter creator
+ * @export
+ */
+export const ExternalLoginsManagementApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Handles the information returned by the external authentication provider
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementCallbackGet: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ExternalLoginsManagement/Callback`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Deletes an external login provider
+         * @param {string} [loginProvider] 
+         * @param {string} [providerKey] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementDelete: async (loginProvider?: string, providerKey?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ExternalLoginsManagement`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (loginProvider !== undefined) {
+                localVarQueryParameter['loginProvider'] = loginProvider;
+            }
+
+            if (providerKey !== undefined) {
+                localVarQueryParameter['providerKey'] = providerKey;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Returns all the available external login providers as well as the currently used ones
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementGet: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ExternalLoginsManagement`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Requests a new challenge for adding external auth
+         * @param {string} [provider] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementGetChallengePost: async (provider?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ExternalLoginsManagement/GetChallenge`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (provider !== undefined) {
+                localVarQueryParameter['provider'] = provider;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ExternalLoginsManagementApi - functional programming interface
+ * @export
+ */
+export const ExternalLoginsManagementApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ExternalLoginsManagementApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Handles the information returned by the external authentication provider
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginsManagementCallbackGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Deletes an external login provider
+         * @param {string} [loginProvider] 
+         * @param {string} [providerKey] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginsManagementDelete(loginProvider, providerKey, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Returns all the available external login providers as well as the currently used ones
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthExternalLoginsManagementGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageExternalLoginInfo>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginsManagementGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Requests a new challenge for adding external auth
+         * @param {string} [provider] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthExternalLoginsManagementGetChallengePost(provider, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ExternalLoginsManagementApi - factory interface
+ * @export
+ */
+export const ExternalLoginsManagementApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ExternalLoginsManagementApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Handles the information returned by the external authentication provider
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementCallbackGet(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthExternalLoginsManagementCallbackGet(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Deletes an external login provider
+         * @param {string} [loginProvider] 
+         * @param {string} [providerKey] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthExternalLoginsManagementDelete(loginProvider, providerKey, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Returns all the available external login providers as well as the currently used ones
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementGet(options?: any): AxiosPromise<VLOBOARDSAreasAuthManageExternalLoginInfo> {
+            return localVarFp.apiAuthExternalLoginsManagementGet(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Requests a new challenge for adding external auth
+         * @param {string} [provider] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthExternalLoginsManagementGetChallengePost(provider, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ExternalLoginsManagementApi - object-oriented interface
+ * @export
+ * @class ExternalLoginsManagementApi
+ * @extends {BaseAPI}
+ */
+export class ExternalLoginsManagementApi extends BaseAPI {
+    /**
+     * 
+     * @summary Handles the information returned by the external authentication provider
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    public apiAuthExternalLoginsManagementCallbackGet(options?: any) {
+        return ExternalLoginsManagementApiFp(this.configuration).apiAuthExternalLoginsManagementCallbackGet(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Deletes an external login provider
+     * @param {string} [loginProvider] 
+     * @param {string} [providerKey] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    public apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any) {
+        return ExternalLoginsManagementApiFp(this.configuration).apiAuthExternalLoginsManagementDelete(loginProvider, providerKey, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Returns all the available external login providers as well as the currently used ones
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    public apiAuthExternalLoginsManagementGet(options?: any) {
+        return ExternalLoginsManagementApiFp(this.configuration).apiAuthExternalLoginsManagementGet(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Requests a new challenge for adding external auth
+     * @param {string} [provider] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    public apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any) {
+        return ExternalLoginsManagementApiFp(this.configuration).apiAuthExternalLoginsManagementGetChallengePost(provider, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * FilesApi - axios parameter creator
+ * @export
+ */
+export const FilesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} [id] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiFilesFilesFileDelete: async (id?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Files/Files/File`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = id;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [id] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiFilesFilesFileGet: async (id?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Files/Files/File`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (id !== undefined) {
+                localVarQueryParameter['id'] = id;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {boolean} [isPublic] 
+         * @param {any} [file] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiFilesFilesFilePost: async (isPublic?: boolean, file?: any, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Files/Files/File`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
+
+            if (isPublic !== undefined) {
+                localVarQueryParameter['isPublic'] = isPublic;
+            }
+
+
+            if (file !== undefined) { 
+                localVarFormParams.append('file', file as any);
+            }
+    
+    
+            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = localVarFormParams;
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * FilesApi - functional programming interface
+ * @export
+ */
+export const FilesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = FilesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [id] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiFilesFilesFileDelete(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiFilesFilesFileDelete(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [id] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiFilesFilesFileGet(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiFilesFilesFileGet(id, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {boolean} [isPublic] 
+         * @param {any} [file] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiFilesFilesFilePost(isPublic, file, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * FilesApi - factory interface
+ * @export
+ */
+export const FilesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = FilesApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [id] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiFilesFilesFileDelete(id?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiFilesFilesFileDelete(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [id] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiFilesFilesFileGet(id?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiFilesFilesFileGet(id, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {boolean} [isPublic] 
+         * @param {any} [file] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): AxiosPromise<void> {
+            return localVarFp.apiFilesFilesFilePost(isPublic, file, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * FilesApi - object-oriented interface
+ * @export
+ * @class FilesApi
+ * @extends {BaseAPI}
+ */
+export class FilesApi extends BaseAPI {
+    /**
+     * 
+     * @param {string} [id] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FilesApi
+     */
+    public apiFilesFilesFileDelete(id?: string, options?: any) {
+        return FilesApiFp(this.configuration).apiFilesFilesFileDelete(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [id] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FilesApi
+     */
+    public apiFilesFilesFileGet(id?: string, options?: any) {
+        return FilesApiFp(this.configuration).apiFilesFilesFileGet(id, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {boolean} [isPublic] 
+     * @param {any} [file] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FilesApi
+     */
+    public apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any) {
+        return FilesApiFp(this.configuration).apiFilesFilesFilePost(isPublic, file, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -877,6 +4542,209 @@ export class ForgotPasswordApi extends BaseAPI {
      */
     public apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any) {
         return ForgotPasswordApiFp(this.configuration).apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * GdprDeleteUserApi - axios parameter creator
+ * @export
+ */
+export const GdprDeleteUserApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+         * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthGdprDeleteUserPost: async (vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/GdprDeleteUser`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthManageGdprDeleteInputModel, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GdprDeleteUserApi - functional programming interface
+ * @export
+ */
+export const GdprDeleteUserApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GdprDeleteUserApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+         * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GdprDeleteUserApi - factory interface
+ * @export
+ */
+export const GdprDeleteUserApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GdprDeleteUserApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+         * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GdprDeleteUserApi - object-oriented interface
+ * @export
+ * @class GdprDeleteUserApi
+ * @extends {BaseAPI}
+ */
+export class GdprDeleteUserApi extends BaseAPI {
+    /**
+     * 
+     * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+     * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GdprDeleteUserApi
+     */
+    public apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any) {
+        return GdprDeleteUserApiFp(this.configuration).apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * GenerateRecoveryCodesApi - axios parameter creator
+ * @export
+ */
+export const GenerateRecoveryCodesApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Generates recovery codes for use with TOTP
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthGenerateRecoveryCodesGet: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/GenerateRecoveryCodes`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * GenerateRecoveryCodesApi - functional programming interface
+ * @export
+ */
+export const GenerateRecoveryCodesApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = GenerateRecoveryCodesApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Generates recovery codes for use with TOTP
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthGenerateRecoveryCodesGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthGenerateRecoveryCodesGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * GenerateRecoveryCodesApi - factory interface
+ * @export
+ */
+export const GenerateRecoveryCodesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = GenerateRecoveryCodesApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Generates recovery codes for use with TOTP
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthGenerateRecoveryCodesGet(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthGenerateRecoveryCodesGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * GenerateRecoveryCodesApi - object-oriented interface
+ * @export
+ * @class GenerateRecoveryCodesApi
+ * @extends {BaseAPI}
+ */
+export class GenerateRecoveryCodesApi extends BaseAPI {
+    /**
+     * 
+     * @summary Generates recovery codes for use with TOTP
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GenerateRecoveryCodesApi
+     */
+    public apiAuthGenerateRecoveryCodesGet(options?: any) {
+        return GenerateRecoveryCodesApiFp(this.configuration).apiAuthGenerateRecoveryCodesGet(options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1170,7 +5038,7 @@ export class Login2FAApi extends BaseAPI {
 export const LoginWithRecoveryCodeApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Also sanitizes returnurl. Who could\'ve thought
+         * 
          * @summary Logins user using 2fa recovery code
          * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel] 
@@ -1219,14 +5087,14 @@ export const LoginWithRecoveryCodeApiFp = function(configuration?: Configuration
     const localVarAxiosParamCreator = LoginWithRecoveryCodeApiAxiosParamCreator(configuration)
     return {
         /**
-         * Also sanitizes returnurl. Who could\'ve thought
+         * 
          * @summary Logins user using 2fa recovery code
          * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthLoginWithRecoveryCodeResult>> {
+        async apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthLoginWithRecoveryCodePost(returnUrl, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1241,14 +5109,14 @@ export const LoginWithRecoveryCodeApiFactory = function (configuration?: Configu
     const localVarFp = LoginWithRecoveryCodeApiFp(configuration)
     return {
         /**
-         * Also sanitizes returnurl. Who could\'ve thought
+         * 
          * @summary Logins user using 2fa recovery code
          * @param {string} [returnUrl] 
          * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginWithRecoveryCodeResult> {
+        apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): AxiosPromise<void> {
             return localVarFp.apiAuthLoginWithRecoveryCodePost(returnUrl, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options).then((request) => request(axios, basePath));
         },
     };
@@ -1262,7 +5130,7 @@ export const LoginWithRecoveryCodeApiFactory = function (configuration?: Configu
  */
 export class LoginWithRecoveryCodeApi extends BaseAPI {
     /**
-     * Also sanitizes returnurl. Who could\'ve thought
+     * 
      * @summary Logins user using 2fa recovery code
      * @param {string} [returnUrl] 
      * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel] 
@@ -1283,7 +5151,7 @@ export class LoginWithRecoveryCodeApi extends BaseAPI {
 export const LogoutApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Will sanitize returnurl
+         * 
          * @summary Logs user out
          * @param {string} [returnUrl] 
          * @param {*} [options] Override http request option.
@@ -1328,13 +5196,13 @@ export const LogoutApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = LogoutApiAxiosParamCreator(configuration)
     return {
         /**
-         * Will sanitize returnurl
+         * 
          * @summary Logs user out
          * @param {string} [returnUrl] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthLogoutResult>> {
+        async apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthLogoutPost(returnUrl, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1349,13 +5217,13 @@ export const LogoutApiFactory = function (configuration?: Configuration, basePat
     const localVarFp = LogoutApiFp(configuration)
     return {
         /**
-         * Will sanitize returnurl
+         * 
          * @summary Logs user out
          * @param {string} [returnUrl] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthLogoutPost(returnUrl?: string, options?: any): AxiosPromise<VLOBOARDSAreasAuthLogoutResult> {
+        apiAuthLogoutPost(returnUrl?: string, options?: any): AxiosPromise<void> {
             return localVarFp.apiAuthLogoutPost(returnUrl, options).then((request) => request(axios, basePath));
         },
     };
@@ -1369,7 +5237,7 @@ export const LogoutApiFactory = function (configuration?: Configuration, basePat
  */
 export class LogoutApi extends BaseAPI {
     /**
-     * Will sanitize returnurl
+     * 
      * @summary Logs user out
      * @param {string} [returnUrl] 
      * @param {*} [options] Override http request option.
@@ -1383,6 +5251,234 @@ export class LogoutApi extends BaseAPI {
 
 
 /**
+ * ProfilePictureApi - axios parameter creator
+ * @export
+ */
+export const ProfilePictureApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfilePictureDelete: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ProfilePicture`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {string} [userId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfilePictureGet: async (userId?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ProfilePicture`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (userId !== undefined) {
+                localVarQueryParameter['userId'] = userId;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {any} picture 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfilePicturePost: async (picture: any, options: any = {}): Promise<RequestArgs> => {
+            // verify required parameter 'picture' is not null or undefined
+            assertParamExists('apiAuthProfilePicturePost', 'picture', picture)
+            const localVarPath = `/api/Auth/ProfilePicture`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+            const localVarFormParams = new ((configuration && configuration.formDataCtor) || FormData)();
+
+
+            if (picture !== undefined) { 
+                localVarFormParams.append('picture', picture as any);
+            }
+    
+    
+            localVarHeaderParameter['Content-Type'] = 'multipart/form-data';
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = localVarFormParams;
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ProfilePictureApi - functional programming interface
+ * @export
+ */
+export const ProfilePictureApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfilePictureApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthProfilePictureDelete(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthProfilePictureDelete(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [userId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthProfilePictureGet(userId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthProfilePictureGet(userId, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {any} picture 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthProfilePicturePost(picture: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthProfilePicturePost(picture, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfilePictureApi - factory interface
+ * @export
+ */
+export const ProfilePictureApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfilePictureApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfilePictureDelete(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthProfilePictureDelete(options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {string} [userId] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfilePictureGet(userId?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthProfilePictureGet(userId, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {any} picture 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfilePicturePost(picture: any, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthProfilePicturePost(picture, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ProfilePictureApi - object-oriented interface
+ * @export
+ * @class ProfilePictureApi
+ * @extends {BaseAPI}
+ */
+export class ProfilePictureApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilePictureApi
+     */
+    public apiAuthProfilePictureDelete(options?: any) {
+        return ProfilePictureApiFp(this.configuration).apiAuthProfilePictureDelete(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [userId] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilePictureApi
+     */
+    public apiAuthProfilePictureGet(userId?: string, options?: any) {
+        return ProfilePictureApiFp(this.configuration).apiAuthProfilePictureGet(userId, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {any} picture 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilePictureApi
+     */
+    public apiAuthProfilePicturePost(picture: any, options?: any) {
+        return ProfilePictureApiFp(this.configuration).apiAuthProfilePicturePost(picture, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
  * RegisterApi - axios parameter creator
  * @export
  */
@@ -1390,12 +5486,12 @@ export const RegisterApiAxiosParamCreator = function (configuration?: Configurat
     return {
         /**
          * 
-         * @param {string} [returnUrl] 
+         * @summary Registers user based on the provided input
          * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthRegisterPost: async (returnUrl?: string, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options: any = {}): Promise<RequestArgs> => {
+        apiAuthRegisterPost: async (vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/Auth/Register`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1407,10 +5503,6 @@ export const RegisterApiAxiosParamCreator = function (configuration?: Configurat
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-
-            if (returnUrl !== undefined) {
-                localVarQueryParameter['returnUrl'] = returnUrl;
-            }
 
 
     
@@ -1438,13 +5530,13 @@ export const RegisterApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {string} [returnUrl] 
+         * @summary Registers user based on the provided input
          * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthRegisterPost(returnUrl?: string, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthRegisterPost(returnUrl, vLOBOARDSAreasAuthRegisterInputModel, options);
+        async apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1459,13 +5551,13 @@ export const RegisterApiFactory = function (configuration?: Configuration, baseP
     return {
         /**
          * 
-         * @param {string} [returnUrl] 
+         * @summary Registers user based on the provided input
          * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthRegisterPost(returnUrl?: string, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthRegistrationResult> {
-            return localVarFp.apiAuthRegisterPost(returnUrl, vLOBOARDSAreasAuthRegisterInputModel, options).then((request) => request(axios, basePath));
+        apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthRegistrationResult> {
+            return localVarFp.apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1479,14 +5571,186 @@ export const RegisterApiFactory = function (configuration?: Configuration, baseP
 export class RegisterApi extends BaseAPI {
     /**
      * 
-     * @param {string} [returnUrl] 
+     * @summary Registers user based on the provided input
      * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    public apiAuthRegisterPost(returnUrl?: string, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any) {
-        return RegisterApiFp(this.configuration).apiAuthRegisterPost(returnUrl, vLOBOARDSAreasAuthRegisterInputModel, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any) {
+        return RegisterApiFp(this.configuration).apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * RequestEmailChangeApi - axios parameter creator
+ * @export
+ */
+export const RequestEmailChangeApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Creates a new email change request
+         * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthRequestEmailChangePost: async (vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/RequestEmailChange`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthManageRequestEmailChangeInput, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Handles the email change requested previously
+         * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthRequestEmailChangePut: async (vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/RequestEmailChange`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthManageConfirmEmailChangeInput, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * RequestEmailChangeApi - functional programming interface
+ * @export
+ */
+export const RequestEmailChangeApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = RequestEmailChangeApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Creates a new email change request
+         * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @summary Handles the email change requested previously
+         * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * RequestEmailChangeApi - factory interface
+ * @export
+ */
+export const RequestEmailChangeApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = RequestEmailChangeApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Creates a new email change request
+         * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @summary Handles the email change requested previously
+         * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * RequestEmailChangeApi - object-oriented interface
+ * @export
+ * @class RequestEmailChangeApi
+ * @extends {BaseAPI}
+ */
+export class RequestEmailChangeApi extends BaseAPI {
+    /**
+     * 
+     * @summary Creates a new email change request
+     * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestEmailChangeApi
+     */
+    public apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any) {
+        return RequestEmailChangeApiFp(this.configuration).apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Handles the email change requested previously
+     * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestEmailChangeApi
+     */
+    public apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any) {
+        return RequestEmailChangeApiFp(this.configuration).apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
@@ -1653,7 +5917,7 @@ export const ResetPasswordApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+        async apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -1674,7 +5938,7 @@ export const ResetPasswordApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): AxiosPromise<string> {
+        apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): AxiosPromise<void> {
             return localVarFp.apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel, options).then((request) => request(axios, basePath));
         },
     };
@@ -1702,6 +5966,100 @@ export class ResetPasswordApi extends BaseAPI {
 
 
 /**
+ * ResetTotpAuthenticatorApi - axios parameter creator
+ * @export
+ */
+export const ResetTotpAuthenticatorApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthResetTotpAuthenticatorPost: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ResetTotpAuthenticator`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ResetTotpAuthenticatorApi - functional programming interface
+ * @export
+ */
+export const ResetTotpAuthenticatorApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ResetTotpAuthenticatorApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthResetTotpAuthenticatorPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthResetTotpAuthenticatorPost(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ResetTotpAuthenticatorApi - factory interface
+ * @export
+ */
+export const ResetTotpAuthenticatorApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ResetTotpAuthenticatorApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthResetTotpAuthenticatorPost(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthResetTotpAuthenticatorPost(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ResetTotpAuthenticatorApi - object-oriented interface
+ * @export
+ * @class ResetTotpAuthenticatorApi
+ * @extends {BaseAPI}
+ */
+export class ResetTotpAuthenticatorApi extends BaseAPI {
+    /**
+     * 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ResetTotpAuthenticatorApi
+     */
+    public apiAuthResetTotpAuthenticatorPost(options?: any) {
+        return ResetTotpAuthenticatorApiFp(this.configuration).apiAuthResetTotpAuthenticatorPost(options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
  * ReturnUrlInfoApi - axios parameter creator
  * @export
  */
@@ -1710,11 +6068,11 @@ export const ReturnUrlInfoApiAxiosParamCreator = function (configuration?: Confi
         /**
          * Use every time you need to check whether to redirect to returnurl
          * @summary Returns information about client associated with returnurl
-         * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel] 
+         * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthReturnUrlInfoPost: async (vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel, options: any = {}): Promise<RequestArgs> => {
+        apiAuthReturnUrlInfoPost: async (vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/api/Auth/ReturnUrlInfo`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
@@ -1734,7 +6092,7 @@ export const ReturnUrlInfoApiAxiosParamCreator = function (configuration?: Confi
             setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthReturnUrlInfoInputModel, localVarRequestOptions, configuration)
+            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthReturnUrlInputModel, localVarRequestOptions, configuration)
 
             return {
                 url: toPathString(localVarUrlObj),
@@ -1754,12 +6112,12 @@ export const ReturnUrlInfoApiFp = function(configuration?: Configuration) {
         /**
          * Use every time you need to check whether to redirect to returnurl
          * @summary Returns information about client associated with returnurl
-         * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel] 
+         * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel, options);
+        async apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -1775,12 +6133,12 @@ export const ReturnUrlInfoApiFactory = function (configuration?: Configuration, 
         /**
          * Use every time you need to check whether to redirect to returnurl
          * @summary Returns information about client associated with returnurl
-         * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel] 
+         * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo> {
-            return localVarFp.apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel, options).then((request) => request(axios, basePath));
+        apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo> {
+            return localVarFp.apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1795,13 +6153,118 @@ export class ReturnUrlInfoApi extends BaseAPI {
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
-     * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel] 
+     * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ReturnUrlInfoApi
      */
-    public apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel, options?: any) {
-        return ReturnUrlInfoApiFp(this.configuration).apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any) {
+        return ReturnUrlInfoApiFp(this.configuration).apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * SetPasswordApi - axios parameter creator
+ * @export
+ */
+export const SetPasswordApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Adds a password (for users using only hardware/external authentication)
+         * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPost: async (vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/SetPassword`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthManageResetPasswordInputModel, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * SetPasswordApi - functional programming interface
+ * @export
+ */
+export const SetPasswordApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = SetPasswordApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Adds a password (for users using only hardware/external authentication)
+         * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * SetPasswordApi - factory interface
+ * @export
+ */
+export const SetPasswordApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = SetPasswordApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Adds a password (for users using only hardware/external authentication)
+         * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * SetPasswordApi - object-oriented interface
+ * @export
+ * @class SetPasswordApi
+ * @extends {BaseAPI}
+ */
+export class SetPasswordApi extends BaseAPI {
+    /**
+     * 
+     * @summary Adds a password (for users using only hardware/external authentication)
+     * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SetPasswordApi
+     */
+    public apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any) {
+        return SetPasswordApiFp(this.configuration).apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
