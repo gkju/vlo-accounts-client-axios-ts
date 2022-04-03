@@ -1,7 +1,7 @@
 {
   "name": "vlo-accounts-client",
   "version": "1.0.0",
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "pnpm@6.11.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "regen": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -o . -i swagger.json"
   },
   "dependencies": {
-    "axios": "latest",
+    "axios": "^0.26.1",
     "typescript": "next"
   }
 }

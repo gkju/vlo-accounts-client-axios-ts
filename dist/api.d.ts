@@ -15,6 +15,56 @@ import { RequestArgs, BaseAPI } from './base';
 /**
  *
  * @export
+ * @interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+ */
+export interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme {
+    /**
+     *
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+     */
+    displayName?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
+     */
+    handlerType?: SystemType;
+}
+/**
+ *
+ * @export
+ * @interface MicrosoftAspNetCoreIdentityUserLoginInfo
+ */
+export interface MicrosoftAspNetCoreIdentityUserLoginInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreIdentityUserLoginInfo
+     */
+    loginProvider?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreIdentityUserLoginInfo
+     */
+    providerKey?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof MicrosoftAspNetCoreIdentityUserLoginInfo
+     */
+    providerDisplayName?: string | null;
+}
+/**
+ *
+ * @export
  * @interface MicrosoftAspNetCoreMvcProblemDetails
  */
 export interface MicrosoftAspNetCoreMvcProblemDetails {
@@ -53,6 +103,2594 @@ export interface MicrosoftAspNetCoreMvcProblemDetails {
 /**
  *
  * @export
+ * @interface SystemModuleHandle
+ */
+export interface SystemModuleHandle {
+    /**
+     *
+     * @type {number}
+     * @memberof SystemModuleHandle
+     */
+    mdStreamVersion?: number;
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionAssembly
+ */
+export interface SystemReflectionAssembly {
+    /**
+     *
+     * @type {Array<SystemReflectionTypeInfo>}
+     * @memberof SystemReflectionAssembly
+     */
+    definedTypes?: Array<SystemReflectionTypeInfo> | null;
+    /**
+     *
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionAssembly
+     */
+    exportedTypes?: Array<SystemType> | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    codeBase?: string | null;
+    /**
+     *
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionAssembly
+     */
+    entryPoint?: SystemReflectionMethodInfo;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    fullName?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    imageRuntimeVersion?: string | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    isDynamic?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    location?: string | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    reflectionOnly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     */
+    isFullyTrusted?: boolean;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionAssembly
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionAssembly
+     */
+    escapedCodeBase?: string | null;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionAssembly
+     */
+    manifestModule?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionModule>}
+     * @memberof SystemReflectionAssembly
+     */
+    modules?: Array<SystemReflectionModule> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionAssembly
+     * @deprecated
+     */
+    globalAssemblyCache?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionAssembly
+     */
+    hostContext?: number;
+    /**
+     *
+     * @type {SystemSecuritySecurityRuleSet}
+     * @memberof SystemReflectionAssembly
+     */
+    securityRuleSet?: SystemSecuritySecurityRuleSet;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionCallingConventions {
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionConstructorInfo
+ */
+export interface SystemReflectionConstructorInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {SystemReflectionMethodAttributes}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    attributes?: SystemReflectionMethodAttributes;
+    /**
+     *
+     * @type {SystemReflectionMethodImplAttributes}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    methodImplementationFlags?: SystemReflectionMethodImplAttributes;
+    /**
+     *
+     * @type {SystemReflectionCallingConventions}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    callingConvention?: SystemReflectionCallingConventions;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isAbstract?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isConstructor?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFinal?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isHideBySig?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isStatic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isVirtual?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFamily?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isPrivate?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isConstructedGenericMethod?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isGenericMethod?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isGenericMethodDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    containsGenericParameters?: boolean;
+    /**
+     *
+     * @type {SystemRuntimeMethodHandle}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    methodHandle?: SystemRuntimeMethodHandle;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionConstructorInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionCustomAttributeData
+ */
+export interface SystemReflectionCustomAttributeData {
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    attributeType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionConstructorInfo}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    constructor?: SystemReflectionConstructorInfo;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeTypedArgument>}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    constructorArguments?: Array<SystemReflectionCustomAttributeTypedArgument> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeNamedArgument>}
+     * @memberof SystemReflectionCustomAttributeData
+     */
+    namedArguments?: Array<SystemReflectionCustomAttributeNamedArgument> | null;
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionCustomAttributeNamedArgument
+ */
+export interface SystemReflectionCustomAttributeNamedArgument {
+    /**
+     *
+     * @type {SystemReflectionMemberInfo}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    memberInfo?: SystemReflectionMemberInfo;
+    /**
+     *
+     * @type {SystemReflectionCustomAttributeTypedArgument}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    typedValue?: SystemReflectionCustomAttributeTypedArgument;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    memberName?: string | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionCustomAttributeNamedArgument
+     */
+    isField?: boolean;
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionCustomAttributeTypedArgument
+ */
+export interface SystemReflectionCustomAttributeTypedArgument {
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionCustomAttributeTypedArgument
+     */
+    argumentType?: SystemType;
+    /**
+     *
+     * @type {any}
+     * @memberof SystemReflectionCustomAttributeTypedArgument
+     */
+    value?: any | null;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionEventAttributes {
+    NUMBER_0 = 0,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionEventInfo
+ */
+export interface SystemReflectionEventInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionEventInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionEventInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionEventInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionEventInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionEventInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionEventInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionEventInfo
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionEventInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {SystemReflectionEventAttributes}
+     * @memberof SystemReflectionEventInfo
+     */
+    attributes?: SystemReflectionEventAttributes;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionEventInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionEventInfo
+     */
+    addMethod?: SystemReflectionMethodInfo;
+    /**
+     *
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionEventInfo
+     */
+    removeMethod?: SystemReflectionMethodInfo;
+    /**
+     *
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionEventInfo
+     */
+    raiseMethod?: SystemReflectionMethodInfo;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionEventInfo
+     */
+    isMulticast?: boolean;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionEventInfo
+     */
+    eventHandlerType?: SystemType;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionFieldAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_5 = 5,
+    NUMBER_6 = 6,
+    NUMBER_7 = 7,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_32768 = 32768,
+    NUMBER_38144 = 38144
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionFieldInfo
+ */
+export interface SystemReflectionFieldInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionFieldInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionFieldInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionFieldInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionFieldInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionFieldInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionFieldInfo
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionFieldInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {SystemReflectionFieldAttributes}
+     * @memberof SystemReflectionFieldInfo
+     */
+    attributes?: SystemReflectionFieldAttributes;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionFieldInfo
+     */
+    fieldType?: SystemType;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isInitOnly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isLiteral?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isNotSerialized?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isPinvokeImpl?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isStatic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isFamily?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isPrivate?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionFieldInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     *
+     * @type {SystemRuntimeFieldHandle}
+     * @memberof SystemReflectionFieldInfo
+     */
+    fieldHandle?: SystemRuntimeFieldHandle;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionGenericParameterAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_28 = 28
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionMemberInfo
+ */
+export interface SystemReflectionMemberInfo {
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionMemberInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMemberInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMemberInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionMemberInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionMemberInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionMemberInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMemberInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionMemberInfo
+     */
+    metadataToken?: number;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionMemberTypes {
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_191 = 191
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionMethodAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_5 = 5,
+    NUMBER_6 = 6,
+    NUMBER_7 = 7,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024,
+    NUMBER_2048 = 2048,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_32768 = 32768,
+    NUMBER_53248 = 53248
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionMethodBase
+ */
+export interface SystemReflectionMethodBase {
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionMethodBase
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionMethodBase
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodBase
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodBase
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionMethodBase
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionMethodBase
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionMethodBase
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {SystemReflectionMethodAttributes}
+     * @memberof SystemReflectionMethodBase
+     */
+    attributes?: SystemReflectionMethodAttributes;
+    /**
+     *
+     * @type {SystemReflectionMethodImplAttributes}
+     * @memberof SystemReflectionMethodBase
+     */
+    methodImplementationFlags?: SystemReflectionMethodImplAttributes;
+    /**
+     *
+     * @type {SystemReflectionCallingConventions}
+     * @memberof SystemReflectionMethodBase
+     */
+    callingConvention?: SystemReflectionCallingConventions;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isAbstract?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isConstructor?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFinal?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isHideBySig?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isStatic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isVirtual?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFamily?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isPrivate?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isConstructedGenericMethod?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isGenericMethod?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isGenericMethodDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    containsGenericParameters?: boolean;
+    /**
+     *
+     * @type {SystemRuntimeMethodHandle}
+     * @memberof SystemReflectionMethodBase
+     */
+    methodHandle?: SystemRuntimeMethodHandle;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSecurityCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodBase
+     */
+    isSecurityTransparent?: boolean;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionMethodImplAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_32 = 32,
+    NUMBER_64 = 64,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_512 = 512,
+    NUMBER_4096 = 4096,
+    NUMBER_65535 = 65535
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionMethodInfo
+ */
+export interface SystemReflectionMethodInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionMethodInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionMethodInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionMethodInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionMethodInfo
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {SystemReflectionMethodAttributes}
+     * @memberof SystemReflectionMethodInfo
+     */
+    attributes?: SystemReflectionMethodAttributes;
+    /**
+     *
+     * @type {SystemReflectionMethodImplAttributes}
+     * @memberof SystemReflectionMethodInfo
+     */
+    methodImplementationFlags?: SystemReflectionMethodImplAttributes;
+    /**
+     *
+     * @type {SystemReflectionCallingConventions}
+     * @memberof SystemReflectionMethodInfo
+     */
+    callingConvention?: SystemReflectionCallingConventions;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isAbstract?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isConstructor?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFinal?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isHideBySig?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isStatic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isVirtual?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFamily?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFamilyAndAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isFamilyOrAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isPrivate?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isConstructedGenericMethod?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isGenericMethod?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isGenericMethodDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    containsGenericParameters?: boolean;
+    /**
+     *
+     * @type {SystemRuntimeMethodHandle}
+     * @memberof SystemReflectionMethodInfo
+     */
+    methodHandle?: SystemRuntimeMethodHandle;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionMethodInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionMethodInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {SystemReflectionParameterInfo}
+     * @memberof SystemReflectionMethodInfo
+     */
+    returnParameter?: SystemReflectionParameterInfo;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionMethodInfo
+     */
+    returnType?: SystemType;
+    /**
+     *
+     * @type {object}
+     * @memberof SystemReflectionMethodInfo
+     */
+    returnTypeCustomAttributes?: object;
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionModule
+ */
+export interface SystemReflectionModule {
+    /**
+     *
+     * @type {SystemReflectionAssembly}
+     * @memberof SystemReflectionModule
+     */
+    assembly?: SystemReflectionAssembly;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    fullyQualifiedName?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionModule
+     */
+    mdStreamVersion?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    moduleVersionId?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionModule
+     */
+    scopeName?: string | null;
+    /**
+     *
+     * @type {SystemModuleHandle}
+     * @memberof SystemReflectionModule
+     */
+    moduleHandle?: SystemModuleHandle;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionModule
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionModule
+     */
+    metadataToken?: number;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionParameterAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_4 = 4,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_32768 = 32768,
+    NUMBER_61440 = 61440
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionParameterInfo
+ */
+export interface SystemReflectionParameterInfo {
+    /**
+     *
+     * @type {SystemReflectionParameterAttributes}
+     * @memberof SystemReflectionParameterInfo
+     */
+    attributes?: SystemReflectionParameterAttributes;
+    /**
+     *
+     * @type {SystemReflectionMemberInfo}
+     * @memberof SystemReflectionParameterInfo
+     */
+    member?: SystemReflectionMemberInfo;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionParameterInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionParameterInfo
+     */
+    parameterType?: SystemType;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionParameterInfo
+     */
+    position?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isIn?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isLcid?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isOptional?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isOut?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    isRetval?: boolean;
+    /**
+     *
+     * @type {any}
+     * @memberof SystemReflectionParameterInfo
+     */
+    defaultValue?: any | null;
+    /**
+     *
+     * @type {any}
+     * @memberof SystemReflectionParameterInfo
+     */
+    rawDefaultValue?: any | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionParameterInfo
+     */
+    hasDefaultValue?: boolean;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionParameterInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionParameterInfo
+     */
+    metadataToken?: number;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionPropertyAttributes {
+    NUMBER_0 = 0,
+    NUMBER_512 = 512,
+    NUMBER_1024 = 1024,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_32768 = 32768,
+    NUMBER_62464 = 62464
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionPropertyInfo
+ */
+export interface SystemReflectionPropertyInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    propertyType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionPropertyAttributes}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    attributes?: SystemReflectionPropertyAttributes;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    canRead?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    canWrite?: boolean;
+    /**
+     *
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    getMethod?: SystemReflectionMethodInfo;
+    /**
+     *
+     * @type {SystemReflectionMethodInfo}
+     * @memberof SystemReflectionPropertyInfo
+     */
+    setMethod?: SystemReflectionMethodInfo;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemReflectionTypeAttributes {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3,
+    NUMBER_4 = 4,
+    NUMBER_5 = 5,
+    NUMBER_6 = 6,
+    NUMBER_7 = 7,
+    NUMBER_8 = 8,
+    NUMBER_16 = 16,
+    NUMBER_24 = 24,
+    NUMBER_32 = 32,
+    NUMBER_128 = 128,
+    NUMBER_256 = 256,
+    NUMBER_1024 = 1024,
+    NUMBER_2048 = 2048,
+    NUMBER_4096 = 4096,
+    NUMBER_8192 = 8192,
+    NUMBER_16384 = 16384,
+    NUMBER_65536 = 65536,
+    NUMBER_131072 = 131072,
+    NUMBER_196608 = 196608,
+    NUMBER_262144 = 262144,
+    NUMBER_264192 = 264192,
+    NUMBER_1048576 = 1048576,
+    NUMBER_12582912 = 12582912
+}
+/**
+ *
+ * @export
+ * @interface SystemReflectionTypeInfo
+ */
+export interface SystemReflectionTypeInfo {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionTypeInfo
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isInterface?: boolean;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemReflectionTypeInfo
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    namespace?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    assemblyQualifiedName?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    fullName?: string | null;
+    /**
+     *
+     * @type {SystemReflectionAssembly}
+     * @memberof SystemReflectionTypeInfo
+     */
+    assembly?: SystemReflectionAssembly;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemReflectionTypeInfo
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNested?: boolean;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionMethodBase}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaringMethod?: SystemReflectionMethodBase;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    underlyingSystemType?: SystemType;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isTypeDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isArray?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isByRef?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isPointer?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isConstructedGenericType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericParameter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericTypeParameter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericMethodParameter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isGenericTypeDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSZArray?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isVariableBoundArray?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isByRefLike?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    hasElementType?: boolean;
+    /**
+     *
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericTypeArguments?: Array<SystemType> | null;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericParameterPosition?: number;
+    /**
+     *
+     * @type {SystemReflectionGenericParameterAttributes}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericParameterAttributes?: SystemReflectionGenericParameterAttributes;
+    /**
+     *
+     * @type {SystemReflectionTypeAttributes}
+     * @memberof SystemReflectionTypeInfo
+     */
+    attributes?: SystemReflectionTypeAttributes;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAbstract?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isImport?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSealed?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedFamANDAssem?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedFamily?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedFamORAssem?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedPrivate?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNestedPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isNotPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAutoLayout?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isExplicitLayout?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isLayoutSequential?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAnsiClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isAutoClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isUnicodeClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isCOMObject?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isContextful?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isEnum?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isMarshalByRef?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isPrimitive?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isValueType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSignatureType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSecurityCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     *
+     * @type {SystemRuntimeInteropServicesStructLayoutAttribute}
+     * @memberof SystemReflectionTypeInfo
+     */
+    structLayoutAttribute?: SystemRuntimeInteropServicesStructLayoutAttribute;
+    /**
+     *
+     * @type {SystemReflectionConstructorInfo}
+     * @memberof SystemReflectionTypeInfo
+     */
+    typeInitializer?: SystemReflectionConstructorInfo;
+    /**
+     *
+     * @type {SystemRuntimeTypeHandle}
+     * @memberof SystemReflectionTypeInfo
+     */
+    typeHandle?: SystemRuntimeTypeHandle;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionTypeInfo
+     */
+    guid?: string;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemReflectionTypeInfo
+     */
+    baseType?: SystemType;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isSerializable?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    containsGenericParameters?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemReflectionTypeInfo
+     */
+    isVisible?: boolean;
+    /**
+     *
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    genericTypeParameters?: Array<SystemType> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionConstructorInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredConstructors?: Array<SystemReflectionConstructorInfo> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionEventInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredEvents?: Array<SystemReflectionEventInfo> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionFieldInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredFields?: Array<SystemReflectionFieldInfo> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionMemberInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredMembers?: Array<SystemReflectionMemberInfo> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionMethodInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredMethods?: Array<SystemReflectionMethodInfo> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionTypeInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredNestedTypes?: Array<SystemReflectionTypeInfo> | null;
+    /**
+     *
+     * @type {Array<SystemReflectionPropertyInfo>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    declaredProperties?: Array<SystemReflectionPropertyInfo> | null;
+    /**
+     *
+     * @type {Array<SystemType>}
+     * @memberof SystemReflectionTypeInfo
+     */
+    implementedInterfaces?: Array<SystemType> | null;
+}
+/**
+ *
+ * @export
+ * @interface SystemRuntimeFieldHandle
+ */
+export interface SystemRuntimeFieldHandle {
+    /**
+     *
+     * @type {object}
+     * @memberof SystemRuntimeFieldHandle
+     */
+    value?: object;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemRuntimeInteropServicesLayoutKind {
+    NUMBER_0 = 0,
+    NUMBER_2 = 2,
+    NUMBER_3 = 3
+}
+/**
+ *
+ * @export
+ * @interface SystemRuntimeInteropServicesStructLayoutAttribute
+ */
+export interface SystemRuntimeInteropServicesStructLayoutAttribute {
+    /**
+     *
+     * @type {any}
+     * @memberof SystemRuntimeInteropServicesStructLayoutAttribute
+     */
+    typeId?: any | null;
+    /**
+     *
+     * @type {SystemRuntimeInteropServicesLayoutKind}
+     * @memberof SystemRuntimeInteropServicesStructLayoutAttribute
+     */
+    value?: SystemRuntimeInteropServicesLayoutKind;
+}
+/**
+ *
+ * @export
+ * @interface SystemRuntimeMethodHandle
+ */
+export interface SystemRuntimeMethodHandle {
+    /**
+     *
+     * @type {object}
+     * @memberof SystemRuntimeMethodHandle
+     */
+    value?: object;
+}
+/**
+ *
+ * @export
+ * @interface SystemRuntimeTypeHandle
+ */
+export interface SystemRuntimeTypeHandle {
+    /**
+     *
+     * @type {object}
+     * @memberof SystemRuntimeTypeHandle
+     */
+    value?: object;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum SystemSecuritySecurityRuleSet {
+    NUMBER_0 = 0,
+    NUMBER_1 = 1,
+    NUMBER_2 = 2
+}
+/**
+ *
+ * @export
+ * @interface SystemType
+ */
+export interface SystemType {
+    /**
+     *
+     * @type {string}
+     * @memberof SystemType
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {Array<SystemReflectionCustomAttributeData>}
+     * @memberof SystemType
+     */
+    customAttributes?: Array<SystemReflectionCustomAttributeData> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isCollectible?: boolean;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemType
+     */
+    metadataToken?: number;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isInterface?: boolean;
+    /**
+     *
+     * @type {SystemReflectionMemberTypes}
+     * @memberof SystemType
+     */
+    memberType?: SystemReflectionMemberTypes;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemType
+     */
+    namespace?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemType
+     */
+    assemblyQualifiedName?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemType
+     */
+    fullName?: string | null;
+    /**
+     *
+     * @type {SystemReflectionAssembly}
+     * @memberof SystemType
+     */
+    assembly?: SystemReflectionAssembly;
+    /**
+     *
+     * @type {SystemReflectionModule}
+     * @memberof SystemType
+     */
+    module?: SystemReflectionModule;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNested?: boolean;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    declaringType?: SystemType;
+    /**
+     *
+     * @type {SystemReflectionMethodBase}
+     * @memberof SystemType
+     */
+    declaringMethod?: SystemReflectionMethodBase;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    reflectedType?: SystemType;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    underlyingSystemType?: SystemType;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isTypeDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isArray?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isByRef?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isPointer?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isConstructedGenericType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericParameter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericTypeParameter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericMethodParameter?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isGenericTypeDefinition?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSZArray?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isVariableBoundArray?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isByRefLike?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    hasElementType?: boolean;
+    /**
+     *
+     * @type {Array<SystemType>}
+     * @memberof SystemType
+     */
+    genericTypeArguments?: Array<SystemType> | null;
+    /**
+     *
+     * @type {number}
+     * @memberof SystemType
+     */
+    genericParameterPosition?: number;
+    /**
+     *
+     * @type {SystemReflectionGenericParameterAttributes}
+     * @memberof SystemType
+     */
+    genericParameterAttributes?: SystemReflectionGenericParameterAttributes;
+    /**
+     *
+     * @type {SystemReflectionTypeAttributes}
+     * @memberof SystemType
+     */
+    attributes?: SystemReflectionTypeAttributes;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAbstract?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isImport?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSealed?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSpecialName?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedAssembly?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedFamANDAssem?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedFamily?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedFamORAssem?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedPrivate?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNestedPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isNotPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isPublic?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAutoLayout?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isExplicitLayout?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isLayoutSequential?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAnsiClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isAutoClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isUnicodeClass?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isCOMObject?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isContextful?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isEnum?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isMarshalByRef?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isPrimitive?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isValueType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSignatureType?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSecurityCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSecuritySafeCritical?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSecurityTransparent?: boolean;
+    /**
+     *
+     * @type {SystemRuntimeInteropServicesStructLayoutAttribute}
+     * @memberof SystemType
+     */
+    structLayoutAttribute?: SystemRuntimeInteropServicesStructLayoutAttribute;
+    /**
+     *
+     * @type {SystemReflectionConstructorInfo}
+     * @memberof SystemType
+     */
+    typeInitializer?: SystemReflectionConstructorInfo;
+    /**
+     *
+     * @type {SystemRuntimeTypeHandle}
+     * @memberof SystemType
+     */
+    typeHandle?: SystemRuntimeTypeHandle;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemType
+     */
+    guid?: string;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof SystemType
+     */
+    baseType?: SystemType;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isSerializable?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    containsGenericParameters?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof SystemType
+     */
+    isVisible?: boolean;
+}
+/**
+ *
+ * @export
  * @interface VLOBOARDSAreasAuthConfirmEmailInputModel
  */
 export interface VLOBOARDSAreasAuthConfirmEmailInputModel {
@@ -68,6 +2706,12 @@ export interface VLOBOARDSAreasAuthConfirmEmailInputModel {
      * @memberof VLOBOARDSAreasAuthConfirmEmailInputModel
      */
     code?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthConfirmEmailInputModel
+     */
+    captchaResponse?: string | null;
 }
 /**
  *
@@ -100,6 +2744,12 @@ export interface VLOBOARDSAreasAuthForgotPasswordInputModel {
      * @memberof VLOBOARDSAreasAuthForgotPasswordInputModel
      */
     email: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthForgotPasswordInputModel
+     */
+    captchaResponse: string;
 }
 /**
  *
@@ -125,6 +2775,12 @@ export interface VLOBOARDSAreasAuthLogin2FAInputModel {
      * @memberof VLOBOARDSAreasAuthLogin2FAInputModel
      */
     rememberMe?: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthLogin2FAInputModel
+     */
+    captchaResponse: string;
 }
 /**
  *
@@ -137,7 +2793,7 @@ export interface VLOBOARDSAreasAuthLoginInputModel {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthLoginInputModel
      */
-    username: string;
+    usernameOrEmail: string;
     /**
      *
      * @type {string}
@@ -194,56 +2850,114 @@ export interface VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel {
      * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel
      */
     recoveryCode: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel
+     */
+    captchaResponse: string;
 }
 /**
  *
  * @export
- * @interface VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
+ * @interface VLOBOARDSAreasAuthManageChangePasswordInputModel
  */
-export interface VLOBOARDSAreasAuthLoginWithRecoveryCodeResult {
+export interface VLOBOARDSAreasAuthManageChangePasswordInputModel {
     /**
      *
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
+     * @memberof VLOBOARDSAreasAuthManageChangePasswordInputModel
      */
-    message?: string | null;
-    /**
-     *
-     * @type {boolean}
-     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
-     */
-    redirect?: boolean;
+    oldPassword: string;
     /**
      *
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeResult
+     * @memberof VLOBOARDSAreasAuthManageChangePasswordInputModel
      */
-    returnUrl?: string | null;
+    newPassword: string;
 }
 /**
  *
  * @export
- * @interface VLOBOARDSAreasAuthLogoutResult
+ * @interface VLOBOARDSAreasAuthManageConfirmEmailChangeInput
  */
-export interface VLOBOARDSAreasAuthLogoutResult {
+export interface VLOBOARDSAreasAuthManageConfirmEmailChangeInput {
     /**
      *
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLogoutResult
+     * @memberof VLOBOARDSAreasAuthManageConfirmEmailChangeInput
      */
-    message?: string | null;
-    /**
-     *
-     * @type {boolean}
-     * @memberof VLOBOARDSAreasAuthLogoutResult
-     */
-    redirect?: boolean;
+    code: string;
     /**
      *
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthLogoutResult
+     * @memberof VLOBOARDSAreasAuthManageConfirmEmailChangeInput
      */
-    returnUrl?: string | null;
+    captchaResponse: string;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthManageExternalLoginInfo
+ */
+export interface VLOBOARDSAreasAuthManageExternalLoginInfo {
+    /**
+     *
+     * @type {Array<MicrosoftAspNetCoreIdentityUserLoginInfo>}
+     * @memberof VLOBOARDSAreasAuthManageExternalLoginInfo
+     */
+    currentLogins?: Array<MicrosoftAspNetCoreIdentityUserLoginInfo> | null;
+    /**
+     *
+     * @type {Array<MicrosoftAspNetCoreAuthenticationAuthenticationScheme>}
+     * @memberof VLOBOARDSAreasAuthManageExternalLoginInfo
+     */
+    availableLogins?: Array<MicrosoftAspNetCoreAuthenticationAuthenticationScheme> | null;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthManageGdprDeleteInputModel
+ */
+export interface VLOBOARDSAreasAuthManageGdprDeleteInputModel {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageGdprDeleteInputModel
+     */
+    password?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthManageRequestEmailChangeInput
+ */
+export interface VLOBOARDSAreasAuthManageRequestEmailChangeInput {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageRequestEmailChangeInput
+     */
+    email: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageRequestEmailChangeInput
+     */
+    captchaResponse: string;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthManageResetPasswordInputModel
+ */
+export interface VLOBOARDSAreasAuthManageResetPasswordInputModel {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageResetPasswordInputModel
+     */
+    newPassword: string;
 }
 /**
  *
@@ -301,6 +3015,12 @@ export interface VLOBOARDSAreasAuthResendEmailConfirmationInputModel {
      * @memberof VLOBOARDSAreasAuthResendEmailConfirmationInputModel
      */
     email: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthResendEmailConfirmationInputModel
+     */
+    captchaResponse: string;
 }
 /**
  *
@@ -385,15 +3105,74 @@ export interface VLOBOARDSAreasAuthReturnUrlInfo {
 /**
  *
  * @export
- * @interface VLOBOARDSAreasAuthReturnUrlInfoInputModel
+ * @interface VLOBOARDSAreasAuthReturnUrlInputModel
  */
-export interface VLOBOARDSAreasAuthReturnUrlInfoInputModel {
+export interface VLOBOARDSAreasAuthReturnUrlInputModel {
     /**
      *
      * @type {string}
-     * @memberof VLOBOARDSAreasAuthReturnUrlInfoInputModel
+     * @memberof VLOBOARDSAreasAuthReturnUrlInputModel
      */
     returnUrl: string;
+}
+/**
+ * ChangePasswordApi - axios parameter creator
+ * @export
+ */
+export declare const ChangePasswordApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Changes the password (changes as in there was a different password previously)
+     * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthChangePasswordPost: (vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel | undefined, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * ChangePasswordApi - functional programming interface
+ * @export
+ */
+export declare const ChangePasswordApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Changes the password (changes as in there was a different password previously)
+     * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * ChangePasswordApi - factory interface
+ * @export
+ */
+export declare const ChangePasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Changes the password (changes as in there was a different password previously)
+     * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel | undefined, options?: any): AxiosPromise<void>;
+};
+/**
+ * ChangePasswordApi - object-oriented interface
+ * @export
+ * @class ChangePasswordApi
+ * @extends {BaseAPI}
+ */
+export declare class ChangePasswordApi extends BaseAPI {
+    /**
+     *
+     * @summary Changes the password (changes as in there was a different password previously)
+     * @param {VLOBOARDSAreasAuthManageChangePasswordInputModel} [vLOBOARDSAreasAuthManageChangePasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ChangePasswordApi
+     */
+    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): Promise<any>;
 }
 /**
  * ConfirmEmailApi - axios parameter creator
@@ -421,13 +3200,13 @@ export declare const ConfirmEmailApiFp: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * ConfirmEmailApi - factory interface
  * @export
  */
-export declare const ConfirmEmailApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ConfirmEmailApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @summary Confirms email using provided userid and code
@@ -452,7 +3231,150 @@ export declare class ConfirmEmailApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConfirmEmailApi
      */
-    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any): Promise<any>;
+}
+/**
+ * Disable2FAApi - axios parameter creator
+ * @export
+ */
+export declare const Disable2FAApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Disables 2FA :c
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthDisable2FAPost: (options?: any) => Promise<RequestArgs>;
+};
+/**
+ * Disable2FAApi - functional programming interface
+ * @export
+ */
+export declare const Disable2FAApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Disables 2FA :c
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthDisable2FAPost(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * Disable2FAApi - factory interface
+ * @export
+ */
+export declare const Disable2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Disables 2FA :c
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthDisable2FAPost(options?: any): AxiosPromise<void>;
+};
+/**
+ * Disable2FAApi - object-oriented interface
+ * @export
+ * @class Disable2FAApi
+ * @extends {BaseAPI}
+ */
+export declare class Disable2FAApi extends BaseAPI {
+    /**
+     *
+     * @summary Disables 2FA :c
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Disable2FAApi
+     */
+    apiAuthDisable2FAPost(options?: any): Promise<any>;
+}
+/**
+ * EnableTotp2FAApi - axios parameter creator
+ * @export
+ */
+export declare const EnableTotp2FAApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthEnableTotp2FAGet: (options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @summary Enables 2FA TOTP based on the previous uri request
+     * @param {string} [code]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthEnableTotp2FAPost: (code?: string | undefined, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * EnableTotp2FAApi - functional programming interface
+ * @export
+ */
+export declare const EnableTotp2FAApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthEnableTotp2FAGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @summary Enables 2FA TOTP based on the previous uri request
+     * @param {string} [code]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthEnableTotp2FAPost(code?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<string[]>>;
+};
+/**
+ * EnableTotp2FAApi - factory interface
+ * @export
+ */
+export declare const EnableTotp2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthEnableTotp2FAGet(options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @summary Enables 2FA TOTP based on the previous uri request
+     * @param {string} [code]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthEnableTotp2FAPost(code?: string | undefined, options?: any): AxiosPromise<string[]>;
+};
+/**
+ * EnableTotp2FAApi - object-oriented interface
+ * @export
+ * @class EnableTotp2FAApi
+ * @extends {BaseAPI}
+ */
+export declare class EnableTotp2FAApi extends BaseAPI {
+    /**
+     *
+     * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EnableTotp2FAApi
+     */
+    apiAuthEnableTotp2FAGet(options?: any): Promise<any>;
+    /**
+     *
+     * @summary Enables 2FA TOTP based on the previous uri request
+     * @param {string} [code]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof EnableTotp2FAApi
+     */
+    apiAuthEnableTotp2FAPost(code?: string, options?: any): Promise<any>;
 }
 /**
  * ExternalLoginApi - axios parameter creator
@@ -463,29 +3385,30 @@ export declare const ExternalLoginApiAxiosParamCreator: (configuration?: Configu
      *
      * @summary Callback executed when external auth provider redirects back to app
      * @param {string} [returnUrl]
+     * @param {boolean} [rememberMe]
      * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCallbackGet: (returnUrl?: string | undefined, remoteError?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginCallbackGet: (returnUrl?: string | undefined, rememberMe?: boolean | undefined, remoteError?: string | undefined, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-     * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCreateAccountPost: (returnUrl?: string | undefined, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginCreateAccountPost: (vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Challenges user using external provider
      * @param {string} [provider]
+     * @param {boolean} [rememberMe]
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginGet: (provider?: string | undefined, returnUrl?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginGet: (provider?: string | undefined, rememberMe?: boolean | undefined, returnUrl?: string | undefined, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ExternalLoginApi - functional programming interface
@@ -496,62 +3419,64 @@ export declare const ExternalLoginApiFp: (configuration?: Configuration | undefi
      *
      * @summary Callback executed when external auth provider redirects back to app
      * @param {string} [returnUrl]
+     * @param {boolean} [rememberMe]
      * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCallbackGet(returnUrl?: string | undefined, remoteError?: string | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginCallbackGet(returnUrl?: string | undefined, rememberMe?: boolean | undefined, remoteError?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-     * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCreateAccountPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
     /**
      *
      * @summary Challenges user using external provider
      * @param {string} [provider]
+     * @param {boolean} [rememberMe]
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginGet(provider?: string | undefined, returnUrl?: string | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginGet(provider?: string | undefined, rememberMe?: boolean | undefined, returnUrl?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * ExternalLoginApi - factory interface
  * @export
  */
-export declare const ExternalLoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ExternalLoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @summary Callback executed when external auth provider redirects back to app
      * @param {string} [returnUrl]
+     * @param {boolean} [rememberMe]
      * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCallbackGet(returnUrl?: string | undefined, remoteError?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginCallbackGet(returnUrl?: string | undefined, rememberMe?: boolean | undefined, remoteError?: string | undefined, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-     * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCreateAccountPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Challenges user using external provider
      * @param {string} [provider]
+     * @param {boolean} [rememberMe]
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginGet(provider?: string | undefined, returnUrl?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginGet(provider?: string | undefined, rememberMe?: boolean | undefined, returnUrl?: string | undefined, options?: any): AxiosPromise<void>;
 };
 /**
  * ExternalLoginApi - object-oriented interface
@@ -564,32 +3489,304 @@ export declare class ExternalLoginApi extends BaseAPI {
      *
      * @summary Callback executed when external auth provider redirects back to app
      * @param {string} [returnUrl]
+     * @param {boolean} [rememberMe]
      * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    apiAuthExternalLoginCallbackGet(returnUrl?: string, remoteError?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): Promise<any>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
-     * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthExternalLoginRegisterInputModel} [vLOBOARDSAreasAuthExternalLoginRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    apiAuthExternalLoginCreateAccountPost(returnUrl?: string, vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<any>;
     /**
      *
      * @summary Challenges user using external provider
      * @param {string} [provider]
+     * @param {boolean} [rememberMe]
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    apiAuthExternalLoginGet(provider?: string, returnUrl?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): Promise<any>;
+}
+/**
+ * ExternalLoginsManagementApi - axios parameter creator
+ * @export
+ */
+export declare const ExternalLoginsManagementApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Handles the information returned by the external authentication provider
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementCallbackGet: (options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @summary Deletes an external login provider
+     * @param {string} [loginProvider]
+     * @param {string} [providerKey]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementDelete: (loginProvider?: string | undefined, providerKey?: string | undefined, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @summary Returns all the available external login providers as well as the currently used ones
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementGet: (options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @summary Requests a new challenge for adding external auth
+     * @param {string} [provider]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementGetChallengePost: (provider?: string | undefined, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * ExternalLoginsManagementApi - functional programming interface
+ * @export
+ */
+export declare const ExternalLoginsManagementApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Handles the information returned by the external authentication provider
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @summary Deletes an external login provider
+     * @param {string} [loginProvider]
+     * @param {string} [providerKey]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementDelete(loginProvider?: string | undefined, providerKey?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @summary Returns all the available external login providers as well as the currently used ones
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthManageExternalLoginInfo>>;
+    /**
+     *
+     * @summary Requests a new challenge for adding external auth
+     * @param {string} [provider]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementGetChallengePost(provider?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * ExternalLoginsManagementApi - factory interface
+ * @export
+ */
+export declare const ExternalLoginsManagementApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Handles the information returned by the external authentication provider
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementCallbackGet(options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @summary Deletes an external login provider
+     * @param {string} [loginProvider]
+     * @param {string} [providerKey]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementDelete(loginProvider?: string | undefined, providerKey?: string | undefined, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @summary Returns all the available external login providers as well as the currently used ones
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementGet(options?: any): AxiosPromise<VLOBOARDSAreasAuthManageExternalLoginInfo>;
+    /**
+     *
+     * @summary Requests a new challenge for adding external auth
+     * @param {string} [provider]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthExternalLoginsManagementGetChallengePost(provider?: string | undefined, options?: any): AxiosPromise<void>;
+};
+/**
+ * ExternalLoginsManagementApi - object-oriented interface
+ * @export
+ * @class ExternalLoginsManagementApi
+ * @extends {BaseAPI}
+ */
+export declare class ExternalLoginsManagementApi extends BaseAPI {
+    /**
+     *
+     * @summary Handles the information returned by the external authentication provider
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<any>;
+    /**
+     *
+     * @summary Deletes an external login provider
+     * @param {string} [loginProvider]
+     * @param {string} [providerKey]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): Promise<any>;
+    /**
+     *
+     * @summary Returns all the available external login providers as well as the currently used ones
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    apiAuthExternalLoginsManagementGet(options?: any): Promise<any>;
+    /**
+     *
+     * @summary Requests a new challenge for adding external auth
+     * @param {string} [provider]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ExternalLoginsManagementApi
+     */
+    apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): Promise<any>;
+}
+/**
+ * FilesApi - axios parameter creator
+ * @export
+ */
+export declare const FilesApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFileDelete: (id?: string | undefined, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFileGet: (id?: string | undefined, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {boolean} [isPublic]
+     * @param {any} [file]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFilePost: (isPublic?: boolean | undefined, file?: any, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * FilesApi - functional programming interface
+ * @export
+ */
+export declare const FilesApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFileDelete(id?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFileGet(id?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {boolean} [isPublic]
+     * @param {any} [file]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFilePost(isPublic?: boolean | undefined, file?: any, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * FilesApi - factory interface
+ * @export
+ */
+export declare const FilesApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFileDelete(id?: string | undefined, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFileGet(id?: string | undefined, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {boolean} [isPublic]
+     * @param {any} [file]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiFilesFilesFilePost(isPublic?: boolean | undefined, file?: any, options?: any): AxiosPromise<void>;
+};
+/**
+ * FilesApi - object-oriented interface
+ * @export
+ * @class FilesApi
+ * @extends {BaseAPI}
+ */
+export declare class FilesApi extends BaseAPI {
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FilesApi
+     */
+    apiFilesFilesFileDelete(id?: string, options?: any): Promise<any>;
+    /**
+     *
+     * @param {string} [id]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FilesApi
+     */
+    apiFilesFilesFileGet(id?: string, options?: any): Promise<any>;
+    /**
+     *
+     * @param {boolean} [isPublic]
+     * @param {any} [file]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FilesApi
+     */
+    apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<any>;
 }
 /**
  * ForgotPasswordApi - axios parameter creator
@@ -617,13 +3814,13 @@ export declare const ForgotPasswordApiFp: (configuration?: Configuration | undef
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * ForgotPasswordApi - factory interface
  * @export
  */
-export declare const ForgotPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ForgotPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @summary Sends password reset email based on given email
@@ -648,7 +3845,121 @@ export declare class ForgotPasswordApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ForgotPasswordApi
      */
-    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any): Promise<any>;
+}
+/**
+ * GdprDeleteUserApi - axios parameter creator
+ * @export
+ */
+export declare const GdprDeleteUserApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+     * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthGdprDeleteUserPost: (vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel | undefined, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * GdprDeleteUserApi - functional programming interface
+ * @export
+ */
+export declare const GdprDeleteUserApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+     * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * GdprDeleteUserApi - factory interface
+ * @export
+ */
+export declare const GdprDeleteUserApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+     * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel | undefined, options?: any): AxiosPromise<void>;
+};
+/**
+ * GdprDeleteUserApi - object-oriented interface
+ * @export
+ * @class GdprDeleteUserApi
+ * @extends {BaseAPI}
+ */
+export declare class GdprDeleteUserApi extends BaseAPI {
+    /**
+     *
+     * @summary Deletes the user and ALL HIS DATA PERMANENTLY
+     * @param {VLOBOARDSAreasAuthManageGdprDeleteInputModel} [vLOBOARDSAreasAuthManageGdprDeleteInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GdprDeleteUserApi
+     */
+    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): Promise<any>;
+}
+/**
+ * GenerateRecoveryCodesApi - axios parameter creator
+ * @export
+ */
+export declare const GenerateRecoveryCodesApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Generates recovery codes for use with TOTP
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthGenerateRecoveryCodesGet: (options?: any) => Promise<RequestArgs>;
+};
+/**
+ * GenerateRecoveryCodesApi - functional programming interface
+ * @export
+ */
+export declare const GenerateRecoveryCodesApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Generates recovery codes for use with TOTP
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthGenerateRecoveryCodesGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * GenerateRecoveryCodesApi - factory interface
+ * @export
+ */
+export declare const GenerateRecoveryCodesApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Generates recovery codes for use with TOTP
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthGenerateRecoveryCodesGet(options?: any): AxiosPromise<void>;
+};
+/**
+ * GenerateRecoveryCodesApi - object-oriented interface
+ * @export
+ * @class GenerateRecoveryCodesApi
+ * @extends {BaseAPI}
+ */
+export declare class GenerateRecoveryCodesApi extends BaseAPI {
+    /**
+     *
+     * @summary Generates recovery codes for use with TOTP
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GenerateRecoveryCodesApi
+     */
+    apiAuthGenerateRecoveryCodesGet(options?: any): Promise<any>;
 }
 /**
  * LoginApi - axios parameter creator
@@ -681,7 +3992,7 @@ export declare const LoginApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
     /**
      *
      * @summary Endpoint used to log user in based on username, password
@@ -690,13 +4001,13 @@ export declare const LoginApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
+    apiAuthLoginPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
 };
 /**
  * LoginApi - factory interface
  * @export
  */
-export declare const LoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const LoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -726,7 +4037,7 @@ export declare class LoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LoginApi
      */
-    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<any>;
     /**
      *
      * @summary Endpoint used to log user in based on username, password
@@ -736,7 +4047,7 @@ export declare class LoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LoginApi
      */
-    apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLoginResult, any>>;
+    apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<any>;
 }
 /**
  * Login2FAApi - axios parameter creator
@@ -766,13 +4077,13 @@ export declare const Login2FAApiFp: (configuration?: Configuration | undefined) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogin2FAPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
+    apiAuthLogin2FAPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
 };
 /**
  * Login2FAApi - factory interface
  * @export
  */
-export declare const Login2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const Login2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @summary Logs user in based on 2FA code
@@ -799,7 +4110,7 @@ export declare class Login2FAApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof Login2FAApi
      */
-    apiAuthLogin2FAPost(returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLoginResult, any>>;
+    apiAuthLogin2FAPost(returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any): Promise<any>;
 }
 /**
  * LoginWithRecoveryCodeApi - axios parameter creator
@@ -807,7 +4118,7 @@ export declare class Login2FAApi extends BaseAPI {
  */
 export declare const LoginWithRecoveryCodeApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
     /**
-     * Also sanitizes returnurl. Who could\'ve thought
+     *
      * @summary Logins user using 2fa recovery code
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel]
@@ -822,29 +4133,29 @@ export declare const LoginWithRecoveryCodeApiAxiosParamCreator: (configuration?:
  */
 export declare const LoginWithRecoveryCodeApiFp: (configuration?: Configuration | undefined) => {
     /**
-     * Also sanitizes returnurl. Who could\'ve thought
+     *
      * @summary Logins user using 2fa recovery code
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginWithRecoveryCodePost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginWithRecoveryCodeResult>>;
+    apiAuthLoginWithRecoveryCodePost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * LoginWithRecoveryCodeApi - factory interface
  * @export
  */
-export declare const LoginWithRecoveryCodeApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const LoginWithRecoveryCodeApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
-     * Also sanitizes returnurl. Who could\'ve thought
+     *
      * @summary Logins user using 2fa recovery code
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginWithRecoveryCodePost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginWithRecoveryCodeResult>;
+    apiAuthLoginWithRecoveryCodePost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any): AxiosPromise<void>;
 };
 /**
  * LoginWithRecoveryCodeApi - object-oriented interface
@@ -854,7 +4165,7 @@ export declare const LoginWithRecoveryCodeApiFactory: (configuration?: Configura
  */
 export declare class LoginWithRecoveryCodeApi extends BaseAPI {
     /**
-     * Also sanitizes returnurl. Who could\'ve thought
+     *
      * @summary Logins user using 2fa recovery code
      * @param {string} [returnUrl]
      * @param {VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel} [vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel]
@@ -862,7 +4173,7 @@ export declare class LoginWithRecoveryCodeApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LoginWithRecoveryCodeApi
      */
-    apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLoginWithRecoveryCodeResult, any>>;
+    apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<any>;
 }
 /**
  * LogoutApi - axios parameter creator
@@ -870,7 +4181,7 @@ export declare class LoginWithRecoveryCodeApi extends BaseAPI {
  */
 export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
     /**
-     * Will sanitize returnurl
+     *
      * @summary Logs user out
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
@@ -884,27 +4195,27 @@ export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration 
  */
 export declare const LogoutApiFp: (configuration?: Configuration | undefined) => {
     /**
-     * Will sanitize returnurl
+     *
      * @summary Logs user out
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost(returnUrl?: string | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLogoutResult>>;
+    apiAuthLogoutPost(returnUrl?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * LogoutApi - factory interface
  * @export
  */
-export declare const LogoutApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const LogoutApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
-     * Will sanitize returnurl
+     *
      * @summary Logs user out
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost(returnUrl?: string | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthLogoutResult>;
+    apiAuthLogoutPost(returnUrl?: string | undefined, options?: any): AxiosPromise<void>;
 };
 /**
  * LogoutApi - object-oriented interface
@@ -914,14 +4225,123 @@ export declare const LogoutApiFactory: (configuration?: Configuration | undefine
  */
 export declare class LogoutApi extends BaseAPI {
     /**
-     * Will sanitize returnurl
+     *
      * @summary Logs user out
      * @param {string} [returnUrl]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LogoutApi
      */
-    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLogoutResult, any>>;
+    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<any>;
+}
+/**
+ * ProfilePictureApi - axios parameter creator
+ * @export
+ */
+export declare const ProfilePictureApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePictureDelete: (options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {string} [userId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePictureGet: (userId?: string | undefined, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {any} picture
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePicturePost: (picture: any, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * ProfilePictureApi - functional programming interface
+ * @export
+ */
+export declare const ProfilePictureApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePictureDelete(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {string} [userId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePictureGet(userId?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {any} picture
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePicturePost(picture: any, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * ProfilePictureApi - factory interface
+ * @export
+ */
+export declare const ProfilePictureApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePictureDelete(options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {string} [userId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePictureGet(userId?: string | undefined, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {any} picture
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfilePicturePost(picture: any, options?: any): AxiosPromise<void>;
+};
+/**
+ * ProfilePictureApi - object-oriented interface
+ * @export
+ * @class ProfilePictureApi
+ * @extends {BaseAPI}
+ */
+export declare class ProfilePictureApi extends BaseAPI {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilePictureApi
+     */
+    apiAuthProfilePictureDelete(options?: any): Promise<any>;
+    /**
+     *
+     * @param {string} [userId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilePictureApi
+     */
+    apiAuthProfilePictureGet(userId?: string, options?: any): Promise<any>;
+    /**
+     *
+     * @param {any} picture
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfilePictureApi
+     */
+    apiAuthProfilePicturePost(picture: any, options?: any): Promise<any>;
 }
 /**
  * RegisterApi - axios parameter creator
@@ -930,12 +4350,12 @@ export declare class LogoutApi extends BaseAPI {
 export declare const RegisterApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
     /**
      *
-     * @param {string} [returnUrl]
+     * @summary Registers user based on the provided input
      * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRegisterPost: (returnUrl?: string | undefined, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthRegisterPost: (vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any) => Promise<RequestArgs>;
 };
 /**
  * RegisterApi - functional programming interface
@@ -944,26 +4364,26 @@ export declare const RegisterApiAxiosParamCreator: (configuration?: Configuratio
 export declare const RegisterApiFp: (configuration?: Configuration | undefined) => {
     /**
      *
-     * @param {string} [returnUrl]
+     * @summary Registers user based on the provided input
      * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRegisterPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>>;
+    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>>;
 };
 /**
  * RegisterApi - factory interface
  * @export
  */
-export declare const RegisterApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const RegisterApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
-     * @param {string} [returnUrl]
+     * @summary Registers user based on the provided input
      * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRegisterPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>;
+    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>;
 };
 /**
  * RegisterApi - object-oriented interface
@@ -974,13 +4394,105 @@ export declare const RegisterApiFactory: (configuration?: Configuration | undefi
 export declare class RegisterApi extends BaseAPI {
     /**
      *
-     * @param {string} [returnUrl]
+     * @summary Registers user based on the provided input
      * @param {VLOBOARDSAreasAuthRegisterInputModel} [vLOBOARDSAreasAuthRegisterInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    apiAuthRegisterPost(returnUrl?: string, vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthRegistrationResult, any>>;
+    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<any>;
+}
+/**
+ * RequestEmailChangeApi - axios parameter creator
+ * @export
+ */
+export declare const RequestEmailChangeApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Creates a new email change request
+     * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthRequestEmailChangePost: (vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput | undefined, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @summary Handles the email change requested previously
+     * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthRequestEmailChangePut: (vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput | undefined, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * RequestEmailChangeApi - functional programming interface
+ * @export
+ */
+export declare const RequestEmailChangeApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Creates a new email change request
+     * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    /**
+     *
+     * @summary Handles the email change requested previously
+     * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * RequestEmailChangeApi - factory interface
+ * @export
+ */
+export declare const RequestEmailChangeApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Creates a new email change request
+     * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput | undefined, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @summary Handles the email change requested previously
+     * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput | undefined, options?: any): AxiosPromise<void>;
+};
+/**
+ * RequestEmailChangeApi - object-oriented interface
+ * @export
+ * @class RequestEmailChangeApi
+ * @extends {BaseAPI}
+ */
+export declare class RequestEmailChangeApi extends BaseAPI {
+    /**
+     *
+     * @summary Creates a new email change request
+     * @param {VLOBOARDSAreasAuthManageRequestEmailChangeInput} [vLOBOARDSAreasAuthManageRequestEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestEmailChangeApi
+     */
+    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): Promise<any>;
+    /**
+     *
+     * @summary Handles the email change requested previously
+     * @param {VLOBOARDSAreasAuthManageConfirmEmailChangeInput} [vLOBOARDSAreasAuthManageConfirmEmailChangeInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RequestEmailChangeApi
+     */
+    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): Promise<any>;
 }
 /**
  * ResendEmailConfirmationApi - axios parameter creator
@@ -1008,13 +4520,13 @@ export declare const ResendEmailConfirmationApiFp: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * ResendEmailConfirmationApi - factory interface
  * @export
  */
-export declare const ResendEmailConfirmationApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ResendEmailConfirmationApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @summary Resends email confirmation
@@ -1039,7 +4551,7 @@ export declare class ResendEmailConfirmationApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResendEmailConfirmationApi
      */
-    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any): Promise<any>;
 }
 /**
  * ResetPasswordApi - axios parameter creator
@@ -1067,13 +4579,13 @@ export declare const ResetPasswordApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<string>>;
+    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
 };
 /**
  * ResetPasswordApi - factory interface
  * @export
  */
-export declare const ResetPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ResetPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      *
      * @summary Changes the password to a new one based on input
@@ -1081,7 +4593,7 @@ export declare const ResetPasswordApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any): AxiosPromise<string>;
+    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any): AxiosPromise<void>;
 };
 /**
  * ResetPasswordApi - object-oriented interface
@@ -1098,7 +4610,58 @@ export declare class ResetPasswordApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResetPasswordApi
      */
-    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<string, any>>;
+    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<any>;
+}
+/**
+ * ResetTotpAuthenticatorApi - axios parameter creator
+ * @export
+ */
+export declare const ResetTotpAuthenticatorApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthResetTotpAuthenticatorPost: (options?: any) => Promise<RequestArgs>;
+};
+/**
+ * ResetTotpAuthenticatorApi - functional programming interface
+ * @export
+ */
+export declare const ResetTotpAuthenticatorApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthResetTotpAuthenticatorPost(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * ResetTotpAuthenticatorApi - factory interface
+ * @export
+ */
+export declare const ResetTotpAuthenticatorApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthResetTotpAuthenticatorPost(options?: any): AxiosPromise<void>;
+};
+/**
+ * ResetTotpAuthenticatorApi - object-oriented interface
+ * @export
+ * @class ResetTotpAuthenticatorApi
+ * @extends {BaseAPI}
+ */
+export declare class ResetTotpAuthenticatorApi extends BaseAPI {
+    /**
+     *
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ResetTotpAuthenticatorApi
+     */
+    apiAuthResetTotpAuthenticatorPost(options?: any): Promise<any>;
 }
 /**
  * ReturnUrlInfoApi - axios parameter creator
@@ -1108,11 +4671,11 @@ export declare const ReturnUrlInfoApiAxiosParamCreator: (configuration?: Configu
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
-     * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel]
+     * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthReturnUrlInfoPost: (vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthReturnUrlInfoPost: (vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel | undefined, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ReturnUrlInfoApi - functional programming interface
@@ -1122,25 +4685,25 @@ export declare const ReturnUrlInfoApiFp: (configuration?: Configuration | undefi
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
-     * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel]
+     * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel | undefined, options?: any): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>>;
+    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>>;
 };
 /**
  * ReturnUrlInfoApi - factory interface
  * @export
  */
-export declare const ReturnUrlInfoApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
+export declare const ReturnUrlInfoApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
-     * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel]
+     * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>;
+    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>;
 };
 /**
  * ReturnUrlInfoApi - object-oriented interface
@@ -1152,11 +4715,70 @@ export declare class ReturnUrlInfoApi extends BaseAPI {
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
-     * @param {VLOBOARDSAreasAuthReturnUrlInfoInputModel} [vLOBOARDSAreasAuthReturnUrlInfoInputModel]
+     * @param {VLOBOARDSAreasAuthReturnUrlInputModel} [vLOBOARDSAreasAuthReturnUrlInputModel]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ReturnUrlInfoApi
      */
-    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInfoInputModel?: VLOBOARDSAreasAuthReturnUrlInfoInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthReturnUrlInfo, any>>;
+    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): Promise<any>;
+}
+/**
+ * SetPasswordApi - axios parameter creator
+ * @export
+ */
+export declare const SetPasswordApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Adds a password (for users using only hardware/external authentication)
+     * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthSetPasswordPost: (vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel | undefined, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * SetPasswordApi - functional programming interface
+ * @export
+ */
+export declare const SetPasswordApiFp: (configuration?: Configuration | undefined) => {
+    /**
+     *
+     * @summary Adds a password (for users using only hardware/external authentication)
+     * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+};
+/**
+ * SetPasswordApi - factory interface
+ * @export
+ */
+export declare const SetPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+    /**
+     *
+     * @summary Adds a password (for users using only hardware/external authentication)
+     * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel | undefined, options?: any): AxiosPromise<void>;
+};
+/**
+ * SetPasswordApi - object-oriented interface
+ * @export
+ * @class SetPasswordApi
+ * @extends {BaseAPI}
+ */
+export declare class SetPasswordApi extends BaseAPI {
+    /**
+     *
+     * @summary Adds a password (for users using only hardware/external authentication)
+     * @param {VLOBOARDSAreasAuthManageResetPasswordInputModel} [vLOBOARDSAreasAuthManageResetPasswordInputModel]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SetPasswordApi
+     */
+    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<any>;
 }
 //# sourceMappingURL=api.d.ts.map

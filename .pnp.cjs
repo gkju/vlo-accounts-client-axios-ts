@@ -35,34 +35,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["axios", "npm:0.24.0"],
+            ["@types/axios", "npm:0.14.0"],
+            ["axios", "npm:0.26.1"],
             ["typescript", "patch:typescript@npm%3A4.6.0-dev.20211203#~builtin<compat/typescript>::version=4.6.0-dev.20211203&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]
       ]],
-      ["axios", [
-        ["npm:0.24.0", {
-          "packageLocation": "./.yarn/cache/axios-npm-0.24.0-39e5c1e79e-468cf496c0.zip/node_modules/axios/",
+      ["@types/axios", [
+        ["npm:0.14.0", {
+          "packageLocation": "./.yarn/cache/@types-axios-npm-0.14.0-42f41917ea-12a230b940.zip/node_modules/@types/axios/",
           "packageDependencies": [
-            ["axios", "npm:0.24.0"],
-            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.5"]
+            ["@types/axios", "npm:0.14.0"],
+            ["axios", "npm:0.26.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["axios", [
+        ["npm:0.26.1", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.26.1-a6641ce4e3-d9eb58ff4b.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.26.1"],
+            ["follow-redirects", "virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["follow-redirects", [
-        ["npm:1.14.5", {
-          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.5-7c681222a0-f004a76b2e.zip/node_modules/follow-redirects/",
+        ["npm:1.14.9", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.9-522f191631-f5982e0eb4.zip/node_modules/follow-redirects/",
           "packageDependencies": [
-            ["follow-redirects", "npm:1.14.5"]
+            ["follow-redirects", "npm:1.14.9"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.5", {
-          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-02c2a4727a/0/cache/follow-redirects-npm-1.14.5-7c681222a0-f004a76b2e.zip/node_modules/follow-redirects/",
+        ["virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-2db68225c5/0/cache/follow-redirects-npm-1.14.9-522f191631-f5982e0eb4.zip/node_modules/follow-redirects/",
           "packageDependencies": [
-            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.5"],
+            ["follow-redirects", "virtual:a6641ce4e3bdcc0997f8f53d9481b67c5d38e21276de8eeee7bf92881685b3ad5600bae416c2af904ceab8132bac649e7efd0af93f18e158e0e65ee05a263d72#npm:1.14.9"],
             ["@types/debug", null],
             ["debug", null]
           ],
@@ -87,7 +98,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["vlo-accounts-client", "workspace:."],
-            ["axios", "npm:0.24.0"],
+            ["@types/axios", "npm:0.14.0"],
+            ["axios", "npm:0.26.1"],
             ["typescript", "patch:typescript@npm%3A4.6.0-dev.20211203#~builtin<compat/typescript>::version=4.6.0-dev.20211203&hash=493e53"]
           ],
           "linkType": "SOFT",

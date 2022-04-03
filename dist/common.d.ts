@@ -11,7 +11,6 @@
  */
 import { Configuration } from "./configuration";
 import { RequestArgs } from "./base";
-import { AxiosInstance } from 'axios';
 /**
  *
  * @export
@@ -62,5 +61,5 @@ export declare const toPathString: (url: URL) => string;
  *
  * @export
  */
-export declare const createRequestFunction: (axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration | undefined) => (axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any, any>>;
+export declare const createRequestFunction: (axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration | undefined) => (axios?: AxiosInstance, basePath?: string) => any;
 //# sourceMappingURL=common.d.ts.map
