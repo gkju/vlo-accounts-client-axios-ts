@@ -1,0 +1,35 @@
+name: Create and publish a npm image
+
+on:
+  push:
+    branches: ['master']
+
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          always-auth: true
+          registry-url: https://npm.pkg.github.com
+          node-version: '16'
+      - name: Cache pnpm modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.23.6
+          run_install: true
+      - name: Publish
+        run: pnpm publish
