@@ -26,3 +26,4 @@ yarn-error.log*
 pnpm-lock.yaml
 .pnp.cjs
 .pnpm-debug.log
+/.idea/
