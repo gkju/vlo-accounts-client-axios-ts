@@ -38,6 +38,29 @@
         "responses": {
           "200": {
             "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
           }
         }
       }
@@ -84,6 +107,46 @@
         "responses": {
           "200": {
             "description": "Success"
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.BadRequestResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.BadRequestResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.BadRequestResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              }
+            }
           }
         }
       }
@@ -96,7 +159,44 @@
         "summary": "Initiates the request to add TOTP to the account by returning the appropriate TOTP uri",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.KeyQrUriTuple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.KeyQrUriTuple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.KeyQrUriTuple"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              }
+            }
           }
         }
       },
@@ -141,6 +241,46 @@
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.BadRequestResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.BadRequestResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.BadRequestResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ObjectResult"
                 }
               }
             }
@@ -392,7 +532,47 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
           }
         }
       },
@@ -411,7 +591,47 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -430,7 +650,27 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
           }
         }
       }
@@ -845,6 +1085,19 @@
         "responses": {
           "200": {
             "description": "Logout result"
+          }
+        }
+      }
+    },
+    "/api/Auth/ProfileInfo": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "summary": "Get the current user's profile information.",
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -1283,6 +1536,51 @@
           },
           "providerDisplayName": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Microsoft.AspNetCore.Mvc.BadRequestResult": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Microsoft.AspNetCore.Mvc.Formatters.IOutputFormatter": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "Microsoft.AspNetCore.Mvc.ObjectResult": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "nullable": true
+          },
+          "formatters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.Formatters.IOutputFormatter"
+            },
+            "nullable": true
+          },
+          "contentTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "declaredType": {
+            "$ref": "#/components/schemas/System.Type"
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },
@@ -3219,10 +3517,12 @@
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
             "format": "email"
           },
           "username": {
+            "minLength": 1,
             "type": "string",
             "format": "string"
           }
@@ -3237,10 +3537,12 @@
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
             "format": "email"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3266,6 +3568,7 @@
             "type": "boolean"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3276,15 +3579,17 @@
           "captchaResponse",
           "password",
           "rememberMe",
-          "usernameOrEmail"
+          "userNameOrEmail"
         ],
         "type": "object",
         "properties": {
-          "usernameOrEmail": {
+          "userNameOrEmail": {
+            "minLength": 1,
             "type": "string",
             "format": "string"
           },
           "password": {
+            "minLength": 1,
             "type": "string",
             "format": "password"
           },
@@ -3292,6 +3597,7 @@
             "type": "boolean"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3322,10 +3628,12 @@
         "type": "object",
         "properties": {
           "recoveryCode": {
+            "minLength": 1,
             "type": "string",
             "format": "string"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3339,10 +3647,12 @@
         "type": "object",
         "properties": {
           "oldPassword": {
+            "minLength": 1,
             "type": "string",
             "format": "password"
           },
           "newPassword": {
+            "minLength": 1,
             "type": "string",
             "format": "password"
           }
@@ -3357,9 +3667,11 @@
         "type": "object",
         "properties": {
           "code": {
+            "minLength": 1,
             "type": "string"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3396,6 +3708,20 @@
         },
         "additionalProperties": false
       },
+      "VLO_BOARDS.Areas.Auth.Manage.KeyQrUriTuple": {
+        "type": "object",
+        "properties": {
+          "sharedKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "authenticatorUri": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "VLO_BOARDS.Areas.Auth.Manage.RequestEmailChangeInput": {
         "required": [
           "captchaResponse",
@@ -3404,10 +3730,12 @@
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
             "format": "email"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3420,6 +3748,7 @@
         "type": "object",
         "properties": {
           "newPassword": {
+            "minLength": 1,
             "type": "string",
             "format": "password"
           }
@@ -3436,6 +3765,7 @@
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
             "format": "email"
           },
@@ -3452,6 +3782,7 @@
             "format": "string"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3475,10 +3806,12 @@
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
             "format": "email"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3494,6 +3827,7 @@
         "type": "object",
         "properties": {
           "email": {
+            "minLength": 1,
             "type": "string",
             "format": "email"
           },
@@ -3509,9 +3843,11 @@
             "nullable": true
           },
           "code": {
+            "minLength": 1,
             "type": "string"
           },
           "captchaResponse": {
+            "minLength": 1,
             "type": "string"
           }
         },
@@ -3552,6 +3888,7 @@
         "type": "object",
         "properties": {
           "returnUrl": {
+            "minLength": 1,
             "type": "string",
             "format": "uri"
           }

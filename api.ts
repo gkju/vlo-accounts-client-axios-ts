@@ -74,6 +74,56 @@ export interface MicrosoftAspNetCoreIdentityUserLoginInfo {
 /**
  * 
  * @export
+ * @interface MicrosoftAspNetCoreMvcBadRequestResult
+ */
+export interface MicrosoftAspNetCoreMvcBadRequestResult {
+    /**
+     * 
+     * @type {number}
+     * @memberof MicrosoftAspNetCoreMvcBadRequestResult
+     */
+    statusCode?: number;
+}
+/**
+ * 
+ * @export
+ * @interface MicrosoftAspNetCoreMvcObjectResult
+ */
+export interface MicrosoftAspNetCoreMvcObjectResult {
+    /**
+     * 
+     * @type {any}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    value?: any | null;
+    /**
+     * 
+     * @type {Array<object>}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    formatters?: Array<object> | null;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    contentTypes?: Array<string> | null;
+    /**
+     * 
+     * @type {SystemType}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    declaredType?: SystemType;
+    /**
+     * 
+     * @type {number}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    statusCode?: number | null;
+}
+/**
+ * 
+ * @export
  * @interface MicrosoftAspNetCoreMvcProblemDetails
  */
 export interface MicrosoftAspNetCoreMvcProblemDetails {
@@ -2827,7 +2877,7 @@ export interface VLOBOARDSAreasAuthLoginInputModel {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthLoginInputModel
      */
-    usernameOrEmail: string;
+    userNameOrEmail: string;
     /**
      * 
      * @type {string}
@@ -2960,6 +3010,25 @@ export interface VLOBOARDSAreasAuthManageGdprDeleteInputModel {
      * @memberof VLOBOARDSAreasAuthManageGdprDeleteInputModel
      */
     password?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface VLOBOARDSAreasAuthManageKeyQrUriTuple
+ */
+export interface VLOBOARDSAreasAuthManageKeyQrUriTuple {
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageKeyQrUriTuple
+     */
+    sharedKey?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageKeyQrUriTuple
+     */
+    authenticatorUri?: string | null;
 }
 /**
  * 
@@ -3545,7 +3614,7 @@ export const EnableTotp2FAApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthEnableTotp2FAGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiAuthEnableTotp2FAGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageKeyQrUriTuple>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthEnableTotp2FAGet(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -3576,7 +3645,7 @@ export const EnableTotp2FAApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthEnableTotp2FAGet(options?: any): AxiosPromise<void> {
+        apiAuthEnableTotp2FAGet(options?: any): AxiosPromise<VLOBOARDSAreasAuthManageKeyQrUriTuple> {
             return localVarFp.apiAuthEnableTotp2FAGet(options).then((request) => request(axios, basePath));
         },
         /**
@@ -4332,7 +4401,7 @@ export const FilesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiFilesFilesFileDelete(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiFilesFilesFileDelete(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiFilesFilesFileDelete(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4342,7 +4411,7 @@ export const FilesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiFilesFilesFileGet(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiFilesFilesFileGet(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiFilesFilesFileGet(id, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4353,7 +4422,7 @@ export const FilesApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiFilesFilesFilePost(isPublic, file, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -4373,7 +4442,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFilesFilesFileDelete(id?: string, options?: any): AxiosPromise<void> {
+        apiFilesFilesFileDelete(id?: string, options?: any): AxiosPromise<string> {
             return localVarFp.apiFilesFilesFileDelete(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4382,7 +4451,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFilesFilesFileGet(id?: string, options?: any): AxiosPromise<void> {
+        apiFilesFilesFileGet(id?: string, options?: any): AxiosPromise<string> {
             return localVarFp.apiFilesFilesFileGet(id, options).then((request) => request(axios, basePath));
         },
         /**
@@ -4392,7 +4461,7 @@ export const FilesApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): AxiosPromise<void> {
+        apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): AxiosPromise<string> {
             return localVarFp.apiFilesFilesFilePost(isPublic, file, options).then((request) => request(axios, basePath));
         },
     };
@@ -5246,6 +5315,104 @@ export class LogoutApi extends BaseAPI {
      */
     public apiAuthLogoutPost(returnUrl?: string, options?: any) {
         return LogoutApiFp(this.configuration).apiAuthLogoutPost(returnUrl, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
+ * ProfileInfoApi - axios parameter creator
+ * @export
+ */
+export const ProfileInfoApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Get the current user\'s profile information.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfileInfoGet: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ProfileInfo`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ProfileInfoApi - functional programming interface
+ * @export
+ */
+export const ProfileInfoApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ProfileInfoApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Get the current user\'s profile information.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthProfileInfoGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthProfileInfoGet(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ProfileInfoApi - factory interface
+ * @export
+ */
+export const ProfileInfoApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ProfileInfoApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Get the current user\'s profile information.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfileInfoGet(options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthProfileInfoGet(options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ProfileInfoApi - object-oriented interface
+ * @export
+ * @class ProfileInfoApi
+ * @extends {BaseAPI}
+ */
+export class ProfileInfoApi extends BaseAPI {
+    /**
+     * 
+     * @summary Get the current user\'s profile information.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileInfoApi
+     */
+    public apiAuthProfileInfoGet(options?: any) {
+        return ProfileInfoApiFp(this.configuration).apiAuthProfileInfoGet(options).then((request) => request(this.axios, this.basePath));
     }
 }
 

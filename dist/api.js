@@ -2606,6 +2606,115 @@ var LogoutApi = /** @class */ (function (_super) {
 }(BaseAPI));
 export { LogoutApi };
 /**
+ * ProfileInfoApi - axios parameter creator
+ * @export
+ */
+export var ProfileInfoApiAxiosParamCreator = function (configuration) {
+    var _this = this;
+    return {
+        /**
+         *
+         * @summary Get the current user\'s profile information.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfileInfoGet: function (options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/api/Auth/ProfileInfo";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+    };
+};
+/**
+ * ProfileInfoApi - functional programming interface
+ * @export
+ */
+export var ProfileInfoApiFp = function (configuration) {
+    var localVarAxiosParamCreator = ProfileInfoApiAxiosParamCreator(configuration);
+    return {
+        /**
+         *
+         * @summary Get the current user\'s profile information.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfileInfoGet: function (options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthProfileInfoGet(options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+    };
+};
+/**
+ * ProfileInfoApi - factory interface
+ * @export
+ */
+export var ProfileInfoApiFactory = function (configuration, basePath, axios) {
+    var localVarFp = ProfileInfoApiFp(configuration);
+    return {
+        /**
+         *
+         * @summary Get the current user\'s profile information.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthProfileInfoGet: function (options) {
+            return localVarFp.apiAuthProfileInfoGet(options).then(function (request) { return request(axios, basePath); });
+        },
+    };
+};
+/**
+ * ProfileInfoApi - object-oriented interface
+ * @export
+ * @class ProfileInfoApi
+ * @extends {BaseAPI}
+ */
+var ProfileInfoApi = /** @class */ (function (_super) {
+    __extends(ProfileInfoApi, _super);
+    function ProfileInfoApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     *
+     * @summary Get the current user\'s profile information.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileInfoApi
+     */
+    ProfileInfoApi.prototype.apiAuthProfileInfoGet = function (options) {
+        var _this = this;
+        return ProfileInfoApiFp(this.configuration).apiAuthProfileInfoGet(options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    return ProfileInfoApi;
+}(BaseAPI));
+export { ProfileInfoApi };
+/**
  * ProfilePictureApi - axios parameter creator
  * @export
  */

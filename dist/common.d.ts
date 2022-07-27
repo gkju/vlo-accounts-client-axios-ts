@@ -11,6 +11,7 @@
  */
 import { Configuration } from "./configuration";
 import { RequestArgs } from "./base";
+import { AxiosInstance } from 'axios';
 /**
  *
  * @export
@@ -26,22 +27,22 @@ export declare const assertParamExists: (functionName: string, paramName: string
  *
  * @export
  */
-export declare const setApiKeyToObject: (object: any, keyParamName: string, configuration?: Configuration | undefined) => Promise<void>;
+export declare const setApiKeyToObject: (object: any, keyParamName: string, configuration?: Configuration) => Promise<void>;
 /**
  *
  * @export
  */
-export declare const setBasicAuthToObject: (object: any, configuration?: Configuration | undefined) => void;
+export declare const setBasicAuthToObject: (object: any, configuration?: Configuration) => void;
 /**
  *
  * @export
  */
-export declare const setBearerAuthToObject: (object: any, configuration?: Configuration | undefined) => Promise<void>;
+export declare const setBearerAuthToObject: (object: any, configuration?: Configuration) => Promise<void>;
 /**
  *
  * @export
  */
-export declare const setOAuthToObject: (object: any, name: string, scopes: string[], configuration?: Configuration | undefined) => Promise<void>;
+export declare const setOAuthToObject: (object: any, name: string, scopes: string[], configuration?: Configuration) => Promise<void>;
 /**
  *
  * @export
@@ -51,7 +52,7 @@ export declare const setSearchParams: (url: URL, ...objects: any[]) => void;
  *
  * @export
  */
-export declare const serializeDataIfNeeded: (value: any, requestOptions: any, configuration?: Configuration | undefined) => any;
+export declare const serializeDataIfNeeded: (value: any, requestOptions: any, configuration?: Configuration) => any;
 /**
  *
  * @export
@@ -61,5 +62,5 @@ export declare const toPathString: (url: URL) => string;
  *
  * @export
  */
-export declare const createRequestFunction: (axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration | undefined) => (axios?: AxiosInstance, basePath?: string) => any;
+export declare const createRequestFunction: (axiosArgs: RequestArgs, globalAxios: AxiosInstance, BASE_PATH: string, configuration?: Configuration) => (axios?: AxiosInstance, basePath?: string) => Promise<import("axios").AxiosResponse<any, any>>;
 //# sourceMappingURL=common.d.ts.map

@@ -65,6 +65,56 @@ export interface MicrosoftAspNetCoreIdentityUserLoginInfo {
 /**
  *
  * @export
+ * @interface MicrosoftAspNetCoreMvcBadRequestResult
+ */
+export interface MicrosoftAspNetCoreMvcBadRequestResult {
+    /**
+     *
+     * @type {number}
+     * @memberof MicrosoftAspNetCoreMvcBadRequestResult
+     */
+    statusCode?: number;
+}
+/**
+ *
+ * @export
+ * @interface MicrosoftAspNetCoreMvcObjectResult
+ */
+export interface MicrosoftAspNetCoreMvcObjectResult {
+    /**
+     *
+     * @type {any}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    value?: any | null;
+    /**
+     *
+     * @type {Array<object>}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    formatters?: Array<object> | null;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    contentTypes?: Array<string> | null;
+    /**
+     *
+     * @type {SystemType}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    declaredType?: SystemType;
+    /**
+     *
+     * @type {number}
+     * @memberof MicrosoftAspNetCoreMvcObjectResult
+     */
+    statusCode?: number | null;
+}
+/**
+ *
+ * @export
  * @interface MicrosoftAspNetCoreMvcProblemDetails
  */
 export interface MicrosoftAspNetCoreMvcProblemDetails {
@@ -2793,7 +2843,7 @@ export interface VLOBOARDSAreasAuthLoginInputModel {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthLoginInputModel
      */
-    usernameOrEmail: string;
+    userNameOrEmail: string;
     /**
      *
      * @type {string}
@@ -2926,6 +2976,25 @@ export interface VLOBOARDSAreasAuthManageGdprDeleteInputModel {
      * @memberof VLOBOARDSAreasAuthManageGdprDeleteInputModel
      */
     password?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthManageKeyQrUriTuple
+ */
+export interface VLOBOARDSAreasAuthManageKeyQrUriTuple {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageKeyQrUriTuple
+     */
+    sharedKey?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageKeyQrUriTuple
+     */
+    authenticatorUri?: string | null;
 }
 /**
  *
@@ -3119,7 +3188,7 @@ export interface VLOBOARDSAreasAuthReturnUrlInputModel {
  * ChangePasswordApi - axios parameter creator
  * @export
  */
-export declare const ChangePasswordApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ChangePasswordApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Changes the password (changes as in there was a different password previously)
@@ -3127,13 +3196,13 @@ export declare const ChangePasswordApiAxiosParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthChangePasswordPost: (vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthChangePasswordPost: (vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ChangePasswordApi - functional programming interface
  * @export
  */
-export declare const ChangePasswordApiFp: (configuration?: Configuration | undefined) => {
+export declare const ChangePasswordApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Changes the password (changes as in there was a different password previously)
@@ -3141,13 +3210,13 @@ export declare const ChangePasswordApiFp: (configuration?: Configuration | undef
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ChangePasswordApi - factory interface
  * @export
  */
-export declare const ChangePasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ChangePasswordApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Changes the password (changes as in there was a different password previously)
@@ -3155,7 +3224,7 @@ export declare const ChangePasswordApiFactory: (configuration?: Configuration | 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * ChangePasswordApi - object-oriented interface
@@ -3172,13 +3241,13 @@ export declare class ChangePasswordApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ChangePasswordApi
      */
-    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): Promise<any>;
+    apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ConfirmEmailApi - axios parameter creator
  * @export
  */
-export declare const ConfirmEmailApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ConfirmEmailApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Confirms email using provided userid and code
@@ -3186,13 +3255,13 @@ export declare const ConfirmEmailApiAxiosParamCreator: (configuration?: Configur
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthConfirmEmailPost: (vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthConfirmEmailPost: (vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ConfirmEmailApi - functional programming interface
  * @export
  */
-export declare const ConfirmEmailApiFp: (configuration?: Configuration | undefined) => {
+export declare const ConfirmEmailApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Confirms email using provided userid and code
@@ -3200,13 +3269,13 @@ export declare const ConfirmEmailApiFp: (configuration?: Configuration | undefin
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ConfirmEmailApi - factory interface
  * @export
  */
-export declare const ConfirmEmailApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ConfirmEmailApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Confirms email using provided userid and code
@@ -3214,7 +3283,7 @@ export declare const ConfirmEmailApiFactory: (configuration?: Configuration | un
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * ConfirmEmailApi - object-oriented interface
@@ -3231,13 +3300,13 @@ export declare class ConfirmEmailApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ConfirmEmailApi
      */
-    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any): Promise<any>;
+    apiAuthConfirmEmailPost(vLOBOARDSAreasAuthConfirmEmailInputModel?: VLOBOARDSAreasAuthConfirmEmailInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * Disable2FAApi - axios parameter creator
  * @export
  */
-export declare const Disable2FAApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const Disable2FAApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Disables 2FA :c
@@ -3250,20 +3319,20 @@ export declare const Disable2FAApiAxiosParamCreator: (configuration?: Configurat
  * Disable2FAApi - functional programming interface
  * @export
  */
-export declare const Disable2FAApiFp: (configuration?: Configuration | undefined) => {
+export declare const Disable2FAApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Disables 2FA :c
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthDisable2FAPost(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthDisable2FAPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * Disable2FAApi - factory interface
  * @export
  */
-export declare const Disable2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const Disable2FAApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Disables 2FA :c
@@ -3286,13 +3355,13 @@ export declare class Disable2FAApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof Disable2FAApi
      */
-    apiAuthDisable2FAPost(options?: any): Promise<any>;
+    apiAuthDisable2FAPost(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * EnableTotp2FAApi - axios parameter creator
  * @export
  */
-export declare const EnableTotp2FAApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const EnableTotp2FAApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
@@ -3307,20 +3376,20 @@ export declare const EnableTotp2FAApiAxiosParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthEnableTotp2FAPost: (code?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthEnableTotp2FAPost: (code?: string, options?: any) => Promise<RequestArgs>;
 };
 /**
  * EnableTotp2FAApi - functional programming interface
  * @export
  */
-export declare const EnableTotp2FAApiFp: (configuration?: Configuration | undefined) => {
+export declare const EnableTotp2FAApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthEnableTotp2FAGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthEnableTotp2FAGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageKeyQrUriTuple>>;
     /**
      *
      * @summary Enables 2FA TOTP based on the previous uri request
@@ -3328,20 +3397,20 @@ export declare const EnableTotp2FAApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthEnableTotp2FAPost(code?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<string[]>>;
+    apiAuthEnableTotp2FAPost(code?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>>;
 };
 /**
  * EnableTotp2FAApi - factory interface
  * @export
  */
-export declare const EnableTotp2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const EnableTotp2FAApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Initiates the request to add TOTP to the account by returning the appropriate TOTP uri
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthEnableTotp2FAGet(options?: any): AxiosPromise<void>;
+    apiAuthEnableTotp2FAGet(options?: any): AxiosPromise<VLOBOARDSAreasAuthManageKeyQrUriTuple>;
     /**
      *
      * @summary Enables 2FA TOTP based on the previous uri request
@@ -3349,7 +3418,7 @@ export declare const EnableTotp2FAApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthEnableTotp2FAPost(code?: string | undefined, options?: any): AxiosPromise<string[]>;
+    apiAuthEnableTotp2FAPost(code?: string, options?: any): AxiosPromise<Array<string>>;
 };
 /**
  * EnableTotp2FAApi - object-oriented interface
@@ -3365,7 +3434,7 @@ export declare class EnableTotp2FAApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EnableTotp2FAApi
      */
-    apiAuthEnableTotp2FAGet(options?: any): Promise<any>;
+    apiAuthEnableTotp2FAGet(options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthManageKeyQrUriTuple, any>>;
     /**
      *
      * @summary Enables 2FA TOTP based on the previous uri request
@@ -3374,13 +3443,13 @@ export declare class EnableTotp2FAApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof EnableTotp2FAApi
      */
-    apiAuthEnableTotp2FAPost(code?: string, options?: any): Promise<any>;
+    apiAuthEnableTotp2FAPost(code?: string, options?: any): Promise<import("axios").AxiosResponse<string[], any>>;
 }
 /**
  * ExternalLoginApi - axios parameter creator
  * @export
  */
-export declare const ExternalLoginApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ExternalLoginApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Callback executed when external auth provider redirects back to app
@@ -3390,7 +3459,7 @@ export declare const ExternalLoginApiAxiosParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCallbackGet: (returnUrl?: string | undefined, rememberMe?: boolean | undefined, remoteError?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginCallbackGet: (returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
@@ -3398,7 +3467,7 @@ export declare const ExternalLoginApiAxiosParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCreateAccountPost: (vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginCreateAccountPost: (vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Challenges user using external provider
@@ -3408,13 +3477,13 @@ export declare const ExternalLoginApiAxiosParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginGet: (provider?: string | undefined, rememberMe?: boolean | undefined, returnUrl?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginGet: (provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ExternalLoginApi - functional programming interface
  * @export
  */
-export declare const ExternalLoginApiFp: (configuration?: Configuration | undefined) => {
+export declare const ExternalLoginApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Callback executed when external auth provider redirects back to app
@@ -3424,7 +3493,7 @@ export declare const ExternalLoginApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCallbackGet(returnUrl?: string | undefined, rememberMe?: boolean | undefined, remoteError?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
@@ -3432,7 +3501,7 @@ export declare const ExternalLoginApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Challenges user using external provider
@@ -3442,13 +3511,13 @@ export declare const ExternalLoginApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginGet(provider?: string | undefined, rememberMe?: boolean | undefined, returnUrl?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ExternalLoginApi - factory interface
  * @export
  */
-export declare const ExternalLoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ExternalLoginApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Callback executed when external auth provider redirects back to app
@@ -3458,7 +3527,7 @@ export declare const ExternalLoginApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCallbackGet(returnUrl?: string | undefined, rememberMe?: boolean | undefined, remoteError?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
@@ -3466,7 +3535,7 @@ export declare const ExternalLoginApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Challenges user using external provider
@@ -3476,7 +3545,7 @@ export declare const ExternalLoginApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginGet(provider?: string | undefined, rememberMe?: boolean | undefined, returnUrl?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): AxiosPromise<void>;
 };
 /**
  * ExternalLoginApi - object-oriented interface
@@ -3495,7 +3564,7 @@ export declare class ExternalLoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): Promise<any>;
+    apiAuthExternalLoginCallbackGet(returnUrl?: string, rememberMe?: boolean, remoteError?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Endpoint used for creating accounts when there\'s no account associated with external login
@@ -3504,7 +3573,7 @@ export declare class ExternalLoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<any>;
+    apiAuthExternalLoginCreateAccountPost(vLOBOARDSAreasAuthExternalLoginRegisterInputModel?: VLOBOARDSAreasAuthExternalLoginRegisterInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Challenges user using external provider
@@ -3515,13 +3584,13 @@ export declare class ExternalLoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginApi
      */
-    apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): Promise<any>;
+    apiAuthExternalLoginGet(provider?: string, rememberMe?: boolean, returnUrl?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ExternalLoginsManagementApi - axios parameter creator
  * @export
  */
-export declare const ExternalLoginsManagementApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ExternalLoginsManagementApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Handles the information returned by the external authentication provider
@@ -3537,7 +3606,7 @@ export declare const ExternalLoginsManagementApiAxiosParamCreator: (configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementDelete: (loginProvider?: string | undefined, providerKey?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginsManagementDelete: (loginProvider?: string, providerKey?: string, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Returns all the available external login providers as well as the currently used ones
@@ -3552,20 +3621,20 @@ export declare const ExternalLoginsManagementApiAxiosParamCreator: (configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementGetChallengePost: (provider?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginsManagementGetChallengePost: (provider?: string, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ExternalLoginsManagementApi - functional programming interface
  * @export
  */
-export declare const ExternalLoginsManagementApiFp: (configuration?: Configuration | undefined) => {
+export declare const ExternalLoginsManagementApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Handles the information returned by the external authentication provider
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Deletes an external login provider
@@ -3574,14 +3643,14 @@ export declare const ExternalLoginsManagementApiFp: (configuration?: Configurati
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementDelete(loginProvider?: string | undefined, providerKey?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Returns all the available external login providers as well as the currently used ones
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthManageExternalLoginInfo>>;
+    apiAuthExternalLoginsManagementGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageExternalLoginInfo>>;
     /**
      *
      * @summary Requests a new challenge for adding external auth
@@ -3589,13 +3658,13 @@ export declare const ExternalLoginsManagementApiFp: (configuration?: Configurati
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementGetChallengePost(provider?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ExternalLoginsManagementApi - factory interface
  * @export
  */
-export declare const ExternalLoginsManagementApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ExternalLoginsManagementApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Handles the information returned by the external authentication provider
@@ -3611,7 +3680,7 @@ export declare const ExternalLoginsManagementApiFactory: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementDelete(loginProvider?: string | undefined, providerKey?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Returns all the available external login providers as well as the currently used ones
@@ -3626,7 +3695,7 @@ export declare const ExternalLoginsManagementApiFactory: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementGetChallengePost(provider?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): AxiosPromise<void>;
 };
 /**
  * ExternalLoginsManagementApi - object-oriented interface
@@ -3642,7 +3711,7 @@ export declare class ExternalLoginsManagementApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginsManagementApi
      */
-    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<any>;
+    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Deletes an external login provider
@@ -3652,7 +3721,7 @@ export declare class ExternalLoginsManagementApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginsManagementApi
      */
-    apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): Promise<any>;
+    apiAuthExternalLoginsManagementDelete(loginProvider?: string, providerKey?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Returns all the available external login providers as well as the currently used ones
@@ -3660,7 +3729,7 @@ export declare class ExternalLoginsManagementApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginsManagementApi
      */
-    apiAuthExternalLoginsManagementGet(options?: any): Promise<any>;
+    apiAuthExternalLoginsManagementGet(options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthManageExternalLoginInfo, any>>;
     /**
      *
      * @summary Requests a new challenge for adding external auth
@@ -3669,27 +3738,27 @@ export declare class ExternalLoginsManagementApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ExternalLoginsManagementApi
      */
-    apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): Promise<any>;
+    apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * FilesApi - axios parameter creator
  * @export
  */
-export declare const FilesApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const FilesApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @param {string} [id]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFileDelete: (id?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiFilesFilesFileDelete: (id?: string, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @param {string} [id]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFileGet: (id?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiFilesFilesFileGet: (id?: string, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @param {boolean} [isPublic]
@@ -3697,27 +3766,27 @@ export declare const FilesApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFilePost: (isPublic?: boolean | undefined, file?: any, options?: any) => Promise<RequestArgs>;
+    apiFilesFilesFilePost: (isPublic?: boolean, file?: any, options?: any) => Promise<RequestArgs>;
 };
 /**
  * FilesApi - functional programming interface
  * @export
  */
-export declare const FilesApiFp: (configuration?: Configuration | undefined) => {
+export declare const FilesApiFp: (configuration?: Configuration) => {
     /**
      *
      * @param {string} [id]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFileDelete(id?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiFilesFilesFileDelete(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
     /**
      *
      * @param {string} [id]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFileGet(id?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiFilesFilesFileGet(id?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
     /**
      *
      * @param {boolean} [isPublic]
@@ -3725,27 +3794,27 @@ export declare const FilesApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFilePost(isPublic?: boolean | undefined, file?: any, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
 };
 /**
  * FilesApi - factory interface
  * @export
  */
-export declare const FilesApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const FilesApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @param {string} [id]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFileDelete(id?: string | undefined, options?: any): AxiosPromise<void>;
+    apiFilesFilesFileDelete(id?: string, options?: any): AxiosPromise<string>;
     /**
      *
      * @param {string} [id]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFileGet(id?: string | undefined, options?: any): AxiosPromise<void>;
+    apiFilesFilesFileGet(id?: string, options?: any): AxiosPromise<string>;
     /**
      *
      * @param {boolean} [isPublic]
@@ -3753,7 +3822,7 @@ export declare const FilesApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiFilesFilesFilePost(isPublic?: boolean | undefined, file?: any, options?: any): AxiosPromise<void>;
+    apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): AxiosPromise<string>;
 };
 /**
  * FilesApi - object-oriented interface
@@ -3769,7 +3838,7 @@ export declare class FilesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FilesApi
      */
-    apiFilesFilesFileDelete(id?: string, options?: any): Promise<any>;
+    apiFilesFilesFileDelete(id?: string, options?: any): Promise<import("axios").AxiosResponse<string, any>>;
     /**
      *
      * @param {string} [id]
@@ -3777,7 +3846,7 @@ export declare class FilesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FilesApi
      */
-    apiFilesFilesFileGet(id?: string, options?: any): Promise<any>;
+    apiFilesFilesFileGet(id?: string, options?: any): Promise<import("axios").AxiosResponse<string, any>>;
     /**
      *
      * @param {boolean} [isPublic]
@@ -3786,13 +3855,13 @@ export declare class FilesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FilesApi
      */
-    apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<any>;
+    apiFilesFilesFilePost(isPublic?: boolean, file?: any, options?: any): Promise<import("axios").AxiosResponse<string, any>>;
 }
 /**
  * ForgotPasswordApi - axios parameter creator
  * @export
  */
-export declare const ForgotPasswordApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ForgotPasswordApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Sends password reset email based on given email
@@ -3800,13 +3869,13 @@ export declare const ForgotPasswordApiAxiosParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthForgotPasswordPost: (vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthForgotPasswordPost: (vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ForgotPasswordApi - functional programming interface
  * @export
  */
-export declare const ForgotPasswordApiFp: (configuration?: Configuration | undefined) => {
+export declare const ForgotPasswordApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Sends password reset email based on given email
@@ -3814,13 +3883,13 @@ export declare const ForgotPasswordApiFp: (configuration?: Configuration | undef
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ForgotPasswordApi - factory interface
  * @export
  */
-export declare const ForgotPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ForgotPasswordApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Sends password reset email based on given email
@@ -3828,7 +3897,7 @@ export declare const ForgotPasswordApiFactory: (configuration?: Configuration | 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * ForgotPasswordApi - object-oriented interface
@@ -3845,13 +3914,13 @@ export declare class ForgotPasswordApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ForgotPasswordApi
      */
-    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any): Promise<any>;
+    apiAuthForgotPasswordPost(vLOBOARDSAreasAuthForgotPasswordInputModel?: VLOBOARDSAreasAuthForgotPasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * GdprDeleteUserApi - axios parameter creator
  * @export
  */
-export declare const GdprDeleteUserApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const GdprDeleteUserApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Deletes the user and ALL HIS DATA PERMANENTLY
@@ -3859,13 +3928,13 @@ export declare const GdprDeleteUserApiAxiosParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthGdprDeleteUserPost: (vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthGdprDeleteUserPost: (vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * GdprDeleteUserApi - functional programming interface
  * @export
  */
-export declare const GdprDeleteUserApiFp: (configuration?: Configuration | undefined) => {
+export declare const GdprDeleteUserApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Deletes the user and ALL HIS DATA PERMANENTLY
@@ -3873,13 +3942,13 @@ export declare const GdprDeleteUserApiFp: (configuration?: Configuration | undef
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * GdprDeleteUserApi - factory interface
  * @export
  */
-export declare const GdprDeleteUserApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const GdprDeleteUserApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Deletes the user and ALL HIS DATA PERMANENTLY
@@ -3887,7 +3956,7 @@ export declare const GdprDeleteUserApiFactory: (configuration?: Configuration | 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * GdprDeleteUserApi - object-oriented interface
@@ -3904,13 +3973,13 @@ export declare class GdprDeleteUserApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GdprDeleteUserApi
      */
-    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): Promise<any>;
+    apiAuthGdprDeleteUserPost(vLOBOARDSAreasAuthManageGdprDeleteInputModel?: VLOBOARDSAreasAuthManageGdprDeleteInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * GenerateRecoveryCodesApi - axios parameter creator
  * @export
  */
-export declare const GenerateRecoveryCodesApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const GenerateRecoveryCodesApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Generates recovery codes for use with TOTP
@@ -3923,20 +3992,20 @@ export declare const GenerateRecoveryCodesApiAxiosParamCreator: (configuration?:
  * GenerateRecoveryCodesApi - functional programming interface
  * @export
  */
-export declare const GenerateRecoveryCodesApiFp: (configuration?: Configuration | undefined) => {
+export declare const GenerateRecoveryCodesApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Generates recovery codes for use with TOTP
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthGenerateRecoveryCodesGet(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthGenerateRecoveryCodesGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * GenerateRecoveryCodesApi - factory interface
  * @export
  */
-export declare const GenerateRecoveryCodesApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const GenerateRecoveryCodesApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Generates recovery codes for use with TOTP
@@ -3959,13 +4028,13 @@ export declare class GenerateRecoveryCodesApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof GenerateRecoveryCodesApi
      */
-    apiAuthGenerateRecoveryCodesGet(options?: any): Promise<any>;
+    apiAuthGenerateRecoveryCodesGet(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * LoginApi - axios parameter creator
  * @export
  */
-export declare const LoginApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const LoginApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -3980,19 +4049,19 @@ export declare const LoginApiAxiosParamCreator: (configuration?: Configuration |
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginPost: (returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthLoginPost: (returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * LoginApi - functional programming interface
  * @export
  */
-export declare const LoginApiFp: (configuration?: Configuration | undefined) => {
+export declare const LoginApiFp: (configuration?: Configuration) => {
     /**
      *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Endpoint used to log user in based on username, password
@@ -4001,13 +4070,13 @@ export declare const LoginApiFp: (configuration?: Configuration | undefined) => 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
+    apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
 };
 /**
  * LoginApi - factory interface
  * @export
  */
-export declare const LoginApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const LoginApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -4022,7 +4091,7 @@ export declare const LoginApiFactory: (configuration?: Configuration | undefined
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginResult>;
+    apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginResult>;
 };
 /**
  * LoginApi - object-oriented interface
@@ -4037,7 +4106,7 @@ export declare class LoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LoginApi
      */
-    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<any>;
+    apiAuthLoginClearExternalCookiesPost(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Endpoint used to log user in based on username, password
@@ -4047,13 +4116,13 @@ export declare class LoginApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LoginApi
      */
-    apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<any>;
+    apiAuthLoginPost(returnUrl?: string, vLOBOARDSAreasAuthLoginInputModel?: VLOBOARDSAreasAuthLoginInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLoginResult, any>>;
 }
 /**
  * Login2FAApi - axios parameter creator
  * @export
  */
-export declare const Login2FAApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const Login2FAApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Logs user in based on 2FA code
@@ -4062,13 +4131,13 @@ export declare const Login2FAApiAxiosParamCreator: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogin2FAPost: (returnUrl?: string | undefined, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthLogin2FAPost: (returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * Login2FAApi - functional programming interface
  * @export
  */
-export declare const Login2FAApiFp: (configuration?: Configuration | undefined) => {
+export declare const Login2FAApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Logs user in based on 2FA code
@@ -4077,13 +4146,13 @@ export declare const Login2FAApiFp: (configuration?: Configuration | undefined) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogin2FAPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
+    apiAuthLogin2FAPost(returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthLoginResult>>;
 };
 /**
  * Login2FAApi - factory interface
  * @export
  */
-export declare const Login2FAApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const Login2FAApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Logs user in based on 2FA code
@@ -4092,7 +4161,7 @@ export declare const Login2FAApiFactory: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogin2FAPost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginResult>;
+    apiAuthLogin2FAPost(returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthLoginResult>;
 };
 /**
  * Login2FAApi - object-oriented interface
@@ -4110,13 +4179,13 @@ export declare class Login2FAApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof Login2FAApi
      */
-    apiAuthLogin2FAPost(returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any): Promise<any>;
+    apiAuthLogin2FAPost(returnUrl?: string, vLOBOARDSAreasAuthLogin2FAInputModel?: VLOBOARDSAreasAuthLogin2FAInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthLoginResult, any>>;
 }
 /**
  * LoginWithRecoveryCodeApi - axios parameter creator
  * @export
  */
-export declare const LoginWithRecoveryCodeApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const LoginWithRecoveryCodeApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Logins user using 2fa recovery code
@@ -4125,13 +4194,13 @@ export declare const LoginWithRecoveryCodeApiAxiosParamCreator: (configuration?:
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginWithRecoveryCodePost: (returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthLoginWithRecoveryCodePost: (returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * LoginWithRecoveryCodeApi - functional programming interface
  * @export
  */
-export declare const LoginWithRecoveryCodeApiFp: (configuration?: Configuration | undefined) => {
+export declare const LoginWithRecoveryCodeApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Logins user using 2fa recovery code
@@ -4140,13 +4209,13 @@ export declare const LoginWithRecoveryCodeApiFp: (configuration?: Configuration 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginWithRecoveryCodePost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * LoginWithRecoveryCodeApi - factory interface
  * @export
  */
-export declare const LoginWithRecoveryCodeApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const LoginWithRecoveryCodeApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Logins user using 2fa recovery code
@@ -4155,7 +4224,7 @@ export declare const LoginWithRecoveryCodeApiFactory: (configuration?: Configura
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLoginWithRecoveryCodePost(returnUrl?: string | undefined, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * LoginWithRecoveryCodeApi - object-oriented interface
@@ -4173,13 +4242,13 @@ export declare class LoginWithRecoveryCodeApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LoginWithRecoveryCodeApi
      */
-    apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<any>;
+    apiAuthLoginWithRecoveryCodePost(returnUrl?: string, vLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel?: VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * LogoutApi - axios parameter creator
  * @export
  */
-export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Logs user out
@@ -4187,13 +4256,13 @@ export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost: (returnUrl?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthLogoutPost: (returnUrl?: string, options?: any) => Promise<RequestArgs>;
 };
 /**
  * LogoutApi - functional programming interface
  * @export
  */
-export declare const LogoutApiFp: (configuration?: Configuration | undefined) => {
+export declare const LogoutApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Logs user out
@@ -4201,13 +4270,13 @@ export declare const LogoutApiFp: (configuration?: Configuration | undefined) =>
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost(returnUrl?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * LogoutApi - factory interface
  * @export
  */
-export declare const LogoutApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const LogoutApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Logs user out
@@ -4215,7 +4284,7 @@ export declare const LogoutApiFactory: (configuration?: Configuration | undefine
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost(returnUrl?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthLogoutPost(returnUrl?: string, options?: any): AxiosPromise<void>;
 };
 /**
  * LogoutApi - object-oriented interface
@@ -4232,13 +4301,68 @@ export declare class LogoutApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LogoutApi
      */
-    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<any>;
+    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+}
+/**
+ * ProfileInfoApi - axios parameter creator
+ * @export
+ */
+export declare const ProfileInfoApiAxiosParamCreator: (configuration?: Configuration) => {
+    /**
+     *
+     * @summary Get the current user\'s profile information.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfileInfoGet: (options?: any) => Promise<RequestArgs>;
+};
+/**
+ * ProfileInfoApi - functional programming interface
+ * @export
+ */
+export declare const ProfileInfoApiFp: (configuration?: Configuration) => {
+    /**
+     *
+     * @summary Get the current user\'s profile information.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfileInfoGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+};
+/**
+ * ProfileInfoApi - factory interface
+ * @export
+ */
+export declare const ProfileInfoApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    /**
+     *
+     * @summary Get the current user\'s profile information.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthProfileInfoGet(options?: any): AxiosPromise<void>;
+};
+/**
+ * ProfileInfoApi - object-oriented interface
+ * @export
+ * @class ProfileInfoApi
+ * @extends {BaseAPI}
+ */
+export declare class ProfileInfoApi extends BaseAPI {
+    /**
+     *
+     * @summary Get the current user\'s profile information.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileInfoApi
+     */
+    apiAuthProfileInfoGet(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ProfilePictureApi - axios parameter creator
  * @export
  */
-export declare const ProfilePictureApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ProfilePictureApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -4251,7 +4375,7 @@ export declare const ProfilePictureApiAxiosParamCreator: (configuration?: Config
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthProfilePictureGet: (userId?: string | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthProfilePictureGet: (userId?: string, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @param {any} picture
@@ -4264,33 +4388,33 @@ export declare const ProfilePictureApiAxiosParamCreator: (configuration?: Config
  * ProfilePictureApi - functional programming interface
  * @export
  */
-export declare const ProfilePictureApiFp: (configuration?: Configuration | undefined) => {
+export declare const ProfilePictureApiFp: (configuration?: Configuration) => {
     /**
      *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthProfilePictureDelete(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthProfilePictureDelete(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @param {string} [userId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthProfilePictureGet(userId?: string | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthProfilePictureGet(userId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @param {any} picture
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthProfilePicturePost(picture: any, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthProfilePicturePost(picture: any, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ProfilePictureApi - factory interface
  * @export
  */
-export declare const ProfilePictureApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ProfilePictureApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -4303,7 +4427,7 @@ export declare const ProfilePictureApiFactory: (configuration?: Configuration | 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthProfilePictureGet(userId?: string | undefined, options?: any): AxiosPromise<void>;
+    apiAuthProfilePictureGet(userId?: string, options?: any): AxiosPromise<void>;
     /**
      *
      * @param {any} picture
@@ -4325,7 +4449,7 @@ export declare class ProfilePictureApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfilePictureApi
      */
-    apiAuthProfilePictureDelete(options?: any): Promise<any>;
+    apiAuthProfilePictureDelete(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @param {string} [userId]
@@ -4333,7 +4457,7 @@ export declare class ProfilePictureApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfilePictureApi
      */
-    apiAuthProfilePictureGet(userId?: string, options?: any): Promise<any>;
+    apiAuthProfilePictureGet(userId?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @param {any} picture
@@ -4341,13 +4465,13 @@ export declare class ProfilePictureApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ProfilePictureApi
      */
-    apiAuthProfilePicturePost(picture: any, options?: any): Promise<any>;
+    apiAuthProfilePicturePost(picture: any, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * RegisterApi - axios parameter creator
  * @export
  */
-export declare const RegisterApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const RegisterApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Registers user based on the provided input
@@ -4355,13 +4479,13 @@ export declare const RegisterApiAxiosParamCreator: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRegisterPost: (vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthRegisterPost: (vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * RegisterApi - functional programming interface
  * @export
  */
-export declare const RegisterApiFp: (configuration?: Configuration | undefined) => {
+export declare const RegisterApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Registers user based on the provided input
@@ -4369,13 +4493,13 @@ export declare const RegisterApiFp: (configuration?: Configuration | undefined) 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>>;
+    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>>;
 };
 /**
  * RegisterApi - factory interface
  * @export
  */
-export declare const RegisterApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const RegisterApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Registers user based on the provided input
@@ -4383,7 +4507,7 @@ export declare const RegisterApiFactory: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>;
+    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthRegistrationResult>;
 };
 /**
  * RegisterApi - object-oriented interface
@@ -4400,13 +4524,13 @@ export declare class RegisterApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<any>;
+    apiAuthRegisterPost(vLOBOARDSAreasAuthRegisterInputModel?: VLOBOARDSAreasAuthRegisterInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthRegistrationResult, any>>;
 }
 /**
  * RequestEmailChangeApi - axios parameter creator
  * @export
  */
-export declare const RequestEmailChangeApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const RequestEmailChangeApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Creates a new email change request
@@ -4414,7 +4538,7 @@ export declare const RequestEmailChangeApiAxiosParamCreator: (configuration?: Co
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRequestEmailChangePost: (vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthRequestEmailChangePost: (vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Handles the email change requested previously
@@ -4422,13 +4546,13 @@ export declare const RequestEmailChangeApiAxiosParamCreator: (configuration?: Co
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRequestEmailChangePut: (vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthRequestEmailChangePut: (vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any) => Promise<RequestArgs>;
 };
 /**
  * RequestEmailChangeApi - functional programming interface
  * @export
  */
-export declare const RequestEmailChangeApiFp: (configuration?: Configuration | undefined) => {
+export declare const RequestEmailChangeApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Creates a new email change request
@@ -4436,7 +4560,7 @@ export declare const RequestEmailChangeApiFp: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Handles the email change requested previously
@@ -4444,13 +4568,13 @@ export declare const RequestEmailChangeApiFp: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * RequestEmailChangeApi - factory interface
  * @export
  */
-export declare const RequestEmailChangeApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const RequestEmailChangeApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Creates a new email change request
@@ -4458,7 +4582,7 @@ export declare const RequestEmailChangeApiFactory: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput | undefined, options?: any): AxiosPromise<void>;
+    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Handles the email change requested previously
@@ -4466,7 +4590,7 @@ export declare const RequestEmailChangeApiFactory: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput | undefined, options?: any): AxiosPromise<void>;
+    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): AxiosPromise<void>;
 };
 /**
  * RequestEmailChangeApi - object-oriented interface
@@ -4483,7 +4607,7 @@ export declare class RequestEmailChangeApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RequestEmailChangeApi
      */
-    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): Promise<any>;
+    apiAuthRequestEmailChangePost(vLOBOARDSAreasAuthManageRequestEmailChangeInput?: VLOBOARDSAreasAuthManageRequestEmailChangeInput, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Handles the email change requested previously
@@ -4492,13 +4616,13 @@ export declare class RequestEmailChangeApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof RequestEmailChangeApi
      */
-    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): Promise<any>;
+    apiAuthRequestEmailChangePut(vLOBOARDSAreasAuthManageConfirmEmailChangeInput?: VLOBOARDSAreasAuthManageConfirmEmailChangeInput, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ResendEmailConfirmationApi - axios parameter creator
  * @export
  */
-export declare const ResendEmailConfirmationApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ResendEmailConfirmationApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Resends email confirmation
@@ -4506,13 +4630,13 @@ export declare const ResendEmailConfirmationApiAxiosParamCreator: (configuration
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResendEmailConfirmationPost: (vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthResendEmailConfirmationPost: (vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ResendEmailConfirmationApi - functional programming interface
  * @export
  */
-export declare const ResendEmailConfirmationApiFp: (configuration?: Configuration | undefined) => {
+export declare const ResendEmailConfirmationApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Resends email confirmation
@@ -4520,13 +4644,13 @@ export declare const ResendEmailConfirmationApiFp: (configuration?: Configuratio
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ResendEmailConfirmationApi - factory interface
  * @export
  */
-export declare const ResendEmailConfirmationApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ResendEmailConfirmationApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Resends email confirmation
@@ -4534,7 +4658,7 @@ export declare const ResendEmailConfirmationApiFactory: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * ResendEmailConfirmationApi - object-oriented interface
@@ -4551,13 +4675,13 @@ export declare class ResendEmailConfirmationApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResendEmailConfirmationApi
      */
-    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any): Promise<any>;
+    apiAuthResendEmailConfirmationPost(vLOBOARDSAreasAuthResendEmailConfirmationInputModel?: VLOBOARDSAreasAuthResendEmailConfirmationInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ResetPasswordApi - axios parameter creator
  * @export
  */
-export declare const ResetPasswordApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ResetPasswordApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Changes the password to a new one based on input
@@ -4565,13 +4689,13 @@ export declare const ResetPasswordApiAxiosParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResetPasswordPost: (vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthResetPasswordPost: (vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ResetPasswordApi - functional programming interface
  * @export
  */
-export declare const ResetPasswordApiFp: (configuration?: Configuration | undefined) => {
+export declare const ResetPasswordApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Changes the password to a new one based on input
@@ -4579,13 +4703,13 @@ export declare const ResetPasswordApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ResetPasswordApi - factory interface
  * @export
  */
-export declare const ResetPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ResetPasswordApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Changes the password to a new one based on input
@@ -4593,7 +4717,7 @@ export declare const ResetPasswordApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * ResetPasswordApi - object-oriented interface
@@ -4610,13 +4734,13 @@ export declare class ResetPasswordApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResetPasswordApi
      */
-    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<any>;
+    apiAuthResetPasswordPost(vLOBOARDSAreasAuthResetPasswordInputModel?: VLOBOARDSAreasAuthResetPasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ResetTotpAuthenticatorApi - axios parameter creator
  * @export
  */
-export declare const ResetTotpAuthenticatorApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ResetTotpAuthenticatorApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -4628,19 +4752,19 @@ export declare const ResetTotpAuthenticatorApiAxiosParamCreator: (configuration?
  * ResetTotpAuthenticatorApi - functional programming interface
  * @export
  */
-export declare const ResetTotpAuthenticatorApiFp: (configuration?: Configuration | undefined) => {
+export declare const ResetTotpAuthenticatorApiFp: (configuration?: Configuration) => {
     /**
      *
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthResetTotpAuthenticatorPost(options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthResetTotpAuthenticatorPost(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * ResetTotpAuthenticatorApi - factory interface
  * @export
  */
-export declare const ResetTotpAuthenticatorApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ResetTotpAuthenticatorApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @param {*} [options] Override http request option.
@@ -4661,13 +4785,13 @@ export declare class ResetTotpAuthenticatorApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ResetTotpAuthenticatorApi
      */
-    apiAuthResetTotpAuthenticatorPost(options?: any): Promise<any>;
+    apiAuthResetTotpAuthenticatorPost(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
  * ReturnUrlInfoApi - axios parameter creator
  * @export
  */
-export declare const ReturnUrlInfoApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const ReturnUrlInfoApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
@@ -4675,13 +4799,13 @@ export declare const ReturnUrlInfoApiAxiosParamCreator: (configuration?: Configu
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthReturnUrlInfoPost: (vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthReturnUrlInfoPost: (vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * ReturnUrlInfoApi - functional programming interface
  * @export
  */
-export declare const ReturnUrlInfoApiFp: (configuration?: Configuration | undefined) => {
+export declare const ReturnUrlInfoApiFp: (configuration?: Configuration) => {
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
@@ -4689,13 +4813,13 @@ export declare const ReturnUrlInfoApiFp: (configuration?: Configuration | undefi
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>>;
+    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>>;
 };
 /**
  * ReturnUrlInfoApi - factory interface
  * @export
  */
-export declare const ReturnUrlInfoApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const ReturnUrlInfoApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      * Use every time you need to check whether to redirect to returnurl
      * @summary Returns information about client associated with returnurl
@@ -4703,7 +4827,7 @@ export declare const ReturnUrlInfoApiFactory: (configuration?: Configuration | u
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel | undefined, options?: any): AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>;
+    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): AxiosPromise<VLOBOARDSAreasAuthReturnUrlInfo>;
 };
 /**
  * ReturnUrlInfoApi - object-oriented interface
@@ -4720,13 +4844,13 @@ export declare class ReturnUrlInfoApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof ReturnUrlInfoApi
      */
-    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): Promise<any>;
+    apiAuthReturnUrlInfoPost(vLOBOARDSAreasAuthReturnUrlInputModel?: VLOBOARDSAreasAuthReturnUrlInputModel, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthReturnUrlInfo, any>>;
 }
 /**
  * SetPasswordApi - axios parameter creator
  * @export
  */
-export declare const SetPasswordApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
+export declare const SetPasswordApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
      * @summary Adds a password (for users using only hardware/external authentication)
@@ -4734,13 +4858,13 @@ export declare const SetPasswordApiAxiosParamCreator: (configuration?: Configura
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthSetPasswordPost: (vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel | undefined, options?: any) => Promise<RequestArgs>;
+    apiAuthSetPasswordPost: (vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any) => Promise<RequestArgs>;
 };
 /**
  * SetPasswordApi - functional programming interface
  * @export
  */
-export declare const SetPasswordApiFp: (configuration?: Configuration | undefined) => {
+export declare const SetPasswordApiFp: (configuration?: Configuration) => {
     /**
      *
      * @summary Adds a password (for users using only hardware/external authentication)
@@ -4748,13 +4872,13 @@ export declare const SetPasswordApiFp: (configuration?: Configuration | undefine
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel | undefined, options?: any): Promise<(axios?: any, basePath?: string | undefined) => AxiosPromise<void>>;
+    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * SetPasswordApi - factory interface
  * @export
  */
-export declare const SetPasswordApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: any) => {
+export declare const SetPasswordApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
      * @summary Adds a password (for users using only hardware/external authentication)
@@ -4762,7 +4886,7 @@ export declare const SetPasswordApiFactory: (configuration?: Configuration | und
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel | undefined, options?: any): AxiosPromise<void>;
+    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): AxiosPromise<void>;
 };
 /**
  * SetPasswordApi - object-oriented interface
@@ -4779,6 +4903,6 @@ export declare class SetPasswordApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof SetPasswordApi
      */
-    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<any>;
+    apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 //# sourceMappingURL=api.d.ts.map
