@@ -84,6 +84,27 @@ import { BASE_PATH, BaseAPI } from './base';
  * @export
  * @enum {string}
  */
+export var Fido2NetLibObjectsAuthenticatorTransport;
+(function (Fido2NetLibObjectsAuthenticatorTransport) {
+    Fido2NetLibObjectsAuthenticatorTransport["Usb"] = "usb";
+    Fido2NetLibObjectsAuthenticatorTransport["Nfc"] = "nfc";
+    Fido2NetLibObjectsAuthenticatorTransport["Ble"] = "ble";
+    Fido2NetLibObjectsAuthenticatorTransport["Internal"] = "internal";
+})(Fido2NetLibObjectsAuthenticatorTransport || (Fido2NetLibObjectsAuthenticatorTransport = {}));
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export var Fido2NetLibObjectsPublicKeyCredentialType;
+(function (Fido2NetLibObjectsPublicKeyCredentialType) {
+    Fido2NetLibObjectsPublicKeyCredentialType["PublicKey"] = "public-key";
+})(Fido2NetLibObjectsPublicKeyCredentialType || (Fido2NetLibObjectsPublicKeyCredentialType = {}));
+/**
+ *
+ * @export
+ * @enum {string}
+ */
 export var SystemReflectionCallingConventions;
 (function (SystemReflectionCallingConventions) {
     SystemReflectionCallingConventions[SystemReflectionCallingConventions["NUMBER_1"] = 1] = "NUMBER_1";

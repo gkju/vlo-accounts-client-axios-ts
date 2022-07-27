@@ -24,6 +24,389 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 /**
  * 
  * @export
+ * @interface AccountsDataModelsDataModelsApplicationUser
+ */
+export interface AccountsDataModelsDataModelsApplicationUser {
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    id?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    userName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    normalizedUserName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    email?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    normalizedEmail?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    emailConfirmed?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    passwordHash?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    securityStamp?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    concurrencyStamp?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    phoneNumber?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    phoneNumberConfirmed?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    twoFactorEnabled?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    lockoutEnd?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    lockoutEnabled?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    accessFailedCount?: number;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsProfilePicture}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    profilePicture?: AccountsDataModelsDataModelsProfilePicture;
+    /**
+     * 
+     * @type {number}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    socialCredit?: number;
+    /**
+     * 
+     * @type {Array<AccountsDataModelsDataModelsFido2Pk>}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    fidoCredentials?: Array<AccountsDataModelsDataModelsFido2Pk> | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    usedBytes?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    maxBytes?: number;
+    /**
+     * 
+     * @type {Array<AccountsDataModelsDataModelsFile>}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    files?: Array<AccountsDataModelsDataModelsFile> | null;
+    /**
+     * 
+     * @type {Array<AccountsDataModelsDataModelsFolder>}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    folders?: Array<AccountsDataModelsDataModelsFolder> | null;
+}
+/**
+ * 
+ * @export
+ * @interface AccountsDataModelsDataModelsFido2Pk
+ */
+export interface AccountsDataModelsDataModelsFido2Pk {
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFido2Pk
+     */
+    id?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFido2Pk
+     */
+    ownerId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsApplicationUser}
+     * @memberof AccountsDataModelsDataModelsFido2Pk
+     */
+    owner?: AccountsDataModelsDataModelsApplicationUser;
+    /**
+     * 
+     * @type {Fido2NetLibObjectsPublicKeyCredentialDescriptor}
+     * @memberof AccountsDataModelsDataModelsFido2Pk
+     */
+    descriptor?: Fido2NetLibObjectsPublicKeyCredentialDescriptor;
+}
+/**
+ * 
+ * @export
+ * @interface AccountsDataModelsDataModelsFile
+ */
+export interface AccountsDataModelsDataModelsFile {
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    objectId?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    bucket?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    backedInMinio?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    userManageable?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    _public?: boolean;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    fileName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    contentType?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    ownerId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsApplicationUser}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    owner?: AccountsDataModelsDataModelsApplicationUser;
+    /**
+     * 
+     * @type {number}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    byteSize?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    parentId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsFolder}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    parent?: AccountsDataModelsDataModelsFolder;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    masterFileId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsFile}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    masterFile?: AccountsDataModelsDataModelsFile;
+    /**
+     * 
+     * @type {Array<AccountsDataModelsDataModelsFile>}
+     * @memberof AccountsDataModelsDataModelsFile
+     */
+    childrenFiles?: Array<AccountsDataModelsDataModelsFile> | null;
+}
+/**
+ * 
+ * @export
+ * @interface AccountsDataModelsDataModelsFolder
+ */
+export interface AccountsDataModelsDataModelsFolder {
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFolder
+     */
+    id?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFolder
+     */
+    ownerId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsApplicationUser}
+     * @memberof AccountsDataModelsDataModelsFolder
+     */
+    owner?: AccountsDataModelsDataModelsApplicationUser;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsFolder
+     */
+    masterFolderId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsFolder}
+     * @memberof AccountsDataModelsDataModelsFolder
+     */
+    masterFolder?: AccountsDataModelsDataModelsFolder;
+}
+/**
+ * 
+ * @export
+ * @interface AccountsDataModelsDataModelsProfilePicture
+ */
+export interface AccountsDataModelsDataModelsProfilePicture {
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsProfilePicture
+     */
+    id?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsFile}
+     * @memberof AccountsDataModelsDataModelsProfilePicture
+     */
+    picture?: AccountsDataModelsDataModelsFile;
+    /**
+     * 
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsProfilePicture
+     */
+    ownerId?: string | null;
+    /**
+     * 
+     * @type {AccountsDataModelsDataModelsApplicationUser}
+     * @memberof AccountsDataModelsDataModelsProfilePicture
+     */
+    owner?: AccountsDataModelsDataModelsApplicationUser;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum Fido2NetLibObjectsAuthenticatorTransport {
+    Usb = 'usb',
+    Nfc = 'nfc',
+    Ble = 'ble',
+    Internal = 'internal'
+}
+
+/**
+ * 
+ * @export
+ * @interface Fido2NetLibObjectsPublicKeyCredentialDescriptor
+ */
+export interface Fido2NetLibObjectsPublicKeyCredentialDescriptor {
+    /**
+     * 
+     * @type {Fido2NetLibObjectsPublicKeyCredentialType}
+     * @memberof Fido2NetLibObjectsPublicKeyCredentialDescriptor
+     */
+    type?: Fido2NetLibObjectsPublicKeyCredentialType;
+    /**
+     * 
+     * @type {string}
+     * @memberof Fido2NetLibObjectsPublicKeyCredentialDescriptor
+     */
+    id?: string | null;
+    /**
+     * 
+     * @type {Array<Fido2NetLibObjectsAuthenticatorTransport>}
+     * @memberof Fido2NetLibObjectsPublicKeyCredentialDescriptor
+     */
+    transports?: Array<Fido2NetLibObjectsAuthenticatorTransport> | null;
+}
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export enum Fido2NetLibObjectsPublicKeyCredentialType {
+    PublicKey = 'public-key'
+}
+
+/**
+ * 
+ * @export
  * @interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme
  */
 export interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme {
@@ -5371,7 +5754,7 @@ export const ProfileInfoApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthProfileInfoGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiAuthProfileInfoGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<AccountsDataModelsDataModelsApplicationUser>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthProfileInfoGet(options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5391,7 +5774,7 @@ export const ProfileInfoApiFactory = function (configuration?: Configuration, ba
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthProfileInfoGet(options?: any): AxiosPromise<void> {
+        apiAuthProfileInfoGet(options?: any): AxiosPromise<AccountsDataModelsDataModelsApplicationUser> {
             return localVarFp.apiAuthProfileInfoGet(options).then((request) => request(axios, basePath));
         },
     };

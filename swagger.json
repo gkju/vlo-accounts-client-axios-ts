@@ -1097,7 +1097,24 @@
         "summary": "Get the current user's profile information.",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+                }
+              }
+            }
           }
         }
       }
@@ -1506,6 +1523,268 @@
   },
   "components": {
     "schemas": {
+      "AccountsData.Models.DataModels.ApplicationUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "profilePicture": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.ProfilePicture"
+          },
+          "socialCredit": {
+            "type": "number",
+            "format": "double"
+          },
+          "fidoCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountsData.Models.DataModels.Fido2Pk"
+            },
+            "nullable": true
+          },
+          "usedBytes": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "maxBytes": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountsData.Models.DataModels.File"
+            },
+            "nullable": true
+          },
+          "folders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountsData.Models.DataModels.Folder"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountsData.Models.DataModels.Fido2Pk": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "owner": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+          },
+          "descriptor": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialDescriptor"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountsData.Models.DataModels.File": {
+        "type": "object",
+        "properties": {
+          "objectId": {
+            "type": "string",
+            "nullable": true
+          },
+          "bucket": {
+            "type": "string",
+            "nullable": true
+          },
+          "backedInMinio": {
+            "type": "boolean"
+          },
+          "userManageable": {
+            "type": "boolean"
+          },
+          "public": {
+            "type": "boolean"
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "owner": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+          },
+          "byteSize": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "parentId": {
+            "type": "string",
+            "nullable": true
+          },
+          "parent": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.Folder"
+          },
+          "masterFileId": {
+            "type": "string",
+            "nullable": true
+          },
+          "masterFile": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.File"
+          },
+          "childrenFiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AccountsData.Models.DataModels.File"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountsData.Models.DataModels.Folder": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "ownerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "owner": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+          },
+          "masterFolderId": {
+            "type": "string",
+            "nullable": true
+          },
+          "masterFolder": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.Folder"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccountsData.Models.DataModels.ProfilePicture": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "picture": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.File"
+          },
+          "ownerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "owner": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Objects.AuthenticatorTransport": {
+        "enum": [
+          "usb",
+          "nfc",
+          "ble",
+          "internal"
+        ],
+        "type": "string"
+      },
+      "Fido2NetLib.Objects.PublicKeyCredentialDescriptor": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialType"
+          },
+          "id": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "transports": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Fido2NetLib.Objects.AuthenticatorTransport"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Objects.PublicKeyCredentialType": {
+        "enum": [
+          "public-key"
+        ],
+        "type": "string"
+      },
       "Microsoft.AspNetCore.Authentication.AuthenticationScheme": {
         "type": "object",
         "properties": {
