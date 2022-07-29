@@ -65,6 +65,27 @@
         }
       }
     },
+    "/api/Auth/ChangeUserName": {
+      "post": {
+        "tags": [
+          "ChangeUserName"
+        ],
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Auth/ConfirmEmail": {
       "post": {
         "tags": [

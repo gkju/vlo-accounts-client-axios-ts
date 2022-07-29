@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "regen": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -o . -i swagger.json"
+    "regen": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -o . -i swagger.json",
+    "prepublish": "pnpm regen && pnpm build" 
   },
   "dependencies": {
     "axios": "^0.27.2",

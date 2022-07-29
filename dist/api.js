@@ -443,6 +443,118 @@ var ChangePasswordApi = /** @class */ (function (_super) {
 }(BaseAPI));
 export { ChangePasswordApi };
 /**
+ * ChangeUserNameApi - axios parameter creator
+ * @export
+ */
+export var ChangeUserNameApiAxiosParamCreator = function (configuration) {
+    var _this = this;
+    return {
+        /**
+         *
+         * @param {string} [userName]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangeUserNamePost: function (userName, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/api/Auth/ChangeUserName";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    if (userName !== undefined) {
+                        localVarQueryParameter['userName'] = userName;
+                    }
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+    };
+};
+/**
+ * ChangeUserNameApi - functional programming interface
+ * @export
+ */
+export var ChangeUserNameApiFp = function (configuration) {
+    var localVarAxiosParamCreator = ChangeUserNameApiAxiosParamCreator(configuration);
+    return {
+        /**
+         *
+         * @param {string} [userName]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangeUserNamePost: function (userName, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthChangeUserNamePost(userName, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+    };
+};
+/**
+ * ChangeUserNameApi - factory interface
+ * @export
+ */
+export var ChangeUserNameApiFactory = function (configuration, basePath, axios) {
+    var localVarFp = ChangeUserNameApiFp(configuration);
+    return {
+        /**
+         *
+         * @param {string} [userName]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangeUserNamePost: function (userName, options) {
+            return localVarFp.apiAuthChangeUserNamePost(userName, options).then(function (request) { return request(axios, basePath); });
+        },
+    };
+};
+/**
+ * ChangeUserNameApi - object-oriented interface
+ * @export
+ * @class ChangeUserNameApi
+ * @extends {BaseAPI}
+ */
+var ChangeUserNameApi = /** @class */ (function (_super) {
+    __extends(ChangeUserNameApi, _super);
+    function ChangeUserNameApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     *
+     * @param {string} [userName]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ChangeUserNameApi
+     */
+    ChangeUserNameApi.prototype.apiAuthChangeUserNamePost = function (userName, options) {
+        var _this = this;
+        return ChangeUserNameApiFp(this.configuration).apiAuthChangeUserNamePost(userName, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    return ChangeUserNameApi;
+}(BaseAPI));
+export { ChangeUserNameApi };
+/**
  * ConfirmEmailApi - axios parameter creator
  * @export
  */

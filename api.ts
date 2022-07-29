@@ -3708,6 +3708,108 @@ export class ChangePasswordApi extends BaseAPI {
 
 
 /**
+ * ChangeUserNameApi - axios parameter creator
+ * @export
+ */
+export const ChangeUserNameApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {string} [userName] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangeUserNamePost: async (userName?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/ChangeUserName`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (userName !== undefined) {
+                localVarQueryParameter['userName'] = userName;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ChangeUserNameApi - functional programming interface
+ * @export
+ */
+export const ChangeUserNameApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = ChangeUserNameApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [userName] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthChangeUserNamePost(userName?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthChangeUserNamePost(userName, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * ChangeUserNameApi - factory interface
+ * @export
+ */
+export const ChangeUserNameApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = ChangeUserNameApiFp(configuration)
+    return {
+        /**
+         * 
+         * @param {string} [userName] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthChangeUserNamePost(userName?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthChangeUserNamePost(userName, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * ChangeUserNameApi - object-oriented interface
+ * @export
+ * @class ChangeUserNameApi
+ * @extends {BaseAPI}
+ */
+export class ChangeUserNameApi extends BaseAPI {
+    /**
+     * 
+     * @param {string} [userName] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ChangeUserNameApi
+     */
+    public apiAuthChangeUserNamePost(userName?: string, options?: any) {
+        return ChangeUserNameApiFp(this.configuration).apiAuthChangeUserNamePost(userName, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
  * ConfirmEmailApi - axios parameter creator
  * @export
  */

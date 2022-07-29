@@ -3623,6 +3623,61 @@ export declare class ChangePasswordApi extends BaseAPI {
     apiAuthChangePasswordPost(vLOBOARDSAreasAuthManageChangePasswordInputModel?: VLOBOARDSAreasAuthManageChangePasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
+ * ChangeUserNameApi - axios parameter creator
+ * @export
+ */
+export declare const ChangeUserNameApiAxiosParamCreator: (configuration?: Configuration) => {
+    /**
+     *
+     * @param {string} [userName]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthChangeUserNamePost: (userName?: string, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * ChangeUserNameApi - functional programming interface
+ * @export
+ */
+export declare const ChangeUserNameApiFp: (configuration?: Configuration) => {
+    /**
+     *
+     * @param {string} [userName]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthChangeUserNamePost(userName?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+};
+/**
+ * ChangeUserNameApi - factory interface
+ * @export
+ */
+export declare const ChangeUserNameApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    /**
+     *
+     * @param {string} [userName]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthChangeUserNamePost(userName?: string, options?: any): AxiosPromise<void>;
+};
+/**
+ * ChangeUserNameApi - object-oriented interface
+ * @export
+ * @class ChangeUserNameApi
+ * @extends {BaseAPI}
+ */
+export declare class ChangeUserNameApi extends BaseAPI {
+    /**
+     *
+     * @param {string} [userName]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ChangeUserNameApi
+     */
+    apiAuthChangeUserNamePost(userName?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+}
+/**
  * ConfirmEmailApi - axios parameter creator
  * @export
  */
