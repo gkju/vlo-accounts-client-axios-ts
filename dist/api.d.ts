@@ -4738,6 +4738,65 @@ export declare class LogoutApi extends BaseAPI {
     apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 /**
+ * PhoneNumberApi - axios parameter creator
+ * @export
+ */
+export declare const PhoneNumberApiAxiosParamCreator: (configuration?: Configuration) => {
+    /**
+     *
+     * @summary Sets a phone number for the current user.
+     * @param {string} [phoneNumber] Phone number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthPhoneNumberPut: (phoneNumber?: string, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * PhoneNumberApi - functional programming interface
+ * @export
+ */
+export declare const PhoneNumberApiFp: (configuration?: Configuration) => {
+    /**
+     *
+     * @summary Sets a phone number for the current user.
+     * @param {string} [phoneNumber] Phone number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthPhoneNumberPut(phoneNumber?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+};
+/**
+ * PhoneNumberApi - factory interface
+ * @export
+ */
+export declare const PhoneNumberApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    /**
+     *
+     * @summary Sets a phone number for the current user.
+     * @param {string} [phoneNumber] Phone number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthPhoneNumberPut(phoneNumber?: string, options?: any): AxiosPromise<void>;
+};
+/**
+ * PhoneNumberApi - object-oriented interface
+ * @export
+ * @class PhoneNumberApi
+ * @extends {BaseAPI}
+ */
+export declare class PhoneNumberApi extends BaseAPI {
+    /**
+     *
+     * @summary Sets a phone number for the current user.
+     * @param {string} [phoneNumber] Phone number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PhoneNumberApi
+     */
+    apiAuthPhoneNumberPut(phoneNumber?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+}
+/**
  * ProfileInfoApi - axios parameter creator
  * @export
  */

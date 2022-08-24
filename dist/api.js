@@ -2739,6 +2739,122 @@ var LogoutApi = /** @class */ (function (_super) {
 }(BaseAPI));
 export { LogoutApi };
 /**
+ * PhoneNumberApi - axios parameter creator
+ * @export
+ */
+export var PhoneNumberApiAxiosParamCreator = function (configuration) {
+    var _this = this;
+    return {
+        /**
+         *
+         * @summary Sets a phone number for the current user.
+         * @param {string} [phoneNumber] Phone number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthPhoneNumberPut: function (phoneNumber, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/api/Auth/PhoneNumber";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    if (phoneNumber !== undefined) {
+                        localVarQueryParameter['phoneNumber'] = phoneNumber;
+                    }
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+    };
+};
+/**
+ * PhoneNumberApi - functional programming interface
+ * @export
+ */
+export var PhoneNumberApiFp = function (configuration) {
+    var localVarAxiosParamCreator = PhoneNumberApiAxiosParamCreator(configuration);
+    return {
+        /**
+         *
+         * @summary Sets a phone number for the current user.
+         * @param {string} [phoneNumber] Phone number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthPhoneNumberPut: function (phoneNumber, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthPhoneNumberPut(phoneNumber, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+    };
+};
+/**
+ * PhoneNumberApi - factory interface
+ * @export
+ */
+export var PhoneNumberApiFactory = function (configuration, basePath, axios) {
+    var localVarFp = PhoneNumberApiFp(configuration);
+    return {
+        /**
+         *
+         * @summary Sets a phone number for the current user.
+         * @param {string} [phoneNumber] Phone number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthPhoneNumberPut: function (phoneNumber, options) {
+            return localVarFp.apiAuthPhoneNumberPut(phoneNumber, options).then(function (request) { return request(axios, basePath); });
+        },
+    };
+};
+/**
+ * PhoneNumberApi - object-oriented interface
+ * @export
+ * @class PhoneNumberApi
+ * @extends {BaseAPI}
+ */
+var PhoneNumberApi = /** @class */ (function (_super) {
+    __extends(PhoneNumberApi, _super);
+    function PhoneNumberApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     *
+     * @summary Sets a phone number for the current user.
+     * @param {string} [phoneNumber] Phone number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PhoneNumberApi
+     */
+    PhoneNumberApi.prototype.apiAuthPhoneNumberPut = function (phoneNumber, options) {
+        var _this = this;
+        return PhoneNumberApiFp(this.configuration).apiAuthPhoneNumberPut(phoneNumber, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    return PhoneNumberApi;
+}(BaseAPI));
+export { PhoneNumberApi };
+/**
  * ProfileInfoApi - axios parameter creator
  * @export
  */
