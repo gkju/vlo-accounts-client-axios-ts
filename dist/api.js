@@ -4008,6 +4008,38 @@ export var SetPasswordApiAxiosParamCreator = function (configuration) {
                 });
             });
         },
+        /**
+         *
+         * @param {string} [pw]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPut: function (pw, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/api/Auth/SetPassword";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'PUT' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    if (pw !== undefined) {
+                        localVarQueryParameter['pw'] = pw;
+                    }
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
     };
 };
 /**
@@ -4037,6 +4069,25 @@ export var SetPasswordApiFp = function (configuration) {
                 });
             });
         },
+        /**
+         *
+         * @param {string} [pw]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPut: function (pw, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthSetPasswordPut(pw, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
     };
 };
 /**
@@ -4055,6 +4106,15 @@ export var SetPasswordApiFactory = function (configuration, basePath, axios) {
          */
         apiAuthSetPasswordPost: function (vLOBOARDSAreasAuthManageResetPasswordInputModel, options) {
             return localVarFp.apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
+         * @param {string} [pw]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPut: function (pw, options) {
+            return localVarFp.apiAuthSetPasswordPut(pw, options).then(function (request) { return request(axios, basePath); });
         },
     };
 };
@@ -4080,6 +4140,17 @@ var SetPasswordApi = /** @class */ (function (_super) {
     SetPasswordApi.prototype.apiAuthSetPasswordPost = function (vLOBOARDSAreasAuthManageResetPasswordInputModel, options) {
         var _this = this;
         return SetPasswordApiFp(this.configuration).apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
+     * @param {string} [pw]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SetPasswordApi
+     */
+    SetPasswordApi.prototype.apiAuthSetPasswordPut = function (pw, options) {
+        var _this = this;
+        return SetPasswordApiFp(this.configuration).apiAuthSetPasswordPut(pw, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     return SetPasswordApi;
 }(BaseAPI));

@@ -1275,6 +1275,12 @@ export interface SystemReflectionMemberInfo {
     memberType?: SystemReflectionMemberTypes;
     /**
      *
+     * @type {string}
+     * @memberof SystemReflectionMemberInfo
+     */
+    name?: string | null;
+    /**
+     *
      * @type {SystemType}
      * @memberof SystemReflectionMemberInfo
      */
@@ -1285,12 +1291,6 @@ export interface SystemReflectionMemberInfo {
      * @memberof SystemReflectionMemberInfo
      */
     reflectedType?: SystemType;
-    /**
-     *
-     * @type {string}
-     * @memberof SystemReflectionMemberInfo
-     */
-    name?: string | null;
     /**
      *
      * @type {SystemReflectionModule}
@@ -5352,6 +5352,13 @@ export declare const SetPasswordApiAxiosParamCreator: (configuration?: Configura
      * @throws {RequiredError}
      */
     apiAuthSetPasswordPost: (vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {string} [pw]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthSetPasswordPut: (pw?: string, options?: any) => Promise<RequestArgs>;
 };
 /**
  * SetPasswordApi - functional programming interface
@@ -5366,6 +5373,13 @@ export declare const SetPasswordApiFp: (configuration?: Configuration) => {
      * @throws {RequiredError}
      */
     apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {string} [pw]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthSetPasswordPut(pw?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
 };
 /**
  * SetPasswordApi - factory interface
@@ -5380,6 +5394,13 @@ export declare const SetPasswordApiFactory: (configuration?: Configuration, base
      * @throws {RequiredError}
      */
     apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {string} [pw]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthSetPasswordPut(pw?: string, options?: any): AxiosPromise<void>;
 };
 /**
  * SetPasswordApi - object-oriented interface
@@ -5397,5 +5418,13 @@ export declare class SetPasswordApi extends BaseAPI {
      * @memberof SetPasswordApi
      */
     apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    /**
+     *
+     * @param {string} [pw]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SetPasswordApi
+     */
+    apiAuthSetPasswordPut(pw?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
 }
 //# sourceMappingURL=api.d.ts.map
