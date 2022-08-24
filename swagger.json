@@ -1110,6 +1110,29 @@
         }
       }
     },
+    "/api/Auth/PhoneNumber": {
+      "put": {
+        "tags": [
+          "PhoneNumber"
+        ],
+        "summary": "Sets a phone number for the current user.",
+        "parameters": [
+          {
+            "name": "phoneNumber",
+            "in": "query",
+            "description": "Phone number",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Auth/ProfileInfo": {
       "get": {
         "tags": [

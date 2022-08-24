@@ -5805,6 +5805,112 @@ export class LogoutApi extends BaseAPI {
 
 
 /**
+ * PhoneNumberApi - axios parameter creator
+ * @export
+ */
+export const PhoneNumberApiAxiosParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @summary Sets a phone number for the current user.
+         * @param {string} [phoneNumber] Phone number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthPhoneNumberPut: async (phoneNumber?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/PhoneNumber`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (phoneNumber !== undefined) {
+                localVarQueryParameter['phoneNumber'] = phoneNumber;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PhoneNumberApi - functional programming interface
+ * @export
+ */
+export const PhoneNumberApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = PhoneNumberApiAxiosParamCreator(configuration)
+    return {
+        /**
+         * 
+         * @summary Sets a phone number for the current user.
+         * @param {string} [phoneNumber] Phone number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthPhoneNumberPut(phoneNumber?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthPhoneNumberPut(phoneNumber, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+    }
+};
+
+/**
+ * PhoneNumberApi - factory interface
+ * @export
+ */
+export const PhoneNumberApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = PhoneNumberApiFp(configuration)
+    return {
+        /**
+         * 
+         * @summary Sets a phone number for the current user.
+         * @param {string} [phoneNumber] Phone number
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthPhoneNumberPut(phoneNumber?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthPhoneNumberPut(phoneNumber, options).then((request) => request(axios, basePath));
+        },
+    };
+};
+
+/**
+ * PhoneNumberApi - object-oriented interface
+ * @export
+ * @class PhoneNumberApi
+ * @extends {BaseAPI}
+ */
+export class PhoneNumberApi extends BaseAPI {
+    /**
+     * 
+     * @summary Sets a phone number for the current user.
+     * @param {string} [phoneNumber] Phone number
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PhoneNumberApi
+     */
+    public apiAuthPhoneNumberPut(phoneNumber?: string, options?: any) {
+        return PhoneNumberApiFp(this.configuration).apiAuthPhoneNumberPut(phoneNumber, options).then((request) => request(this.axios, this.basePath));
+    }
+}
+
+
+/**
  * ProfileInfoApi - axios parameter creator
  * @export
  */
