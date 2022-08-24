@@ -1089,14 +1089,34 @@
       }
     },
     "/api/Auth/Logout": {
+      "get": {
+        "tags": [
+          "Logout"
+        ],
+        "summary": "Returns bad request if user interaction is required for logout",
+        "parameters": [
+          {
+            "name": "logoutId",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
       "post": {
         "tags": [
           "Logout"
         ],
-        "summary": "Logs user out",
         "parameters": [
           {
-            "name": "returnUrl",
+            "name": "logoutId",
             "in": "query",
             "schema": {
               "type": "string"
@@ -1105,7 +1125,24 @@
         ],
         "responses": {
           "200": {
-            "description": "Logout result"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult"
+                }
+              }
+            }
           }
         }
       }
@@ -1847,23 +1884,6 @@
           "public-key"
         ],
         "type": "string"
-      },
-      "Microsoft.AspNetCore.Authentication.AuthenticationScheme": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "displayName": {
-            "type": "string",
-            "nullable": true
-          },
-          "handlerType": {
-            "$ref": "#/components/schemas/System.Type"
-          }
-        },
-        "additionalProperties": false
       },
       "Microsoft.AspNetCore.Identity.UserLoginInfo": {
         "type": "object",
@@ -4037,7 +4057,7 @@
           "availableLogins": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Microsoft.AspNetCore.Authentication.AuthenticationScheme"
+              "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.SimplifiedAuthenticationScheme"
             },
             "nullable": true
           }
@@ -4063,6 +4083,20 @@
             "nullable": true
           },
           "authenticatorUri": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult": {
+        "type": "object",
+        "properties": {
+          "postLogoutRedirectUri": {
+            "type": "string",
+            "nullable": true
+          },
+          "signOutIFrameUrl": {
             "type": "string",
             "nullable": true
           }
@@ -4098,6 +4132,20 @@
             "minLength": 1,
             "type": "string",
             "format": "password"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VLO_BOARDS.Areas.Auth.Manage.SimplifiedAuthenticationScheme": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

@@ -1275,12 +1275,6 @@ export interface SystemReflectionMemberInfo {
     memberType?: SystemReflectionMemberTypes;
     /**
      *
-     * @type {string}
-     * @memberof SystemReflectionMemberInfo
-     */
-    name?: string | null;
-    /**
-     *
      * @type {SystemType}
      * @memberof SystemReflectionMemberInfo
      */
@@ -1291,6 +1285,12 @@ export interface SystemReflectionMemberInfo {
      * @memberof SystemReflectionMemberInfo
      */
     reflectedType?: SystemType;
+    /**
+     *
+     * @type {string}
+     * @memberof SystemReflectionMemberInfo
+     */
+    name?: string | null;
     /**
      *
      * @type {SystemReflectionModule}
@@ -3304,6 +3304,12 @@ export interface VLOBOARDSAreasAuthManageChangePasswordInputModel {
      * @memberof VLOBOARDSAreasAuthManageChangePasswordInputModel
      */
     newPassword: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageChangePasswordInputModel
+     */
+    captchaResponse: string;
 }
 /**
  *
