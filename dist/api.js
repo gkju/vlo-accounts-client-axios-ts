@@ -2631,12 +2631,44 @@ export var LogoutApiAxiosParamCreator = function (configuration) {
     return {
         /**
          *
-         * @summary Logs user out
-         * @param {string} [returnUrl]
+         * @summary Returns bad request if user interaction is required for logout
+         * @param {string} [logoutId]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthLogoutPost: function (returnUrl, options) {
+        apiAuthLogoutGet: function (logoutId, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/api/Auth/Logout";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    if (logoutId !== undefined) {
+                        localVarQueryParameter['logoutId'] = logoutId;
+                    }
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+        /**
+         *
+         * @param {string} [logoutId]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLogoutPost: function (logoutId, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
@@ -2649,8 +2681,8 @@ export var LogoutApiAxiosParamCreator = function (configuration) {
                     localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
                     localVarHeaderParameter = {};
                     localVarQueryParameter = {};
-                    if (returnUrl !== undefined) {
-                        localVarQueryParameter['returnUrl'] = returnUrl;
+                    if (logoutId !== undefined) {
+                        localVarQueryParameter['logoutId'] = logoutId;
                     }
                     setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
                     headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
@@ -2673,17 +2705,36 @@ export var LogoutApiFp = function (configuration) {
     return {
         /**
          *
-         * @summary Logs user out
-         * @param {string} [returnUrl]
+         * @summary Returns bad request if user interaction is required for logout
+         * @param {string} [logoutId]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthLogoutPost: function (returnUrl, options) {
+        apiAuthLogoutGet: function (logoutId, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthLogoutPost(returnUrl, options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthLogoutGet(logoutId, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+        /**
+         *
+         * @param {string} [logoutId]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLogoutPost: function (logoutId, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthLogoutPost(logoutId, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -2702,13 +2753,22 @@ export var LogoutApiFactory = function (configuration, basePath, axios) {
     return {
         /**
          *
-         * @summary Logs user out
-         * @param {string} [returnUrl]
+         * @summary Returns bad request if user interaction is required for logout
+         * @param {string} [logoutId]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthLogoutPost: function (returnUrl, options) {
-            return localVarFp.apiAuthLogoutPost(returnUrl, options).then(function (request) { return request(axios, basePath); });
+        apiAuthLogoutGet: function (logoutId, options) {
+            return localVarFp.apiAuthLogoutGet(logoutId, options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
+         * @param {string} [logoutId]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthLogoutPost: function (logoutId, options) {
+            return localVarFp.apiAuthLogoutPost(logoutId, options).then(function (request) { return request(axios, basePath); });
         },
     };
 };
@@ -2725,15 +2785,26 @@ var LogoutApi = /** @class */ (function (_super) {
     }
     /**
      *
-     * @summary Logs user out
-     * @param {string} [returnUrl]
+     * @summary Returns bad request if user interaction is required for logout
+     * @param {string} [logoutId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LogoutApi
      */
-    LogoutApi.prototype.apiAuthLogoutPost = function (returnUrl, options) {
+    LogoutApi.prototype.apiAuthLogoutGet = function (logoutId, options) {
         var _this = this;
-        return LogoutApiFp(this.configuration).apiAuthLogoutPost(returnUrl, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return LogoutApiFp(this.configuration).apiAuthLogoutGet(logoutId, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
+     * @param {string} [logoutId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LogoutApi
+     */
+    LogoutApi.prototype.apiAuthLogoutPost = function (logoutId, options) {
+        var _this = this;
+        return LogoutApiFp(this.configuration).apiAuthLogoutPost(logoutId, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     return LogoutApi;
 }(BaseAPI));

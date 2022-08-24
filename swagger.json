@@ -1129,17 +1129,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult"
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.LogoutResult"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult"
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.LogoutResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult"
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.LogoutResult"
                 }
               }
             }
@@ -4089,7 +4089,7 @@
         },
         "additionalProperties": false
       },
-      "VLO_BOARDS.Areas.Auth.Manage.Logout+LogoutResult": {
+      "VLO_BOARDS.Areas.Auth.Manage.LogoutResult": {
         "type": "object",
         "properties": {
           "postLogoutRedirectUri": {

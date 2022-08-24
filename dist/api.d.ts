@@ -394,31 +394,6 @@ export declare enum Fido2NetLibObjectsPublicKeyCredentialType {
 /**
  *
  * @export
- * @interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme
- */
-export interface MicrosoftAspNetCoreAuthenticationAuthenticationScheme {
-    /**
-     *
-     * @type {string}
-     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
-     */
-    name?: string | null;
-    /**
-     *
-     * @type {string}
-     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
-     */
-    displayName?: string | null;
-    /**
-     *
-     * @type {SystemType}
-     * @memberof MicrosoftAspNetCoreAuthenticationAuthenticationScheme
-     */
-    handlerType?: SystemType;
-}
-/**
- *
- * @export
  * @interface MicrosoftAspNetCoreIdentityUserLoginInfo
  */
 export interface MicrosoftAspNetCoreIdentityUserLoginInfo {
@@ -3344,10 +3319,10 @@ export interface VLOBOARDSAreasAuthManageExternalLoginInfo {
     currentLogins?: Array<MicrosoftAspNetCoreIdentityUserLoginInfo> | null;
     /**
      *
-     * @type {Array<MicrosoftAspNetCoreAuthenticationAuthenticationScheme>}
+     * @type {Array<VLOBOARDSAreasAuthManageSimplifiedAuthenticationScheme>}
      * @memberof VLOBOARDSAreasAuthManageExternalLoginInfo
      */
-    availableLogins?: Array<MicrosoftAspNetCoreAuthenticationAuthenticationScheme> | null;
+    availableLogins?: Array<VLOBOARDSAreasAuthManageSimplifiedAuthenticationScheme> | null;
 }
 /**
  *
@@ -3384,6 +3359,25 @@ export interface VLOBOARDSAreasAuthManageKeyQrUriTuple {
 /**
  *
  * @export
+ * @interface VLOBOARDSAreasAuthManageLogoutResult
+ */
+export interface VLOBOARDSAreasAuthManageLogoutResult {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageLogoutResult
+     */
+    postLogoutRedirectUri?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageLogoutResult
+     */
+    signOutIFrameUrl?: string | null;
+}
+/**
+ *
+ * @export
  * @interface VLOBOARDSAreasAuthManageRequestEmailChangeInput
  */
 export interface VLOBOARDSAreasAuthManageRequestEmailChangeInput {
@@ -3412,6 +3406,25 @@ export interface VLOBOARDSAreasAuthManageResetPasswordInputModel {
      * @memberof VLOBOARDSAreasAuthManageResetPasswordInputModel
      */
     newPassword: string;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthManageSimplifiedAuthenticationScheme
+ */
+export interface VLOBOARDSAreasAuthManageSimplifiedAuthenticationScheme {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageSimplifiedAuthenticationScheme
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthManageSimplifiedAuthenticationScheme
+     */
+    displayName?: string | null;
 }
 /**
  *
@@ -4691,12 +4704,19 @@ export declare class LoginWithRecoveryCodeApi extends BaseAPI {
 export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration) => {
     /**
      *
-     * @summary Logs user out
-     * @param {string} [returnUrl]
+     * @summary Returns bad request if user interaction is required for logout
+     * @param {string} [logoutId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost: (returnUrl?: string, options?: any) => Promise<RequestArgs>;
+    apiAuthLogoutGet: (logoutId?: string, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {string} [logoutId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthLogoutPost: (logoutId?: string, options?: any) => Promise<RequestArgs>;
 };
 /**
  * LogoutApi - functional programming interface
@@ -4705,12 +4725,19 @@ export declare const LogoutApiAxiosParamCreator: (configuration?: Configuration)
 export declare const LogoutApiFp: (configuration?: Configuration) => {
     /**
      *
-     * @summary Logs user out
-     * @param {string} [returnUrl]
+     * @summary Returns bad request if user interaction is required for logout
+     * @param {string} [logoutId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    apiAuthLogoutGet(logoutId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {string} [logoutId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthLogoutPost(logoutId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageLogoutResult>>;
 };
 /**
  * LogoutApi - factory interface
@@ -4719,12 +4746,19 @@ export declare const LogoutApiFp: (configuration?: Configuration) => {
 export declare const LogoutApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
     /**
      *
-     * @summary Logs user out
-     * @param {string} [returnUrl]
+     * @summary Returns bad request if user interaction is required for logout
+     * @param {string} [logoutId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutPost(returnUrl?: string, options?: any): AxiosPromise<void>;
+    apiAuthLogoutGet(logoutId?: string, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {string} [logoutId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    apiAuthLogoutPost(logoutId?: string, options?: any): AxiosPromise<VLOBOARDSAreasAuthManageLogoutResult>;
 };
 /**
  * LogoutApi - object-oriented interface
@@ -4735,13 +4769,21 @@ export declare const LogoutApiFactory: (configuration?: Configuration, basePath?
 export declare class LogoutApi extends BaseAPI {
     /**
      *
-     * @summary Logs user out
-     * @param {string} [returnUrl]
+     * @summary Returns bad request if user interaction is required for logout
+     * @param {string} [logoutId]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof LogoutApi
      */
-    apiAuthLogoutPost(returnUrl?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthLogoutGet(logoutId?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    /**
+     *
+     * @param {string} [logoutId]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LogoutApi
+     */
+    apiAuthLogoutPost(logoutId?: string, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthManageLogoutResult, any>>;
 }
 /**
  * PhoneNumberApi - axios parameter creator
