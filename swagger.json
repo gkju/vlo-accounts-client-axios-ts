@@ -1106,7 +1106,24 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.LogoutResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.LogoutResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.Manage.LogoutResult"
+                }
+              }
+            }
           }
         }
       },

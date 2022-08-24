@@ -4730,7 +4730,7 @@ export declare const LogoutApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutGet(logoutId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    apiAuthLogoutGet(logoutId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageLogoutResult>>;
     /**
      *
      * @param {string} [logoutId]
@@ -4751,7 +4751,7 @@ export declare const LogoutApiFactory: (configuration?: Configuration, basePath?
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthLogoutGet(logoutId?: string, options?: any): AxiosPromise<void>;
+    apiAuthLogoutGet(logoutId?: string, options?: any): AxiosPromise<VLOBOARDSAreasAuthManageLogoutResult>;
     /**
      *
      * @param {string} [logoutId]
@@ -4775,7 +4775,7 @@ export declare class LogoutApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof LogoutApi
      */
-    apiAuthLogoutGet(logoutId?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthLogoutGet(logoutId?: string, options?: any): Promise<import("axios").AxiosResponse<VLOBOARDSAreasAuthManageLogoutResult, any>>;
     /**
      *
      * @param {string} [logoutId]

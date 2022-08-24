@@ -5809,7 +5809,7 @@ export const LogoutApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async apiAuthLogoutGet(logoutId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+        async apiAuthLogoutGet(logoutId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<VLOBOARDSAreasAuthManageLogoutResult>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthLogoutGet(logoutId, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
@@ -5840,7 +5840,7 @@ export const LogoutApiFactory = function (configuration?: Configuration, basePat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthLogoutGet(logoutId?: string, options?: any): AxiosPromise<void> {
+        apiAuthLogoutGet(logoutId?: string, options?: any): AxiosPromise<VLOBOARDSAreasAuthManageLogoutResult> {
             return localVarFp.apiAuthLogoutGet(logoutId, options).then((request) => request(axios, basePath));
         },
         /**
