@@ -1297,6 +1297,12 @@ export interface SystemReflectionMemberInfo {
     memberType?: SystemReflectionMemberTypes;
     /**
      * 
+     * @type {string}
+     * @memberof SystemReflectionMemberInfo
+     */
+    name?: string | null;
+    /**
+     * 
      * @type {SystemType}
      * @memberof SystemReflectionMemberInfo
      */
@@ -1307,12 +1313,6 @@ export interface SystemReflectionMemberInfo {
      * @memberof SystemReflectionMemberInfo
      */
     reflectedType?: SystemType;
-    /**
-     * 
-     * @type {string}
-     * @memberof SystemReflectionMemberInfo
-     */
-    name?: string | null;
     /**
      * 
      * @type {SystemReflectionModule}
@@ -6962,6 +6962,40 @@ export const SetPasswordApiAxiosParamCreator = function (configuration?: Configu
                 options: localVarRequestOptions,
             };
         },
+        /**
+         * 
+         * @param {string} [pw] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPut: async (pw?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/SetPassword`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (pw !== undefined) {
+                localVarQueryParameter['pw'] = pw;
+            }
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
     }
 };
 
@@ -6981,6 +7015,16 @@ export const SetPasswordApiFp = function(configuration?: Configuration) {
          */
         async apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
+         * 
+         * @param {string} [pw] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async apiAuthSetPasswordPut(pw?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthSetPasswordPut(pw, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -7003,6 +7047,15 @@ export const SetPasswordApiFactory = function (configuration?: Configuration, ba
         apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any): AxiosPromise<void> {
             return localVarFp.apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options).then((request) => request(axios, basePath));
         },
+        /**
+         * 
+         * @param {string} [pw] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        apiAuthSetPasswordPut(pw?: string, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthSetPasswordPut(pw, options).then((request) => request(axios, basePath));
+        },
     };
 };
 
@@ -7023,6 +7076,17 @@ export class SetPasswordApi extends BaseAPI {
      */
     public apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel?: VLOBOARDSAreasAuthManageResetPasswordInputModel, options?: any) {
         return SetPasswordApiFp(this.configuration).apiAuthSetPasswordPost(vLOBOARDSAreasAuthManageResetPasswordInputModel, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {string} [pw] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SetPasswordApi
+     */
+    public apiAuthSetPasswordPut(pw?: string, options?: any) {
+        return SetPasswordApiFp(this.configuration).apiAuthSetPasswordPut(pw, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

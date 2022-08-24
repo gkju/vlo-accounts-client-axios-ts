@@ -1562,6 +1562,25 @@
             "description": "Success"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "SetPassword"
+        ],
+        "parameters": [
+          {
+            "name": "pw",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
       }
     }
   },
@@ -2483,16 +2502,16 @@
           "memberType": {
             "$ref": "#/components/schemas/System.Reflection.MemberTypes"
           },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
           "declaringType": {
             "$ref": "#/components/schemas/System.Type"
           },
           "reflectedType": {
             "$ref": "#/components/schemas/System.Type"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
           },
           "module": {
             "$ref": "#/components/schemas/System.Reflection.Module"
