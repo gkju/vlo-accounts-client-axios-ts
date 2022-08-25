@@ -3804,12 +3804,6 @@ export interface VLOBOARDSAreasAuthFidoRegisterInput {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthFidoRegisterInput
      */
-    username: string;
-    /**
-     *
-     * @type {string}
-     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
-     */
     captchaResponse: string;
 }
 /**
