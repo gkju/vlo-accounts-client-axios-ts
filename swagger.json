@@ -510,6 +510,322 @@
           "ExternalLoginsManagement"
         ],
         "summary": "Handles the information returned by the external authentication provider",
+        "parameters": [
+          {
+            "name": "returnUrl",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "remoteError",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/fidoRegisterUser": {
+      "post": {
+        "tags": [
+          "Fido"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.FidoRegisterInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.FidoRegisterInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.FidoRegisterInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/makeCredentialOptions": {
+      "post": {
+        "tags": [
+          "Fido"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.MakeCredentialsOptionsInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.MakeCredentialsOptionsInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VLO_BOARDS.Areas.Auth.MakeCredentialsOptionsInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.CredentialCreateOptions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/makeCredential": {
+      "post": {
+        "tags": [
+          "Fido"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAttestationRawResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAttestationRawResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAttestationRawResponse"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.Fido2_CredentialMakeResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.Fido2_CredentialMakeResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.Fido2_CredentialMakeResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.Fido2_CredentialMakeResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.Fido2_CredentialMakeResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.Fido2_CredentialMakeResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assertionOptions": {
+      "post": {
+        "tags": [
+          "Fido"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userVerification",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.AssertionOptions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.AssertionOptions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.AssertionOptions"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.AssertionOptions"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.AssertionOptions"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Fido2NetLib.AssertionOptions"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/makeAssertion": {
+      "post": {
+        "tags": [
+          "Fido"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAssertionRawResponse"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAssertionRawResponse"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAssertionRawResponse"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -1714,6 +2030,14 @@
             },
             "nullable": true
           },
+          "assertionOptionsJson": {
+            "type": "string",
+            "nullable": true
+          },
+          "attestationOptionsJson": {
+            "type": "string",
+            "nullable": true
+          },
           "usedBytes": {
             "type": "integer",
             "format": "int64"
@@ -1753,8 +2077,8 @@
           "owner": {
             "$ref": "#/components/schemas/AccountsData.Models.DataModels.ApplicationUser"
           },
-          "descriptor": {
-            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialDescriptor"
+          "storedCredential": {
+            "$ref": "#/components/schemas/AccountsData.Models.DataModels.StoredCredentialId"
           }
         },
         "additionalProperties": false
@@ -1866,6 +2190,401 @@
         },
         "additionalProperties": false
       },
+      "AccountsData.Models.DataModels.StoredCredentialId": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "descriptor": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialDescriptor"
+          },
+          "publicKey": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "userHandle": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "signatureCounter": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "credType": {
+            "type": "string",
+            "nullable": true
+          },
+          "regDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "aaGuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.AssertionOptions": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "challenge": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "timeout": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rpId": {
+            "type": "string",
+            "nullable": true
+          },
+          "allowCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialDescriptor"
+            },
+            "nullable": true
+          },
+          "userVerification": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.UserVerificationRequirement"
+          },
+          "extensions": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AuthenticationExtensionsClientInputs"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.AuthenticatorAssertionRawResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "rawId": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "response": {
+            "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAssertionRawResponse_AssertionResponse"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialType"
+          },
+          "extensions": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AuthenticationExtensionsClientOutputs"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.AuthenticatorAssertionRawResponse_AssertionResponse": {
+        "type": "object",
+        "properties": {
+          "authenticatorData": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "signature": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "clientDataJSON": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "userHandle": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.AuthenticatorAttestationRawResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "rawId": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialType"
+          },
+          "response": {
+            "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorAttestationRawResponse_ResponseData"
+          },
+          "extensions": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AuthenticationExtensionsClientOutputs"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.AuthenticatorAttestationRawResponse_ResponseData": {
+        "type": "object",
+        "properties": {
+          "attestationObject": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "clientDataJSON": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.AuthenticatorSelection": {
+        "type": "object",
+        "properties": {
+          "authenticatorAttachment": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AuthenticatorAttachment"
+          },
+          "requireResidentKey": {
+            "type": "boolean"
+          },
+          "userVerification": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.UserVerificationRequirement"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.CredentialCreateOptions": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "rp": {
+            "$ref": "#/components/schemas/Fido2NetLib.PublicKeyCredentialRpEntity"
+          },
+          "user": {
+            "$ref": "#/components/schemas/Fido2NetLib.Fido2User"
+          },
+          "challenge": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "pubKeyCredParams": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Fido2NetLib.PubKeyCredParam"
+            },
+            "nullable": true
+          },
+          "timeout": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "attestation": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AttestationConveyancePreference"
+          },
+          "authenticatorSelection": {
+            "$ref": "#/components/schemas/Fido2NetLib.AuthenticatorSelection"
+          },
+          "excludeCredentials": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialDescriptor"
+            },
+            "nullable": true
+          },
+          "extensions": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AuthenticationExtensionsClientInputs"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Fido2User": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Fido2_CredentialMakeResult": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.AttestationVerificationSuccess"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Objects.AttestationConveyancePreference": {
+        "enum": [
+          "none",
+          "indirect",
+          "direct"
+        ],
+        "type": "string"
+      },
+      "Fido2NetLib.Objects.AttestationVerificationSuccess": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "credentialId": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "counter": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "publicKey": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/Fido2NetLib.Fido2User"
+          },
+          "credType": {
+            "type": "string",
+            "nullable": true
+          },
+          "aaguid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Objects.AuthenticationExtensionsClientInputs": {
+        "type": "object",
+        "properties": {
+          "example.extension": {
+            "nullable": true
+          },
+          "appid": {
+            "type": "string",
+            "nullable": true
+          },
+          "authnSel": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            },
+            "nullable": true
+          },
+          "exts": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "uvm": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Objects.AuthenticationExtensionsClientOutputs": {
+        "type": "object",
+        "properties": {
+          "example.extension": {
+            "nullable": true
+          },
+          "appid": {
+            "type": "boolean"
+          },
+          "authnSel": {
+            "type": "boolean"
+          },
+          "exts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "uvm": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.Objects.AuthenticatorAttachment": {
+        "enum": [
+          "platform",
+          "cross-platform"
+        ],
+        "type": "string"
+      },
       "Fido2NetLib.Objects.AuthenticatorTransport": {
         "enum": [
           "usb",
@@ -1874,6 +2593,24 @@
           "internal"
         ],
         "type": "string"
+      },
+      "Fido2NetLib.Objects.COSE_Algorithm": {
+        "enum": [
+          -65535,
+          -259,
+          -258,
+          -257,
+          -47,
+          -39,
+          -38,
+          -37,
+          -36,
+          -35,
+          -8,
+          -7
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "Fido2NetLib.Objects.PublicKeyCredentialDescriptor": {
         "type": "object",
@@ -1901,6 +2638,44 @@
           "public-key"
         ],
         "type": "string"
+      },
+      "Fido2NetLib.Objects.UserVerificationRequirement": {
+        "enum": [
+          "required",
+          "preferred",
+          "discouraged"
+        ],
+        "type": "string"
+      },
+      "Fido2NetLib.PubKeyCredParam": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.PublicKeyCredentialType"
+          },
+          "alg": {
+            "$ref": "#/components/schemas/Fido2NetLib.Objects.COSE_Algorithm"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Fido2NetLib.PublicKeyCredentialRpEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "icon": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "Microsoft.AspNetCore.Identity.UserLoginInfo": {
         "type": "object",
@@ -3908,6 +4683,54 @@
         },
         "additionalProperties": false
       },
+      "VLO_BOARDS.Areas.Auth.FidoRegisterInput": {
+        "required": [
+          "attType",
+          "authType",
+          "captchaResponse",
+          "email",
+          "requireResidentKey",
+          "username",
+          "userName",
+          "userVerification"
+        ],
+        "type": "object",
+        "properties": {
+          "userName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "attType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "authType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "requireResidentKey": {
+            "type": "boolean"
+          },
+          "userVerification": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "username": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "captchaResponse": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "VLO_BOARDS.Areas.Auth.ForgotPasswordInputModel": {
         "required": [
           "captchaResponse",
@@ -4012,6 +4835,38 @@
             "format": "string"
           },
           "captchaResponse": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VLO_BOARDS.Areas.Auth.MakeCredentialsOptionsInput": {
+        "required": [
+          "attType",
+          "authType",
+          "requireResidentKey",
+          "userName",
+          "userVerification"
+        ],
+        "type": "object",
+        "properties": {
+          "userName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "attType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "authType": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "requireResidentKey": {
+            "type": "boolean"
+          },
+          "userVerification": {
             "minLength": 1,
             "type": "string"
           }

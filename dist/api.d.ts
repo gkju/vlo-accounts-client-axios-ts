@@ -128,6 +128,18 @@ export interface AccountsDataModelsDataModelsApplicationUser {
     fidoCredentials?: Array<AccountsDataModelsDataModelsFido2Pk> | null;
     /**
      *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    assertionOptionsJson?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsApplicationUser
+     */
+    attestationOptionsJson?: string | null;
+    /**
+     *
      * @type {number}
      * @memberof AccountsDataModelsDataModelsApplicationUser
      */
@@ -177,10 +189,10 @@ export interface AccountsDataModelsDataModelsFido2Pk {
     owner?: AccountsDataModelsDataModelsApplicationUser;
     /**
      *
-     * @type {Fido2NetLibObjectsPublicKeyCredentialDescriptor}
+     * @type {AccountsDataModelsDataModelsStoredCredentialId}
      * @memberof AccountsDataModelsDataModelsFido2Pk
      */
-    descriptor?: Fido2NetLibObjectsPublicKeyCredentialDescriptor;
+    storedCredential?: AccountsDataModelsDataModelsStoredCredentialId;
 }
 /**
  *
@@ -350,6 +362,542 @@ export interface AccountsDataModelsDataModelsProfilePicture {
 /**
  *
  * @export
+ * @interface AccountsDataModelsDataModelsStoredCredentialId
+ */
+export interface AccountsDataModelsDataModelsStoredCredentialId {
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    userId?: string | null;
+    /**
+     *
+     * @type {Fido2NetLibObjectsPublicKeyCredentialDescriptor}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    descriptor?: Fido2NetLibObjectsPublicKeyCredentialDescriptor;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    publicKey?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    userHandle?: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    signatureCounter?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    credType?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    regDate?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    aaGuid?: string;
+    /**
+     *
+     * @type {string}
+     * @memberof AccountsDataModelsDataModelsStoredCredentialId
+     */
+    id?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibAssertionOptions
+ */
+export interface Fido2NetLibAssertionOptions {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    status?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    errorMessage?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    challenge?: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    timeout?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    rpId?: string | null;
+    /**
+     *
+     * @type {Array<Fido2NetLibObjectsPublicKeyCredentialDescriptor>}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    allowCredentials?: Array<Fido2NetLibObjectsPublicKeyCredentialDescriptor> | null;
+    /**
+     *
+     * @type {Fido2NetLibObjectsUserVerificationRequirement}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    userVerification?: Fido2NetLibObjectsUserVerificationRequirement;
+    /**
+     *
+     * @type {Fido2NetLibObjectsAuthenticationExtensionsClientInputs}
+     * @memberof Fido2NetLibAssertionOptions
+     */
+    extensions?: Fido2NetLibObjectsAuthenticationExtensionsClientInputs;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibAuthenticatorAssertionRawResponse
+ */
+export interface Fido2NetLibAuthenticatorAssertionRawResponse {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponse
+     */
+    id?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponse
+     */
+    rawId?: string | null;
+    /**
+     *
+     * @type {Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponse
+     */
+    response?: Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse;
+    /**
+     *
+     * @type {Fido2NetLibObjectsPublicKeyCredentialType}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponse
+     */
+    type?: Fido2NetLibObjectsPublicKeyCredentialType;
+    /**
+     *
+     * @type {Fido2NetLibObjectsAuthenticationExtensionsClientOutputs}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponse
+     */
+    extensions?: Fido2NetLibObjectsAuthenticationExtensionsClientOutputs;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse
+ */
+export interface Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse
+     */
+    authenticatorData?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse
+     */
+    signature?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse
+     */
+    clientDataJSON?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAssertionRawResponseAssertionResponse
+     */
+    userHandle?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibAuthenticatorAttestationRawResponse
+ */
+export interface Fido2NetLibAuthenticatorAttestationRawResponse {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponse
+     */
+    id?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponse
+     */
+    rawId?: string | null;
+    /**
+     *
+     * @type {Fido2NetLibObjectsPublicKeyCredentialType}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponse
+     */
+    type?: Fido2NetLibObjectsPublicKeyCredentialType;
+    /**
+     *
+     * @type {Fido2NetLibAuthenticatorAttestationRawResponseResponseData}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponse
+     */
+    response?: Fido2NetLibAuthenticatorAttestationRawResponseResponseData;
+    /**
+     *
+     * @type {Fido2NetLibObjectsAuthenticationExtensionsClientOutputs}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponse
+     */
+    extensions?: Fido2NetLibObjectsAuthenticationExtensionsClientOutputs;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibAuthenticatorAttestationRawResponseResponseData
+ */
+export interface Fido2NetLibAuthenticatorAttestationRawResponseResponseData {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponseResponseData
+     */
+    attestationObject?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibAuthenticatorAttestationRawResponseResponseData
+     */
+    clientDataJSON?: string | null;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibAuthenticatorSelection
+ */
+export interface Fido2NetLibAuthenticatorSelection {
+    /**
+     *
+     * @type {Fido2NetLibObjectsAuthenticatorAttachment}
+     * @memberof Fido2NetLibAuthenticatorSelection
+     */
+    authenticatorAttachment?: Fido2NetLibObjectsAuthenticatorAttachment;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Fido2NetLibAuthenticatorSelection
+     */
+    requireResidentKey?: boolean;
+    /**
+     *
+     * @type {Fido2NetLibObjectsUserVerificationRequirement}
+     * @memberof Fido2NetLibAuthenticatorSelection
+     */
+    userVerification?: Fido2NetLibObjectsUserVerificationRequirement;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibCredentialCreateOptions
+ */
+export interface Fido2NetLibCredentialCreateOptions {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    status?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    errorMessage?: string | null;
+    /**
+     *
+     * @type {Fido2NetLibPublicKeyCredentialRpEntity}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    rp?: Fido2NetLibPublicKeyCredentialRpEntity;
+    /**
+     *
+     * @type {Fido2NetLibFido2User}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    user?: Fido2NetLibFido2User;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    challenge?: string | null;
+    /**
+     *
+     * @type {Array<Fido2NetLibPubKeyCredParam>}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    pubKeyCredParams?: Array<Fido2NetLibPubKeyCredParam> | null;
+    /**
+     *
+     * @type {number}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    timeout?: number;
+    /**
+     *
+     * @type {Fido2NetLibObjectsAttestationConveyancePreference}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    attestation?: Fido2NetLibObjectsAttestationConveyancePreference;
+    /**
+     *
+     * @type {Fido2NetLibAuthenticatorSelection}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    authenticatorSelection?: Fido2NetLibAuthenticatorSelection;
+    /**
+     *
+     * @type {Array<Fido2NetLibObjectsPublicKeyCredentialDescriptor>}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    excludeCredentials?: Array<Fido2NetLibObjectsPublicKeyCredentialDescriptor> | null;
+    /**
+     *
+     * @type {Fido2NetLibObjectsAuthenticationExtensionsClientInputs}
+     * @memberof Fido2NetLibCredentialCreateOptions
+     */
+    extensions?: Fido2NetLibObjectsAuthenticationExtensionsClientInputs;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibFido2CredentialMakeResult
+ */
+export interface Fido2NetLibFido2CredentialMakeResult {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibFido2CredentialMakeResult
+     */
+    status?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibFido2CredentialMakeResult
+     */
+    errorMessage?: string | null;
+    /**
+     *
+     * @type {Fido2NetLibObjectsAttestationVerificationSuccess}
+     * @memberof Fido2NetLibFido2CredentialMakeResult
+     */
+    result?: Fido2NetLibObjectsAttestationVerificationSuccess;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibFido2User
+ */
+export interface Fido2NetLibFido2User {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibFido2User
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibFido2User
+     */
+    id?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibFido2User
+     */
+    displayName?: string | null;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum Fido2NetLibObjectsAttestationConveyancePreference {
+    None = "none",
+    Indirect = "indirect",
+    Direct = "direct"
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibObjectsAttestationVerificationSuccess
+ */
+export interface Fido2NetLibObjectsAttestationVerificationSuccess {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    status?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    errorMessage?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    credentialId?: string | null;
+    /**
+     *
+     * @type {number}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    counter?: number;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    publicKey?: string | null;
+    /**
+     *
+     * @type {Fido2NetLibFido2User}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    user?: Fido2NetLibFido2User;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    credType?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    aaguid?: string;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibObjectsAuthenticationExtensionsClientInputs
+ */
+export interface Fido2NetLibObjectsAuthenticationExtensionsClientInputs {
+    /**
+     *
+     * @type {any}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientInputs
+     */
+    example_extension?: any | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientInputs
+     */
+    appid?: string | null;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientInputs
+     */
+    authnSel?: Array<string> | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientInputs
+     */
+    exts?: boolean | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientInputs
+     */
+    uvm?: boolean | null;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibObjectsAuthenticationExtensionsClientOutputs
+ */
+export interface Fido2NetLibObjectsAuthenticationExtensionsClientOutputs {
+    /**
+     *
+     * @type {any}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientOutputs
+     */
+    example_extension?: any | null;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientOutputs
+     */
+    appid?: boolean;
+    /**
+     *
+     * @type {boolean}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientOutputs
+     */
+    authnSel?: boolean;
+    /**
+     *
+     * @type {Array<string>}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientOutputs
+     */
+    exts?: Array<string> | null;
+    /**
+     *
+     * @type {Array<Array<number>>}
+     * @memberof Fido2NetLibObjectsAuthenticationExtensionsClientOutputs
+     */
+    uvm?: Array<Array<number>> | null;
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum Fido2NetLibObjectsAuthenticatorAttachment {
+    Platform = "platform",
+    CrossPlatform = "cross-platform"
+}
+/**
+ *
+ * @export
  * @enum {string}
  */
 export declare enum Fido2NetLibObjectsAuthenticatorTransport {
@@ -357,6 +905,25 @@ export declare enum Fido2NetLibObjectsAuthenticatorTransport {
     Nfc = "nfc",
     Ble = "ble",
     Internal = "internal"
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum Fido2NetLibObjectsCOSEAlgorithm {
+    NUMBER_MINUS_65535 = -65535,
+    NUMBER_MINUS_259 = -259,
+    NUMBER_MINUS_258 = -258,
+    NUMBER_MINUS_257 = -257,
+    NUMBER_MINUS_47 = -47,
+    NUMBER_MINUS_39 = -39,
+    NUMBER_MINUS_38 = -38,
+    NUMBER_MINUS_37 = -37,
+    NUMBER_MINUS_36 = -36,
+    NUMBER_MINUS_35 = -35,
+    NUMBER_MINUS_8 = -8,
+    NUMBER_MINUS_7 = -7
 }
 /**
  *
@@ -390,6 +957,60 @@ export interface Fido2NetLibObjectsPublicKeyCredentialDescriptor {
  */
 export declare enum Fido2NetLibObjectsPublicKeyCredentialType {
     PublicKey = "public-key"
+}
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export declare enum Fido2NetLibObjectsUserVerificationRequirement {
+    Required = "required",
+    Preferred = "preferred",
+    Discouraged = "discouraged"
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibPubKeyCredParam
+ */
+export interface Fido2NetLibPubKeyCredParam {
+    /**
+     *
+     * @type {Fido2NetLibObjectsPublicKeyCredentialType}
+     * @memberof Fido2NetLibPubKeyCredParam
+     */
+    type?: Fido2NetLibObjectsPublicKeyCredentialType;
+    /**
+     *
+     * @type {Fido2NetLibObjectsCOSEAlgorithm}
+     * @memberof Fido2NetLibPubKeyCredParam
+     */
+    alg?: Fido2NetLibObjectsCOSEAlgorithm;
+}
+/**
+ *
+ * @export
+ * @interface Fido2NetLibPublicKeyCredentialRpEntity
+ */
+export interface Fido2NetLibPublicKeyCredentialRpEntity {
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibPublicKeyCredentialRpEntity
+     */
+    id?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibPublicKeyCredentialRpEntity
+     */
+    name?: string | null;
+    /**
+     *
+     * @type {string}
+     * @memberof Fido2NetLibPublicKeyCredentialRpEntity
+     */
+    icon?: string | null;
 }
 /**
  *
@@ -3139,6 +3760,61 @@ export interface VLOBOARDSAreasAuthExternalLoginRegisterInputModel {
 /**
  *
  * @export
+ * @interface VLOBOARDSAreasAuthFidoRegisterInput
+ */
+export interface VLOBOARDSAreasAuthFidoRegisterInput {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    userName: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    attType: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    authType: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    requireResidentKey: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    userVerification: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    email: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    username: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthFidoRegisterInput
+     */
+    captchaResponse: string;
+}
+/**
+ *
+ * @export
  * @interface VLOBOARDSAreasAuthForgotPasswordInputModel
  */
 export interface VLOBOARDSAreasAuthForgotPasswordInputModel {
@@ -3260,6 +3936,43 @@ export interface VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel {
      * @memberof VLOBOARDSAreasAuthLoginWithRecoveryCodeInputModel
      */
     captchaResponse: string;
+}
+/**
+ *
+ * @export
+ * @interface VLOBOARDSAreasAuthMakeCredentialsOptionsInput
+ */
+export interface VLOBOARDSAreasAuthMakeCredentialsOptionsInput {
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthMakeCredentialsOptionsInput
+     */
+    userName: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthMakeCredentialsOptionsInput
+     */
+    attType: string;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthMakeCredentialsOptionsInput
+     */
+    authType: string;
+    /**
+     *
+     * @type {boolean}
+     * @memberof VLOBOARDSAreasAuthMakeCredentialsOptionsInput
+     */
+    requireResidentKey: boolean;
+    /**
+     *
+     * @type {string}
+     * @memberof VLOBOARDSAreasAuthMakeCredentialsOptionsInput
+     */
+    userVerification: string;
 }
 /**
  *
@@ -4047,10 +4760,12 @@ export declare const ExternalLoginsManagementApiAxiosParamCreator: (configuratio
     /**
      *
      * @summary Handles the information returned by the external authentication provider
+     * @param {string} [returnUrl]
+     * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementCallbackGet: (options?: any) => Promise<RequestArgs>;
+    apiAuthExternalLoginsManagementCallbackGet: (returnUrl?: string, remoteError?: string, options?: any) => Promise<RequestArgs>;
     /**
      *
      * @summary Deletes an external login provider
@@ -4084,10 +4799,12 @@ export declare const ExternalLoginsManagementApiFp: (configuration?: Configurati
     /**
      *
      * @summary Handles the information returned by the external authentication provider
+     * @param {string} [returnUrl]
+     * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    apiAuthExternalLoginsManagementCallbackGet(returnUrl?: string, remoteError?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
     /**
      *
      * @summary Deletes an external login provider
@@ -4121,10 +4838,12 @@ export declare const ExternalLoginsManagementApiFactory: (configuration?: Config
     /**
      *
      * @summary Handles the information returned by the external authentication provider
+     * @param {string} [returnUrl]
+     * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    apiAuthExternalLoginsManagementCallbackGet(options?: any): AxiosPromise<void>;
+    apiAuthExternalLoginsManagementCallbackGet(returnUrl?: string, remoteError?: string, options?: any): AxiosPromise<void>;
     /**
      *
      * @summary Deletes an external login provider
@@ -4160,11 +4879,13 @@ export declare class ExternalLoginsManagementApi extends BaseAPI {
     /**
      *
      * @summary Handles the information returned by the external authentication provider
+     * @param {string} [returnUrl]
+     * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginsManagementApi
      */
-    apiAuthExternalLoginsManagementCallbackGet(options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    apiAuthExternalLoginsManagementCallbackGet(returnUrl?: string, remoteError?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
     /**
      *
      * @summary Deletes an external login provider
@@ -4192,6 +4913,181 @@ export declare class ExternalLoginsManagementApi extends BaseAPI {
      * @memberof ExternalLoginsManagementApi
      */
     apiAuthExternalLoginsManagementGetChallengePost(provider?: string, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+}
+/**
+ * FidoApi - axios parameter creator
+ * @export
+ */
+export declare const FidoApiAxiosParamCreator: (configuration?: Configuration) => {
+    /**
+     *
+     * @param {string} [username]
+     * @param {string} [userVerification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    assertionOptionsPost: (username?: string, userVerification?: string, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    fidoRegisterUserPost: (vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeAssertionPost: (fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeCredentialOptionsPost: (vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any) => Promise<RequestArgs>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeCredentialPost: (fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any) => Promise<RequestArgs>;
+};
+/**
+ * FidoApi - functional programming interface
+ * @export
+ */
+export declare const FidoApiFp: (configuration?: Configuration) => {
+    /**
+     *
+     * @param {string} [username]
+     * @param {string} [userVerification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    assertionOptionsPost(username?: string, userVerification?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibAssertionOptions>>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibCredentialCreateOptions>>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibCredentialCreateOptions>>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibFido2CredentialMakeResult>>;
+};
+/**
+ * FidoApi - factory interface
+ * @export
+ */
+export declare const FidoApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+    /**
+     *
+     * @param {string} [username]
+     * @param {string} [userVerification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    assertionOptionsPost(username?: string, userVerification?: string, options?: any): AxiosPromise<Fido2NetLibAssertionOptions>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): AxiosPromise<Fido2NetLibCredentialCreateOptions>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): AxiosPromise<void>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): AxiosPromise<Fido2NetLibCredentialCreateOptions>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     */
+    makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): AxiosPromise<Fido2NetLibFido2CredentialMakeResult>;
+};
+/**
+ * FidoApi - object-oriented interface
+ * @export
+ * @class FidoApi
+ * @extends {BaseAPI}
+ */
+export declare class FidoApi extends BaseAPI {
+    /**
+     *
+     * @param {string} [username]
+     * @param {string} [userVerification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    assertionOptionsPost(username?: string, userVerification?: string, options?: any): Promise<import("axios").AxiosResponse<Fido2NetLibAssertionOptions, any>>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): Promise<import("axios").AxiosResponse<Fido2NetLibCredentialCreateOptions, any>>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): Promise<import("axios").AxiosResponse<void, any>>;
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): Promise<import("axios").AxiosResponse<Fido2NetLibCredentialCreateOptions, any>>;
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): Promise<import("axios").AxiosResponse<Fido2NetLibFido2CredentialMakeResult, any>>;
 }
 /**
  * FilesApi - axios parameter creator

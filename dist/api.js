@@ -84,6 +84,27 @@ import { BASE_PATH, BaseAPI } from './base';
  * @export
  * @enum {string}
  */
+export var Fido2NetLibObjectsAttestationConveyancePreference;
+(function (Fido2NetLibObjectsAttestationConveyancePreference) {
+    Fido2NetLibObjectsAttestationConveyancePreference["None"] = "none";
+    Fido2NetLibObjectsAttestationConveyancePreference["Indirect"] = "indirect";
+    Fido2NetLibObjectsAttestationConveyancePreference["Direct"] = "direct";
+})(Fido2NetLibObjectsAttestationConveyancePreference || (Fido2NetLibObjectsAttestationConveyancePreference = {}));
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export var Fido2NetLibObjectsAuthenticatorAttachment;
+(function (Fido2NetLibObjectsAuthenticatorAttachment) {
+    Fido2NetLibObjectsAuthenticatorAttachment["Platform"] = "platform";
+    Fido2NetLibObjectsAuthenticatorAttachment["CrossPlatform"] = "cross-platform";
+})(Fido2NetLibObjectsAuthenticatorAttachment || (Fido2NetLibObjectsAuthenticatorAttachment = {}));
+/**
+ *
+ * @export
+ * @enum {string}
+ */
 export var Fido2NetLibObjectsAuthenticatorTransport;
 (function (Fido2NetLibObjectsAuthenticatorTransport) {
     Fido2NetLibObjectsAuthenticatorTransport["Usb"] = "usb";
@@ -96,10 +117,41 @@ export var Fido2NetLibObjectsAuthenticatorTransport;
  * @export
  * @enum {string}
  */
+export var Fido2NetLibObjectsCOSEAlgorithm;
+(function (Fido2NetLibObjectsCOSEAlgorithm) {
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_65535"] = -65535] = "NUMBER_MINUS_65535";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_259"] = -259] = "NUMBER_MINUS_259";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_258"] = -258] = "NUMBER_MINUS_258";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_257"] = -257] = "NUMBER_MINUS_257";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_47"] = -47] = "NUMBER_MINUS_47";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_39"] = -39] = "NUMBER_MINUS_39";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_38"] = -38] = "NUMBER_MINUS_38";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_37"] = -37] = "NUMBER_MINUS_37";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_36"] = -36] = "NUMBER_MINUS_36";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_35"] = -35] = "NUMBER_MINUS_35";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_8"] = -8] = "NUMBER_MINUS_8";
+    Fido2NetLibObjectsCOSEAlgorithm[Fido2NetLibObjectsCOSEAlgorithm["NUMBER_MINUS_7"] = -7] = "NUMBER_MINUS_7";
+})(Fido2NetLibObjectsCOSEAlgorithm || (Fido2NetLibObjectsCOSEAlgorithm = {}));
+/**
+ *
+ * @export
+ * @enum {string}
+ */
 export var Fido2NetLibObjectsPublicKeyCredentialType;
 (function (Fido2NetLibObjectsPublicKeyCredentialType) {
     Fido2NetLibObjectsPublicKeyCredentialType["PublicKey"] = "public-key";
 })(Fido2NetLibObjectsPublicKeyCredentialType || (Fido2NetLibObjectsPublicKeyCredentialType = {}));
+/**
+ *
+ * @export
+ * @enum {string}
+ */
+export var Fido2NetLibObjectsUserVerificationRequirement;
+(function (Fido2NetLibObjectsUserVerificationRequirement) {
+    Fido2NetLibObjectsUserVerificationRequirement["Required"] = "required";
+    Fido2NetLibObjectsUserVerificationRequirement["Preferred"] = "preferred";
+    Fido2NetLibObjectsUserVerificationRequirement["Discouraged"] = "discouraged";
+})(Fido2NetLibObjectsUserVerificationRequirement || (Fido2NetLibObjectsUserVerificationRequirement = {}));
 /**
  *
  * @export
@@ -1265,10 +1317,12 @@ export var ExternalLoginsManagementApiAxiosParamCreator = function (configuratio
         /**
          *
          * @summary Handles the information returned by the external authentication provider
+         * @param {string} [returnUrl]
+         * @param {string} [remoteError]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginsManagementCallbackGet: function (options) {
+        apiAuthExternalLoginsManagementCallbackGet: function (returnUrl, remoteError, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
@@ -1281,6 +1335,12 @@ export var ExternalLoginsManagementApiAxiosParamCreator = function (configuratio
                     localVarRequestOptions = __assign(__assign({ method: 'GET' }, baseOptions), options);
                     localVarHeaderParameter = {};
                     localVarQueryParameter = {};
+                    if (returnUrl !== undefined) {
+                        localVarQueryParameter['returnUrl'] = returnUrl;
+                    }
+                    if (remoteError !== undefined) {
+                        localVarQueryParameter['remoteError'] = remoteError;
+                    }
                     setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
                     headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
                     localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
@@ -1402,15 +1462,17 @@ export var ExternalLoginsManagementApiFp = function (configuration) {
         /**
          *
          * @summary Handles the information returned by the external authentication provider
+         * @param {string} [returnUrl]
+         * @param {string} [remoteError]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginsManagementCallbackGet: function (options) {
+        apiAuthExternalLoginsManagementCallbackGet: function (returnUrl, remoteError, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthExternalLoginsManagementCallbackGet(options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthExternalLoginsManagementCallbackGet(returnUrl, remoteError, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -1490,11 +1552,13 @@ export var ExternalLoginsManagementApiFactory = function (configuration, basePat
         /**
          *
          * @summary Handles the information returned by the external authentication provider
+         * @param {string} [returnUrl]
+         * @param {string} [remoteError]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        apiAuthExternalLoginsManagementCallbackGet: function (options) {
-            return localVarFp.apiAuthExternalLoginsManagementCallbackGet(options).then(function (request) { return request(axios, basePath); });
+        apiAuthExternalLoginsManagementCallbackGet: function (returnUrl, remoteError, options) {
+            return localVarFp.apiAuthExternalLoginsManagementCallbackGet(returnUrl, remoteError, options).then(function (request) { return request(axios, basePath); });
         },
         /**
          *
@@ -1542,13 +1606,15 @@ var ExternalLoginsManagementApi = /** @class */ (function (_super) {
     /**
      *
      * @summary Handles the information returned by the external authentication provider
+     * @param {string} [returnUrl]
+     * @param {string} [remoteError]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ExternalLoginsManagementApi
      */
-    ExternalLoginsManagementApi.prototype.apiAuthExternalLoginsManagementCallbackGet = function (options) {
+    ExternalLoginsManagementApi.prototype.apiAuthExternalLoginsManagementCallbackGet = function (returnUrl, remoteError, options) {
         var _this = this;
-        return ExternalLoginsManagementApiFp(this.configuration).apiAuthExternalLoginsManagementCallbackGet(options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return ExternalLoginsManagementApiFp(this.configuration).apiAuthExternalLoginsManagementCallbackGet(returnUrl, remoteError, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      *
@@ -1589,6 +1655,405 @@ var ExternalLoginsManagementApi = /** @class */ (function (_super) {
     return ExternalLoginsManagementApi;
 }(BaseAPI));
 export { ExternalLoginsManagementApi };
+/**
+ * FidoApi - axios parameter creator
+ * @export
+ */
+export var FidoApiAxiosParamCreator = function (configuration) {
+    var _this = this;
+    return {
+        /**
+         *
+         * @param {string} [username]
+         * @param {string} [userVerification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assertionOptionsPost: function (username, userVerification, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/assertionOptions";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    if (username !== undefined) {
+                        localVarQueryParameter['username'] = username;
+                    }
+                    if (userVerification !== undefined) {
+                        localVarQueryParameter['userVerification'] = userVerification;
+                    }
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+        /**
+         *
+         * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        fidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/fidoRegisterUser";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    localVarHeaderParameter['Content-Type'] = 'application/json';
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthFidoRegisterInput, localVarRequestOptions, configuration);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+        /**
+         *
+         * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/makeAssertion";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    localVarHeaderParameter['Content-Type'] = 'application/json';
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    localVarRequestOptions.data = serializeDataIfNeeded(fido2NetLibAuthenticatorAssertionRawResponse, localVarRequestOptions, configuration);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+        /**
+         *
+         * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/makeCredentialOptions";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    localVarHeaderParameter['Content-Type'] = 'application/json';
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    localVarRequestOptions.data = serializeDataIfNeeded(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, localVarRequestOptions, configuration);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+        /**
+         *
+         * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+            if (options === void 0) { options = {}; }
+            return __awaiter(_this, void 0, void 0, function () {
+                var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
+                return __generator(this, function (_a) {
+                    localVarPath = "/makeCredential";
+                    localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+                    if (configuration) {
+                        baseOptions = configuration.baseOptions;
+                    }
+                    localVarRequestOptions = __assign(__assign({ method: 'POST' }, baseOptions), options);
+                    localVarHeaderParameter = {};
+                    localVarQueryParameter = {};
+                    localVarHeaderParameter['Content-Type'] = 'application/json';
+                    setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+                    headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+                    localVarRequestOptions.headers = __assign(__assign(__assign({}, localVarHeaderParameter), headersFromBaseOptions), options.headers);
+                    localVarRequestOptions.data = serializeDataIfNeeded(fido2NetLibAuthenticatorAttestationRawResponse, localVarRequestOptions, configuration);
+                    return [2 /*return*/, {
+                            url: toPathString(localVarUrlObj),
+                            options: localVarRequestOptions,
+                        }];
+                });
+            });
+        },
+    };
+};
+/**
+ * FidoApi - functional programming interface
+ * @export
+ */
+export var FidoApiFp = function (configuration) {
+    var localVarAxiosParamCreator = FidoApiAxiosParamCreator(configuration);
+    return {
+        /**
+         *
+         * @param {string} [username]
+         * @param {string} [userVerification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assertionOptionsPost: function (username, userVerification, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.assertionOptionsPost(username, userVerification, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+        /**
+         *
+         * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        fidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+        /**
+         *
+         * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+        /**
+         *
+         * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+        /**
+         *
+         * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+            return __awaiter(this, void 0, void 0, function () {
+                var localVarAxiosArgs;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options)];
+                        case 1:
+                            localVarAxiosArgs = _a.sent();
+                            return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
+                    }
+                });
+            });
+        },
+    };
+};
+/**
+ * FidoApi - factory interface
+ * @export
+ */
+export var FidoApiFactory = function (configuration, basePath, axios) {
+    var localVarFp = FidoApiFp(configuration);
+    return {
+        /**
+         *
+         * @param {string} [username]
+         * @param {string} [userVerification]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        assertionOptionsPost: function (username, userVerification, options) {
+            return localVarFp.assertionOptionsPost(username, userVerification, options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
+         * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        fidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+            return localVarFp.fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
+         * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+            return localVarFp.makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
+         * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+            return localVarFp.makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then(function (request) { return request(axios, basePath); });
+        },
+        /**
+         *
+         * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        makeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+            return localVarFp.makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then(function (request) { return request(axios, basePath); });
+        },
+    };
+};
+/**
+ * FidoApi - object-oriented interface
+ * @export
+ * @class FidoApi
+ * @extends {BaseAPI}
+ */
+var FidoApi = /** @class */ (function (_super) {
+    __extends(FidoApi, _super);
+    function FidoApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     *
+     * @param {string} [username]
+     * @param {string} [userVerification]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    FidoApi.prototype.assertionOptionsPost = function (username, userVerification, options) {
+        var _this = this;
+        return FidoApiFp(this.configuration).assertionOptionsPost(username, userVerification, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthFidoRegisterInput} [vLOBOARDSAreasAuthFidoRegisterInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    FidoApi.prototype.fidoRegisterUserPost = function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+        var _this = this;
+        return FidoApiFp(this.configuration).fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAssertionRawResponse} [fido2NetLibAuthenticatorAssertionRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    FidoApi.prototype.makeAssertionPost = function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+        var _this = this;
+        return FidoApiFp(this.configuration).makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
+     * @param {VLOBOARDSAreasAuthMakeCredentialsOptionsInput} [vLOBOARDSAreasAuthMakeCredentialsOptionsInput]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    FidoApi.prototype.makeCredentialOptionsPost = function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+        var _this = this;
+        return FidoApiFp(this.configuration).makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    /**
+     *
+     * @param {Fido2NetLibAuthenticatorAttestationRawResponse} [fido2NetLibAuthenticatorAttestationRawResponse]
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof FidoApi
+     */
+    FidoApi.prototype.makeCredentialPost = function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+        var _this = this;
+        return FidoApiFp(this.configuration).makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then(function (request) { return request(_this.axios, _this.basePath); });
+    };
+    return FidoApi;
+}(BaseAPI));
+export { FidoApi };
 /**
  * FilesApi - axios parameter creator
  * @export
