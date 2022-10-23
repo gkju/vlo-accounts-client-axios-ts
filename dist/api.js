@@ -1669,12 +1669,12 @@ export var FidoApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        assertionOptionsPost: function (username, userVerification, options) {
+        apiAuthFidoAssertionOptionsPost: function (username, userVerification, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
                 return __generator(this, function (_a) {
-                    localVarPath = "/assertionOptions";
+                    localVarPath = "/api/Auth/Fido/assertionOptions";
                     localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1704,12 +1704,12 @@ export var FidoApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+        apiAuthFidoFidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
                 return __generator(this, function (_a) {
-                    localVarPath = "/fidoRegisterUser";
+                    localVarPath = "/api/Auth/Fido/fidoRegisterUser";
                     localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1735,12 +1735,12 @@ export var FidoApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+        apiAuthFidoMakeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
                 return __generator(this, function (_a) {
-                    localVarPath = "/makeAssertion";
+                    localVarPath = "/api/Auth/Fido/makeAssertion";
                     localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1766,12 +1766,12 @@ export var FidoApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+        apiAuthFidoMakeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
                 return __generator(this, function (_a) {
-                    localVarPath = "/makeCredentialOptions";
+                    localVarPath = "/api/Auth/Fido/makeCredentialOptions";
                     localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1797,12 +1797,12 @@ export var FidoApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+        apiAuthFidoMakeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
             if (options === void 0) { options = {}; }
             return __awaiter(_this, void 0, void 0, function () {
                 var localVarPath, localVarUrlObj, baseOptions, localVarRequestOptions, localVarHeaderParameter, localVarQueryParameter, headersFromBaseOptions;
                 return __generator(this, function (_a) {
-                    localVarPath = "/makeCredential";
+                    localVarPath = "/api/Auth/Fido/makeCredential";
                     localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
                     if (configuration) {
                         baseOptions = configuration.baseOptions;
@@ -1838,12 +1838,12 @@ export var FidoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        assertionOptionsPost: function (username, userVerification, options) {
+        apiAuthFidoAssertionOptionsPost: function (username, userVerification, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.assertionOptionsPost(username, userVerification, options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthFidoAssertionOptionsPost(username, userVerification, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -1857,12 +1857,12 @@ export var FidoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+        apiAuthFidoFidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -1876,12 +1876,12 @@ export var FidoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+        apiAuthFidoMakeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -1895,12 +1895,12 @@ export var FidoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+        apiAuthFidoMakeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -1914,12 +1914,12 @@ export var FidoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+        apiAuthFidoMakeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
             return __awaiter(this, void 0, void 0, function () {
                 var localVarAxiosArgs;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
-                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options)];
+                        case 0: return [4 /*yield*/, localVarAxiosParamCreator.apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options)];
                         case 1:
                             localVarAxiosArgs = _a.sent();
                             return [2 /*return*/, createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)];
@@ -1943,8 +1943,8 @@ export var FidoApiFactory = function (configuration, basePath, axios) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        assertionOptionsPost: function (username, userVerification, options) {
-            return localVarFp.assertionOptionsPost(username, userVerification, options).then(function (request) { return request(axios, basePath); });
+        apiAuthFidoAssertionOptionsPost: function (username, userVerification, options) {
+            return localVarFp.apiAuthFidoAssertionOptionsPost(username, userVerification, options).then(function (request) { return request(axios, basePath); });
         },
         /**
          *
@@ -1952,8 +1952,8 @@ export var FidoApiFactory = function (configuration, basePath, axios) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
-            return localVarFp.fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then(function (request) { return request(axios, basePath); });
+        apiAuthFidoFidoRegisterUserPost: function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+            return localVarFp.apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then(function (request) { return request(axios, basePath); });
         },
         /**
          *
@@ -1961,8 +1961,8 @@ export var FidoApiFactory = function (configuration, basePath, axios) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
-            return localVarFp.makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then(function (request) { return request(axios, basePath); });
+        apiAuthFidoMakeAssertionPost: function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+            return localVarFp.apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then(function (request) { return request(axios, basePath); });
         },
         /**
          *
@@ -1970,8 +1970,8 @@ export var FidoApiFactory = function (configuration, basePath, axios) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
-            return localVarFp.makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then(function (request) { return request(axios, basePath); });
+        apiAuthFidoMakeCredentialOptionsPost: function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+            return localVarFp.apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then(function (request) { return request(axios, basePath); });
         },
         /**
          *
@@ -1979,8 +1979,8 @@ export var FidoApiFactory = function (configuration, basePath, axios) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
-            return localVarFp.makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then(function (request) { return request(axios, basePath); });
+        apiAuthFidoMakeCredentialPost: function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+            return localVarFp.apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then(function (request) { return request(axios, basePath); });
         },
     };
 };
@@ -2003,9 +2003,9 @@ var FidoApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    FidoApi.prototype.assertionOptionsPost = function (username, userVerification, options) {
+    FidoApi.prototype.apiAuthFidoAssertionOptionsPost = function (username, userVerification, options) {
         var _this = this;
-        return FidoApiFp(this.configuration).assertionOptionsPost(username, userVerification, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return FidoApiFp(this.configuration).apiAuthFidoAssertionOptionsPost(username, userVerification, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      *
@@ -2014,9 +2014,9 @@ var FidoApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    FidoApi.prototype.fidoRegisterUserPost = function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
+    FidoApi.prototype.apiAuthFidoFidoRegisterUserPost = function (vLOBOARDSAreasAuthFidoRegisterInput, options) {
         var _this = this;
-        return FidoApiFp(this.configuration).fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return FidoApiFp(this.configuration).apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      *
@@ -2025,9 +2025,9 @@ var FidoApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    FidoApi.prototype.makeAssertionPost = function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
+    FidoApi.prototype.apiAuthFidoMakeAssertionPost = function (fido2NetLibAuthenticatorAssertionRawResponse, options) {
         var _this = this;
-        return FidoApiFp(this.configuration).makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return FidoApiFp(this.configuration).apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      *
@@ -2036,9 +2036,9 @@ var FidoApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    FidoApi.prototype.makeCredentialOptionsPost = function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
+    FidoApi.prototype.apiAuthFidoMakeCredentialOptionsPost = function (vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options) {
         var _this = this;
-        return FidoApiFp(this.configuration).makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return FidoApiFp(this.configuration).apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     /**
      *
@@ -2047,9 +2047,9 @@ var FidoApi = /** @class */ (function (_super) {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    FidoApi.prototype.makeCredentialPost = function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
+    FidoApi.prototype.apiAuthFidoMakeCredentialPost = function (fido2NetLibAuthenticatorAttestationRawResponse, options) {
         var _this = this;
-        return FidoApiFp(this.configuration).makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then(function (request) { return request(_this.axios, _this.basePath); });
+        return FidoApiFp(this.configuration).apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then(function (request) { return request(_this.axios, _this.basePath); });
     };
     return FidoApi;
 }(BaseAPI));

@@ -68,24 +68,6 @@ export interface AccountsDataModelsDataModelsApplicationUser {
      * @type {string}
      * @memberof AccountsDataModelsDataModelsApplicationUser
      */
-    passwordHash?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    securityStamp?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    concurrencyStamp?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
     phoneNumber?: string | null;
     /**
      * 
@@ -131,24 +113,6 @@ export interface AccountsDataModelsDataModelsApplicationUser {
     socialCredit?: number;
     /**
      * 
-     * @type {Array<AccountsDataModelsDataModelsFido2Pk>}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    fidoCredentials?: Array<AccountsDataModelsDataModelsFido2Pk> | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    assertionOptionsJson?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    attestationOptionsJson?: string | null;
-    /**
-     * 
      * @type {number}
      * @memberof AccountsDataModelsDataModelsApplicationUser
      */
@@ -159,49 +123,6 @@ export interface AccountsDataModelsDataModelsApplicationUser {
      * @memberof AccountsDataModelsDataModelsApplicationUser
      */
     maxBytes?: number;
-    /**
-     * 
-     * @type {Array<AccountsDataModelsDataModelsFile>}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    files?: Array<AccountsDataModelsDataModelsFile> | null;
-    /**
-     * 
-     * @type {Array<AccountsDataModelsDataModelsFolder>}
-     * @memberof AccountsDataModelsDataModelsApplicationUser
-     */
-    folders?: Array<AccountsDataModelsDataModelsFolder> | null;
-}
-/**
- * 
- * @export
- * @interface AccountsDataModelsDataModelsFido2Pk
- */
-export interface AccountsDataModelsDataModelsFido2Pk {
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsFido2Pk
-     */
-    id?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsFido2Pk
-     */
-    ownerId?: string | null;
-    /**
-     * 
-     * @type {AccountsDataModelsDataModelsApplicationUser}
-     * @memberof AccountsDataModelsDataModelsFido2Pk
-     */
-    owner?: AccountsDataModelsDataModelsApplicationUser;
-    /**
-     * 
-     * @type {AccountsDataModelsDataModelsStoredCredentialId}
-     * @memberof AccountsDataModelsDataModelsFido2Pk
-     */
-    storedCredential?: AccountsDataModelsDataModelsStoredCredentialId;
 }
 /**
  * 
@@ -259,12 +180,6 @@ export interface AccountsDataModelsDataModelsFile {
     ownerId?: string | null;
     /**
      * 
-     * @type {AccountsDataModelsDataModelsApplicationUser}
-     * @memberof AccountsDataModelsDataModelsFile
-     */
-    owner?: AccountsDataModelsDataModelsApplicationUser;
-    /**
-     * 
      * @type {number}
      * @memberof AccountsDataModelsDataModelsFile
      */
@@ -281,24 +196,6 @@ export interface AccountsDataModelsDataModelsFile {
      * @memberof AccountsDataModelsDataModelsFile
      */
     parent?: AccountsDataModelsDataModelsFolder;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsFile
-     */
-    masterFileId?: string | null;
-    /**
-     * 
-     * @type {AccountsDataModelsDataModelsFile}
-     * @memberof AccountsDataModelsDataModelsFile
-     */
-    masterFile?: AccountsDataModelsDataModelsFile;
-    /**
-     * 
-     * @type {Array<AccountsDataModelsDataModelsFile>}
-     * @memberof AccountsDataModelsDataModelsFile
-     */
-    childrenFiles?: Array<AccountsDataModelsDataModelsFile> | null;
 }
 /**
  * 
@@ -317,25 +214,19 @@ export interface AccountsDataModelsDataModelsFolder {
      * @type {string}
      * @memberof AccountsDataModelsDataModelsFolder
      */
-    ownerId?: string | null;
+    name?: string | null;
     /**
      * 
-     * @type {AccountsDataModelsDataModelsApplicationUser}
+     * @type {string}
      * @memberof AccountsDataModelsDataModelsFolder
      */
-    owner?: AccountsDataModelsDataModelsApplicationUser;
+    ownerId?: string | null;
     /**
      * 
      * @type {string}
      * @memberof AccountsDataModelsDataModelsFolder
      */
     masterFolderId?: string | null;
-    /**
-     * 
-     * @type {AccountsDataModelsDataModelsFolder}
-     * @memberof AccountsDataModelsDataModelsFolder
-     */
-    masterFolder?: AccountsDataModelsDataModelsFolder;
 }
 /**
  * 
@@ -361,73 +252,6 @@ export interface AccountsDataModelsDataModelsProfilePicture {
      * @memberof AccountsDataModelsDataModelsProfilePicture
      */
     ownerId?: string | null;
-    /**
-     * 
-     * @type {AccountsDataModelsDataModelsApplicationUser}
-     * @memberof AccountsDataModelsDataModelsProfilePicture
-     */
-    owner?: AccountsDataModelsDataModelsApplicationUser;
-}
-/**
- * 
- * @export
- * @interface AccountsDataModelsDataModelsStoredCredentialId
- */
-export interface AccountsDataModelsDataModelsStoredCredentialId {
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    userId?: string | null;
-    /**
-     * 
-     * @type {Fido2NetLibObjectsPublicKeyCredentialDescriptor}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    descriptor?: Fido2NetLibObjectsPublicKeyCredentialDescriptor;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    publicKey?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    userHandle?: string | null;
-    /**
-     * 
-     * @type {number}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    signatureCounter?: number;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    credType?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    regDate?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    aaGuid?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AccountsDataModelsDataModelsStoredCredentialId
-     */
-    id?: string | null;
 }
 /**
  * 
@@ -822,6 +646,18 @@ export interface Fido2NetLibObjectsAttestationVerificationSuccess {
      * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
      */
     aaguid?: string;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyX509CertificatesX509Certificate2}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    attestationCertificate?: SystemSecurityCryptographyX509CertificatesX509Certificate2;
+    /**
+     * 
+     * @type {Array<SystemSecurityCryptographyX509CertificatesX509Certificate2>}
+     * @memberof Fido2NetLibObjectsAttestationVerificationSuccess
+     */
+    attestationCertificateChain?: Array<SystemSecurityCryptographyX509CertificatesX509Certificate2> | null;
 }
 /**
  * 
@@ -1163,6 +999,50 @@ export interface SystemModuleHandle {
 /**
  * 
  * @export
+ * @interface SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+ */
+export interface SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e {
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+     */
+    length?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+     */
+    isEmpty?: boolean;
+    /**
+     * 
+     * @type {SystemReadOnlySpan1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e}
+     * @memberof SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+     */
+    span?: SystemReadOnlySpan1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e;
+}
+/**
+ * 
+ * @export
+ * @interface SystemReadOnlySpan1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+ */
+export interface SystemReadOnlySpan1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e {
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemReadOnlySpan1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+     */
+    length?: number;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemReadOnlySpan1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e
+     */
+    isEmpty?: boolean;
+}
+/**
+ * 
+ * @export
  * @interface SystemReflectionAssembly
  */
 export interface SystemReflectionAssembly {
@@ -1182,6 +1062,7 @@ export interface SystemReflectionAssembly {
      * 
      * @type {string}
      * @memberof SystemReflectionAssembly
+     * @deprecated
      */
     codeBase?: string | null;
     /**
@@ -1242,6 +1123,7 @@ export interface SystemReflectionAssembly {
      * 
      * @type {string}
      * @memberof SystemReflectionAssembly
+     * @deprecated
      */
     escapedCodeBase?: string | null;
     /**
@@ -1901,6 +1783,12 @@ export interface SystemReflectionMemberInfo {
     memberType?: SystemReflectionMemberTypes;
     /**
      * 
+     * @type {string}
+     * @memberof SystemReflectionMemberInfo
+     */
+    name?: string | null;
+    /**
+     * 
      * @type {SystemType}
      * @memberof SystemReflectionMemberInfo
      */
@@ -1911,12 +1799,6 @@ export interface SystemReflectionMemberInfo {
      * @memberof SystemReflectionMemberInfo
      */
     reflectedType?: SystemType;
-    /**
-     * 
-     * @type {string}
-     * @memberof SystemReflectionMemberInfo
-     */
-    name?: string | null;
     /**
      * 
      * @type {SystemReflectionModule}
@@ -3317,6 +3199,308 @@ export interface SystemRuntimeTypeHandle {
 /**
  * 
  * @export
+ * @interface SystemSecurityCryptographyAsnEncodedData
+ */
+export interface SystemSecurityCryptographyAsnEncodedData {
+    /**
+     * 
+     * @type {SystemSecurityCryptographyOid}
+     * @memberof SystemSecurityCryptographyAsnEncodedData
+     */
+    oid?: SystemSecurityCryptographyOid;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyAsnEncodedData
+     */
+    rawData?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyAsymmetricAlgorithm
+ */
+export interface SystemSecurityCryptographyAsymmetricAlgorithm {
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemSecurityCryptographyAsymmetricAlgorithm
+     */
+    keySize?: number;
+    /**
+     * 
+     * @type {Array<SystemSecurityCryptographyKeySizes>}
+     * @memberof SystemSecurityCryptographyAsymmetricAlgorithm
+     */
+    legalKeySizes?: Array<SystemSecurityCryptographyKeySizes> | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyAsymmetricAlgorithm
+     */
+    signatureAlgorithm?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyAsymmetricAlgorithm
+     */
+    keyExchangeAlgorithm?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyKeySizes
+ */
+export interface SystemSecurityCryptographyKeySizes {
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemSecurityCryptographyKeySizes
+     */
+    minSize?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemSecurityCryptographyKeySizes
+     */
+    maxSize?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemSecurityCryptographyKeySizes
+     */
+    skipSize?: number;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyOid
+ */
+export interface SystemSecurityCryptographyOid {
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyOid
+     */
+    value?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyOid
+     */
+    friendlyName?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyX509CertificatesPublicKey
+ */
+export interface SystemSecurityCryptographyX509CertificatesPublicKey {
+    /**
+     * 
+     * @type {SystemSecurityCryptographyAsnEncodedData}
+     * @memberof SystemSecurityCryptographyX509CertificatesPublicKey
+     */
+    encodedKeyValue?: SystemSecurityCryptographyAsnEncodedData;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyAsnEncodedData}
+     * @memberof SystemSecurityCryptographyX509CertificatesPublicKey
+     */
+    encodedParameters?: SystemSecurityCryptographyAsnEncodedData;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyAsymmetricAlgorithm}
+     * @memberof SystemSecurityCryptographyX509CertificatesPublicKey
+     */
+    key?: SystemSecurityCryptographyAsymmetricAlgorithm;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyOid}
+     * @memberof SystemSecurityCryptographyX509CertificatesPublicKey
+     */
+    oid?: SystemSecurityCryptographyOid;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyX509CertificatesX500DistinguishedName
+ */
+export interface SystemSecurityCryptographyX509CertificatesX500DistinguishedName {
+    /**
+     * 
+     * @type {SystemSecurityCryptographyOid}
+     * @memberof SystemSecurityCryptographyX509CertificatesX500DistinguishedName
+     */
+    oid?: SystemSecurityCryptographyOid;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX500DistinguishedName
+     */
+    rawData?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX500DistinguishedName
+     */
+    name?: string | null;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyX509CertificatesX509Certificate2
+ */
+export interface SystemSecurityCryptographyX509CertificatesX509Certificate2 {
+    /**
+     * 
+     * @type {object}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    handle?: object;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    issuer?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    subject?: string | null;
+    /**
+     * 
+     * @type {SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    serialNumberBytes?: SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    archived?: boolean;
+    /**
+     * 
+     * @type {Array<SystemSecurityCryptographyX509CertificatesX509Extension>}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    extensions?: Array<SystemSecurityCryptographyX509CertificatesX509Extension> | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    friendlyName?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    hasPrivateKey?: boolean;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyAsymmetricAlgorithm}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    privateKey?: SystemSecurityCryptographyAsymmetricAlgorithm;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyX509CertificatesX500DistinguishedName}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    issuerName?: SystemSecurityCryptographyX509CertificatesX500DistinguishedName;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    notAfter?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    notBefore?: string;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyX509CertificatesPublicKey}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    publicKey?: SystemSecurityCryptographyX509CertificatesPublicKey;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    rawData?: string | null;
+    /**
+     * 
+     * @type {SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    rawDataMemory?: SystemReadOnlyMemory1SystemByteSystemPrivateCoreLibVersion7000CultureNeutralPublicKeyToken7cec85d7bea7798e;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    serialNumber?: string | null;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyOid}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    signatureAlgorithm?: SystemSecurityCryptographyOid;
+    /**
+     * 
+     * @type {SystemSecurityCryptographyX509CertificatesX500DistinguishedName}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    subjectName?: SystemSecurityCryptographyX509CertificatesX500DistinguishedName;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    thumbprint?: string | null;
+    /**
+     * 
+     * @type {number}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Certificate2
+     */
+    version?: number;
+}
+/**
+ * 
+ * @export
+ * @interface SystemSecurityCryptographyX509CertificatesX509Extension
+ */
+export interface SystemSecurityCryptographyX509CertificatesX509Extension {
+    /**
+     * 
+     * @type {SystemSecurityCryptographyOid}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Extension
+     */
+    oid?: SystemSecurityCryptographyOid;
+    /**
+     * 
+     * @type {string}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Extension
+     */
+    rawData?: string | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof SystemSecurityCryptographyX509CertificatesX509Extension
+     */
+    critical?: boolean;
+}
+/**
+ * 
+ * @export
  * @enum {string}
  */
 
@@ -3826,7 +4010,7 @@ export interface VLOBOARDSAreasAuthFidoRegisterInput {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthFidoRegisterInput
      */
-    authType: string;
+    authType?: string | null;
     /**
      * 
      * @type {boolean}
@@ -4000,7 +4184,7 @@ export interface VLOBOARDSAreasAuthMakeCredentialsOptionsInput {
      * @type {string}
      * @memberof VLOBOARDSAreasAuthMakeCredentialsOptionsInput
      */
-    authType: string;
+    authType?: string | null;
     /**
      * 
      * @type {boolean}
@@ -5516,8 +5700,8 @@ export const FidoApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        assertionOptionsPost: async (username?: string, userVerification?: string, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/assertionOptions`;
+        apiAuthFidoAssertionOptionsPost: async (username?: string, userVerification?: string, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Fido/assertionOptions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5554,8 +5738,8 @@ export const FidoApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fidoRegisterUserPost: async (vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/fidoRegisterUser`;
+        apiAuthFidoFidoRegisterUserPost: async (vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Fido/fidoRegisterUser`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5587,8 +5771,8 @@ export const FidoApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeAssertionPost: async (fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/makeAssertion`;
+        apiAuthFidoMakeAssertionPost: async (fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Fido/makeAssertion`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5620,8 +5804,8 @@ export const FidoApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialOptionsPost: async (vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/makeCredentialOptions`;
+        apiAuthFidoMakeCredentialOptionsPost: async (vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Fido/makeCredentialOptions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5653,8 +5837,8 @@ export const FidoApiAxiosParamCreator = function (configuration?: Configuration)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialPost: async (fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options: any = {}): Promise<RequestArgs> => {
-            const localVarPath = `/makeCredential`;
+        apiAuthFidoMakeCredentialPost: async (fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/Auth/Fido/makeCredential`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
             let baseOptions;
@@ -5697,8 +5881,8 @@ export const FidoApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async assertionOptionsPost(username?: string, userVerification?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibAssertionOptions>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.assertionOptionsPost(username, userVerification, options);
+        async apiAuthFidoAssertionOptionsPost(username?: string, userVerification?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibAssertionOptions>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthFidoAssertionOptionsPost(username, userVerification, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5707,8 +5891,8 @@ export const FidoApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibCredentialCreateOptions>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options);
+        async apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibCredentialCreateOptions>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5717,8 +5901,8 @@ export const FidoApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options);
+        async apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5727,8 +5911,8 @@ export const FidoApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibCredentialCreateOptions>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options);
+        async apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibCredentialCreateOptions>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
@@ -5737,8 +5921,8 @@ export const FidoApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibFido2CredentialMakeResult>> {
-            const localVarAxiosArgs = await localVarAxiosParamCreator.makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options);
+        async apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Fido2NetLibFido2CredentialMakeResult>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options);
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
     }
@@ -5758,8 +5942,8 @@ export const FidoApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        assertionOptionsPost(username?: string, userVerification?: string, options?: any): AxiosPromise<Fido2NetLibAssertionOptions> {
-            return localVarFp.assertionOptionsPost(username, userVerification, options).then((request) => request(axios, basePath));
+        apiAuthFidoAssertionOptionsPost(username?: string, userVerification?: string, options?: any): AxiosPromise<Fido2NetLibAssertionOptions> {
+            return localVarFp.apiAuthFidoAssertionOptionsPost(username, userVerification, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5767,8 +5951,8 @@ export const FidoApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): AxiosPromise<Fido2NetLibCredentialCreateOptions> {
-            return localVarFp.fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then((request) => request(axios, basePath));
+        apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any): AxiosPromise<Fido2NetLibCredentialCreateOptions> {
+            return localVarFp.apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5776,8 +5960,8 @@ export const FidoApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): AxiosPromise<void> {
-            return localVarFp.makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then((request) => request(axios, basePath));
+        apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any): AxiosPromise<void> {
+            return localVarFp.apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5785,8 +5969,8 @@ export const FidoApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): AxiosPromise<Fido2NetLibCredentialCreateOptions> {
-            return localVarFp.makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then((request) => request(axios, basePath));
+        apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any): AxiosPromise<Fido2NetLibCredentialCreateOptions> {
+            return localVarFp.apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then((request) => request(axios, basePath));
         },
         /**
          * 
@@ -5794,8 +5978,8 @@ export const FidoApiFactory = function (configuration?: Configuration, basePath?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): AxiosPromise<Fido2NetLibFido2CredentialMakeResult> {
-            return localVarFp.makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then((request) => request(axios, basePath));
+        apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any): AxiosPromise<Fido2NetLibFido2CredentialMakeResult> {
+            return localVarFp.apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -5815,8 +5999,8 @@ export class FidoApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    public assertionOptionsPost(username?: string, userVerification?: string, options?: any) {
-        return FidoApiFp(this.configuration).assertionOptionsPost(username, userVerification, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthFidoAssertionOptionsPost(username?: string, userVerification?: string, options?: any) {
+        return FidoApiFp(this.configuration).apiAuthFidoAssertionOptionsPost(username, userVerification, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5826,8 +6010,8 @@ export class FidoApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    public fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any) {
-        return FidoApiFp(this.configuration).fidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput?: VLOBOARDSAreasAuthFidoRegisterInput, options?: any) {
+        return FidoApiFp(this.configuration).apiAuthFidoFidoRegisterUserPost(vLOBOARDSAreasAuthFidoRegisterInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5837,8 +6021,8 @@ export class FidoApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    public makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any) {
-        return FidoApiFp(this.configuration).makeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse?: Fido2NetLibAuthenticatorAssertionRawResponse, options?: any) {
+        return FidoApiFp(this.configuration).apiAuthFidoMakeAssertionPost(fido2NetLibAuthenticatorAssertionRawResponse, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5848,8 +6032,8 @@ export class FidoApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    public makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any) {
-        return FidoApiFp(this.configuration).makeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput?: VLOBOARDSAreasAuthMakeCredentialsOptionsInput, options?: any) {
+        return FidoApiFp(this.configuration).apiAuthFidoMakeCredentialOptionsPost(vLOBOARDSAreasAuthMakeCredentialsOptionsInput, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -5859,8 +6043,8 @@ export class FidoApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof FidoApi
      */
-    public makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any) {
-        return FidoApiFp(this.configuration).makeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then((request) => request(this.axios, this.basePath));
+    public apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse?: Fido2NetLibAuthenticatorAttestationRawResponse, options?: any) {
+        return FidoApiFp(this.configuration).apiAuthFidoMakeCredentialPost(fido2NetLibAuthenticatorAttestationRawResponse, options).then((request) => request(this.axios, this.basePath));
     }
 }
 
