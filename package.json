@@ -1,6 +1,6 @@
 {
   "name": "@gkju/vlo-accounts-client-axios-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "packageManager": "pnpm@6.11.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
