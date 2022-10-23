@@ -4815,13 +4815,11 @@
         "properties": {
           "email": {
             "minLength": 1,
-            "type": "string",
-            "format": "email"
+            "type": "string"
           },
           "username": {
             "minLength": 1,
-            "type": "string",
-            "format": "string"
+            "type": "string"
           }
         },
         "additionalProperties": false
